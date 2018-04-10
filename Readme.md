@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Алексей Баранов](https://up.htmlacademy.ru/adaptive/14/user/619275).
-* Наставник: `Неизвестно`.
+* Студент: [Алексей Баранов](https://up.htmlacademy.ru/adaptive/14/user/619275)
+* Наставник: [Евгений Баранков](https://up.htmlacademy.ru/htmlcss/20/user/518169)
 
 ---
 
