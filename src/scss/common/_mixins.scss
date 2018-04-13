@@ -1,0 +1,37 @@
+@mixin fonts($size, $height, $weight, $style, $color) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  font-style: $style;
+  color: $color;
+}
+
+@mixin resetlist() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin catalog-section($padding-top, $padding-bottom, $grow-size, $bg-color, $icon-w, $icon-h, $icon-url) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  background-color: $bg-color;
+
+  &:hover,
+  &:focus {
+    padding-bottom: $padding-bottom + $grow-size;
+    padding-top: $padding-top - $grow-size;
+    box-shadow: 0 -#{$grow-size} 0 0 $bg-color;
+  }
+
+  &::after {
+    content: "";
+    width: $icon-w;
+    height: $icon-h;
+    margin-left: auto;
+    background-color: $bg-color;
+    background-image: url($icon-url);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}

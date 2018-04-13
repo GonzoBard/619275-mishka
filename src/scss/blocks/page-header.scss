@@ -1,0 +1,7 @@
+.page-header {
+  &__info {
+    display: none;
+
+    @include fonts(14px, 24px, 400, normal, $color-tundora);
+  }
+}
