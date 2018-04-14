@@ -3,9 +3,40 @@
   width: 100%;
 
   &__item {
-    padding-left: 75px;
-
+    padding-left: 30px;
     padding-top: 26px;
     padding-bottom: 28px;
+  }
+
+  &__link {
+    padding-left: 45px;
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &--search {
+      background-color: $color-white;
+      background-image: url("../img/site-nav__item-icon-search.svg");
+      background-repeat: no-repeat;
+      background-position: 2px 5px;
+
+      &:hover,
+      &:focus {
+        background-image: url("../img/site-nav__item-icon-search-hover.svg");
+      }
+    }
+
+    &--basket {
+      background-color: $color-white;
+      background-image: url("../img/site-nav__item-icon-basket.svg");
+      background-repeat: no-repeat;
+      background-position: 0 4px;
+
+      &:hover,
+      &:focus {
+        background-image: url("../img/site-nav__item-icon-basket-hover.svg");
+      }
+    }
   }
 }
