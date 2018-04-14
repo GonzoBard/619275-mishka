@@ -1,20 +1,60 @@
 .week-product {
+  margin-top: 27px;
+
+  &__header {
+    @include resetMarginPadding();
+  }
+
   &__label {
+    @include resetMarginPadding();
+    margin-top: 5px;
+
     @include fonts(17px, 20px, 700, normal, $color-downy);
     text-transform: uppercase;
   }
 
   &__description {
     p {
-      @include fonts(15px, 24px, 400, normal, $color-tundora);
-    }
+      margin-top: 23px;
 
-    table {
-      @include fonts(15px, 20px, 400, normal, $color-tundora);
+      @include fonts(15px, 24px, 400, normal, $color-tundora);
     }
   }
 
+  &__description-table {
+    width: 100%;
+    margin-top: 18px;
+    border-spacing: 0;
+
+    @include fonts(15px, 20px, 400, normal, $color-tundora);
+
+    td {
+      padding: 9px 0 10px;
+      border-bottom: 1px solid $color-gallery;
+    }
+  }
+
+  &__param-name {
+    width: 98px;
+  }
+
+  &__pic {
+    margin-top: 28px;
+  }
+
+  &__buy {
+    margin-top: 20px;
+  }
+
   &__price {
+    text-align: center;
+
+    @include resetMarginPadding();
     @include fonts(17px, 24px, 700, normal, $color-tundora);
+  }
+
+  &__btn-order {
+    width: 100%;
+    margin-top: 26px;
   }
 }

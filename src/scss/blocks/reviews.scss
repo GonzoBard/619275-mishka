@@ -1,6 +1,6 @@
 .reviews {
   &__list {
-    @include resetlist();
+    @include resetList();
   }
 
   &__text {

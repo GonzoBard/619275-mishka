@@ -1,6 +1,6 @@
 .advantages {
   &__list {
-    @include resetlist();
+    @include resetList();
   }
 
   &__item {

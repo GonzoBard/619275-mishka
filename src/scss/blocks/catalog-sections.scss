@@ -5,7 +5,7 @@
   z-index: 1000;
 
   &__list {
-    @include resetlist();
+    @include resetList();
 
     display: flex;
     flex-direction: column;

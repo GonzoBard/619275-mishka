@@ -1,6 +1,6 @@
 .social {
   &__list {
-    @include resetlist();
+    @include resetList();
 
     display: flex;
     flex-direction: row;
