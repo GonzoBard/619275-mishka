@@ -44,72 +44,76 @@
     </ul>
   </section>
 
-  <section class="week-product  container">
-    <h3 class="visually-hidden">Товар недели</h3>
-    <h3 class="week-product__header">Вязаные корзинки</h3>
-    <p class="week-product__label">Товар недели</p>
-    <div class="week-product__description">
-      <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-      <table class="week-product__description-table">
-        <tr class="week-product__description-line">
-          <td class="week-product__param-name">Цвет:</td>
-          <td class="week-product__param-value">«Тиффани»/серый</td>
-        </tr>
-        <tr class="week-product__description-line">
-          <td class="week-product__param-name">Диаметр:</td>
-          <td class="week-product__param-value">25 см</td>
-        </tr>
-        <tr class="week-product__description-line">
-          <td class="week-product__param-name">Высота:</td>
-          <td class="week-product__param-value">15 см</td>
-        </tr>
-      </table>
-    </div>
-    <img class="week-product__pic" src="img/week-product__pic-knitted-baskets.jpg" alt="Вязаные корзинки" width="260" height="315">
-    <div class="week-product__buy">
-      <p class="week-product__price">Цена: 990 руб.</p>
-      <button class="btn  week-product__btn-order">Заказать</button>
+  <section class="week-product">
+    <div class="week-product__container">
+      <h3 class="visually-hidden">Товар недели</h3>
+      <h3 class="week-product__header">Вязаные корзинки</h3>
+      <p class="week-product__label">Товар недели</p>
+      <div class="week-product__description">
+        <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="week-product__description-table">
+          <tr class="week-product__description-line">
+            <td class="week-product__param-name">Цвет:</td>
+            <td class="week-product__param-value">«Тиффани»/серый</td>
+          </tr>
+          <tr class="week-product__description-line">
+            <td class="week-product__param-name">Диаметр:</td>
+            <td class="week-product__param-value">25 см</td>
+          </tr>
+          <tr class="week-product__description-line">
+            <td class="week-product__param-name">Высота:</td>
+            <td class="week-product__param-value">15 см</td>
+          </tr>
+        </table>
+      </div>
+      <img class="week-product__pic" src="img/week-product__pic-knitted-baskets.jpg" alt="Вязаные корзинки" width="260" height="315">
+      <div class="week-product__buy">
+        <p class="week-product__price">Цена: 990 руб.</p>
+        <button class="btn  week-product__btn-order">Заказать</button>
+      </div>
     </div>
   </section>
 
-  <section class="week-product-modal">
+  <section class="week-product-modal  visually-hidden">
     <h3 class="visually-hidden">Форма добавления товара недели в корзину</h3>
-    <h3>Добавить в корзину</h3>
-    <p>Выберите размер:</p>
+    <h3 class="week-product-modal__header">Добавить в корзину</h3>
+    <p class="week-product-modal__text">Выберите размер:</p>
     <form class="form-add-product" action="https://echo.htmlacademy.ru" method="post">
 
       <ul class="form-add-product__list" aria-label="Список размеров">
 
         <li class="form-group-add-product" aria-label="Размер «s»">
-          <input type="radio" name="size" value="s" id="form-group-add-product__size-s" checked>
+          <input class="visually-hidden" type="radio" name="size" value="s" id="form-group-add-product__size-s" checked>
           <label for="form-group-add-product__size-s">s</label>
         </li>
 
         <li class="form-group-add-product" aria-label="Размер «m»">
-          <input type="radio" name="size" value="m" id="form-group-add-product__size-m">
+          <input class="visually-hidden" type="radio" name="size" value="m" id="form-group-add-product__size-m">
           <label for="form-group-add-product__size-m">m</label>
         </li>
 
         <li class="form-group-add-product" aria-label="Размер «l»">
-          <input type="radio" name="size" value="l" id="form-group-add-product__size-l">
+          <input class="visually-hidden" type="radio" name="size" value="l" id="form-group-add-product__size-l">
           <label for="form-group-add-product__size-l">l</label>
         </li>
 
       </ul>
-      <button class="form-add-product__btn">Добавить</button>
+      <button class="btn form-add-product__btn">Добавить</button>
     </form>
   </section>
 
   <section class="advantages">
-    <h3>Коротко о нас:</h3>
-    <ul class="advantages__list">
-      <li class="advantages__item advantages__item--environmentally-friendly-material">Экологически чистые материалы</li>
-      <li class="advantages__item advantages__item--scandinavian-style-at-the-russian-price">Скандинавский стиль по российской цене</li>
-      <li class="advantages__item advantages__item--increases-likes-on-photos">Увеличивает лайки на фотографиях</li>
-      <li class="advantages__item advantages__item--hand-tied-with-love-and-affection">Связано вручную с любовью и умилением</li>
-      <li class="advantages__item advantages__item--support-of-domestic-manufacturer">Поддержка отечественного производителя</li>
-      <li class="advantages__item advantages__item--comes-in-gift-box">Поставляется в подарочной упаковке</li>
-    </ul>
+    <div class="advantages__container">
+      <h3 class="advantages__header">Коротко о нас:</h3>
+      <ul class="advantages__list">
+        <li class="advantages__item advantages__item--environmentally-friendly-material">Экологически чистые материалы</li>
+        <li class="advantages__item advantages__item--scandinavian-style-at-the-russian-price">Скандинавский стиль по российской цене</li>
+        <li class="advantages__item advantages__item--increases-likes-on-photos">Увеличивает лайки на фотографиях</li>
+        <li class="advantages__item advantages__item--hand-tied-with-love-and-affection">Связано вручную с любовью и умилением</li>
+        <li class="advantages__item advantages__item--support-of-domestic-manufacturer">Поддержка отечественного производителя</li>
+        <li class="advantages__item advantages__item--comes-in-gift-box">Поставляется в подарочной упаковке</li>
+      </ul>
+    </div>
   </section>
 
   <section class="reviews">

@@ -1,5 +1,27 @@
 .week-product {
   margin-top: 27px;
+  padding-bottom: 35px;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: $color-white;
+    background-image: url("../img/week-product__waves.svg");
+    background-repeat: repeat-x;
+    background-position: 0 0;
+  }
+
+  &__container {
+    margin-left: $indent-30;
+    margin-right: $indent-30;
+  }
 
   &__header {
     @include resetMarginPadding();
