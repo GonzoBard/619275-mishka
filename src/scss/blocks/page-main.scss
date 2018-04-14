@@ -11,14 +11,4 @@
   h3 {
     @include fonts(25px, 30px, 700, normal, $color-black);
   }
-
-  &__title {
-    width: 217px;
-    margin-top: 70px;
-    text-align: center;
-  }
-
-  &__catalog-sections {
-    margin-top: 100px;
-  }
 }

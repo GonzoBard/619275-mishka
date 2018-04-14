@@ -1,4 +1,7 @@
 .catalog-sections {
+  position: relative;
+  z-index: 1000;
+
   &__list {
     @include resetlist();
 
