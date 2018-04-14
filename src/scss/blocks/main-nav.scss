@@ -1,0 +1,17 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $color-gallery;
+  }
+
+  &__new,
+  &__sale {
+    display: none;
+  }
+}

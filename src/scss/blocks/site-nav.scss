@@ -1,3 +1,8 @@
 .site-nav {
   @include resetlist();
+  width: 100%;
+
+  &__item {
+    padding-left: 75px;
+  }
 }
