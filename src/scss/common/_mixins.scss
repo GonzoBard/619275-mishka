@@ -66,3 +66,19 @@
     opacity: 0.5;
   }
 }
+
+@mixin waves($height) {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: $height;
+    background-color: $color-white;
+    background-image: url("../img/week-product__waves.svg");
+    background-repeat: repeat-x;
+    background-position: 0 0;
+  }
+}

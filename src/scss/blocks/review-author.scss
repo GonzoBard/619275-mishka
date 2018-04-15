@@ -9,6 +9,8 @@
   }
 
   &__contact {
+    margin-top: 3px;
+
     @include fonts(17px, 30px, 400, normal, $color-tundora);
   }
 }
