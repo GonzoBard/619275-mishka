@@ -1,4 +1,5 @@
 .week-product {
+  width: 100%;
   margin-top: 27px;
   padding-bottom: 35px;
 
@@ -41,6 +42,7 @@
     td {
       padding: 9px 0 10px;
       border-bottom: 1px solid $color-gallery;
+      vertical-align: top;
     }
   }
 
@@ -66,5 +68,6 @@
   &__btn-order {
     width: 100%;
     margin-top: 26px;
+    font-size: 17px;
   }
 }
