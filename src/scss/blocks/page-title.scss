@@ -1,5 +1,7 @@
 .page-title {
   width: 100%;
+  padding-top: 48px;
+  padding-bottom: 53px;
 
   background-color: $color-alabaster;
 
@@ -18,11 +20,6 @@
     .page-title__header {
       width: 217px;
     }
-  }
-
-  &--catalog {
-    padding-top: 48px;
-    padding-bottom: 53px;
   }
 
   &__header {
