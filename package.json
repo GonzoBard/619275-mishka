@@ -15,7 +15,7 @@
   },
   "editorconfig-cli": [
     "*.json",
-    "source/*.html"
+    "src/*.html"
   ],
   "engines": {
     "node": "8.11"
