@@ -8,6 +8,7 @@
   &__header {
     @include resetMarginPadding();
     margin-top: 25px;
+    padding-bottom: 23px;
     padding-left: 89px;
 
     background-color: $color-white;
@@ -17,7 +18,6 @@
   }
 
   &__video {
-    margin-top: 23px;
     margin-left: -1px;
     margin-right: -1px;
   }

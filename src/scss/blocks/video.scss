@@ -21,5 +21,15 @@
 
     user-select: none;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      outline-width: 0;
+      background-image: url("../img/video__play--icon-hover.svg");
+    }
+
+    &:active {
+      background-image: url("../img/video__play--icon-active.svg");
+    }
   }
 }
