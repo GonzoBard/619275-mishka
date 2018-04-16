@@ -1,4 +1,7 @@
 .copyright {
+  padding-top: 7px;
+  padding-bottom: 2px;
+
   &__a {
     @include fonts(19px, 18px, 700, normal, $color-black);
     text-decoration: none;
@@ -6,16 +9,17 @@
     cursor: pointer;
     user-select: none;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    position: relative;
 
     &::after {
       content: "";
+      position: absolute;
+      top: -1px;
+      right: -57px;
+
       width: 27px;
       height: 34px;
-      margin-left: 20px;
+      margin-left: 29px;
 
       background-color: transparent;
       background-image: url("../img/copyright__logo.svg");

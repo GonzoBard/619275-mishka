@@ -64,6 +64,31 @@
 
   &__map {
     margin-top: 16px;
+
+    position: relative;
+  }
+
+  &__pin-wrap {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    background-color: transparent;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -33px;
+
+      display: block;
+      width: 67px;
+      height: 100px;
+
+      background-color: transparent;
+      background-image: url("../img/contacts__map-pin-icon.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
   }
 
   &__btn {

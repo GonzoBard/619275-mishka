@@ -5,8 +5,9 @@
   height: 28px;
 
   border: none;
+  background-color: $color-seashell;
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: 0 center;
 
   @include fonts(0, 0, 400, normal, transparent);
 
