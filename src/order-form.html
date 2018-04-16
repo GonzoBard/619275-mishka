@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/bundle.min.css">
+</head>
+<body>
+
+<h1 class="visually-hidden">Форма заказа магазина «Мишка»</h1>
+
+<header class="page-header">
+  <nav class="main-nav">
+    <h2 class="visually-hidden">Основная навигация</h2>
+    <div class="logo  main-nav__item  main-nav__logo">
+      <a class="logo__link" href="index.html">
+        <img class="logo__pic" src="img/page-header__logo-mishka-mobile.svg" alt="Логотип магазина «Мишка»" width="86" height="35">
+      </a>
+    </div>
+    <ul class="site-nav" aria-label="Главная навигация">
+      <li class="site-nav__item  main-nav__item  main-nav__catalog"><a class="a  site-nav__link  site-nav__link--catalog" href="catalog.html">Каталог товаров</a></li>
+      <li class="site-nav__item  main-nav__item  main-nav__order"><a class="a  site-nav__link  site-nav__link--order" href="order-form.html">Вязание на заказ</a></li>
+      <li class="site-nav__item  main-nav__item  main-nav__search"><a class="a  site-nav__link  site-nav__link--search" href="#">Поиск по сайту</a></li>
+      <li class="site-nav__item  main-nav__item  main-nav__basket"><a class="a  site-nav__link  site-nav__link--basket" href="#">Корзина: пока пуста</a></li>
+      <li class="site-nav__item  main-nav__item  main-nav__new"><a class="a  site-nav__link  site-nav__link--new" href="#">Новые поступления</a></li>
+      <li class="site-nav__item  main-nav__item  main-nav__sale"><a class="a  site-nav__link  site-nav__link--sale" href="#">Распродажа</a></li>
+    </ul>
+  </nav>
+  <p class="page-header__info">Бесплатная доставка по России</p>
+</header>
+
+<main class="page-main">
+
+  <section class="page-title  page-main__title">
+    <h2 class="page-title__header">Вязание на заказ</h2>
+  </section>
+
+  <section class="form-order">
+    <h3 class="visually-hidden">Форма заказа</h3>
+    <p class="form-order__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <ul class="form-order__list" aria-label="Список групп формы">
+
+        <li class="form-group-order" aria-label="Группа «Тип»">
+          <ul class="form-group-order__list" aria-label="Список элементов группы">
+            <li class="form-group-order__item form-group-order__item--title">Тип</li>
+            <li class="form-group-order__item">
+              <input type="radio" name="order-type" value="accessory-for-interior" id="form-group-order__item-order-type--accessory-for-interior" checked>
+              <label for="form-group-order__item-order-type--accessory-for-interior">Аксессуар для интерьера</label>
+            </li>
+            <li class="form-group-order__item">
+              <input type="radio" name="order-type" value="toy-for-children" id="form-group-order__item-order-type--toy-for-children">
+              <label for="form-group-order__item-order-type--toy-for-children">Детская игрушка</label>
+            </li>
+          </ul>
+        </li>
+
+        <li class="form-group-order" aria-label="Группа «Цвет»">
+          <ul class="form-group-order__list" aria-label="Список элементов группы">
+            <li class="form-group-order__item form-group-order__item--title">Цвет</li>
+            <li class="form-group-order__item">
+              <input type="checkbox" name="color-white" id="form-group-order__item-color--white" checked>
+              <label for="form-group-order__item-color--white">Белый</label>
+            </li>
+            <li class="form-group-order__item">
+              <input type="checkbox" name="color-gray" id="form-group-order__item-color--gray" checked>
+              <label for="form-group-order__item-color--gray">Серый</label>
+            </li>
+            <li class="form-group-order__item">
+              <input type="checkbox" name="color-tiffany" id="form-group-order__item-color--tiffany">
+              <label for="form-group-order__item-color--tiffany">«Тиффани»</label>
+            </li>
+            <li class="form-group-order__item">
+              <input type="checkbox" name="color-black" id="form-group-order__item-color--black">
+              <label for="form-group-order__item-color--black">Черный</label>
+            </li>
+            <li class="form-group-order__item">
+              <input type="checkbox" name="color-pink" id="form-group-order__item-color--pink">
+              <label for="form-group-order__item-color--pink">Розовый</label>
+            </li>
+            <li class="form-group-order__item">
+              <input type="checkbox" name="color-orange" id="form-group-order__item-color--orange">
+              <label for="form-group-order__item-color--orange">Оранжевый</label>
+            </li>
+          </ul>
+        </li>
+
+        <li class="form-group-order" aria-label="Группа «ФИО»">
+          <ul class="form-group-order__list" aria-label="Список элементов группы">
+            <li class="form-group-order__item form-group-order__item--title">ФИО</li>
+            <li class="form-group-order__item">
+              <label for="form-group-order__item-full-name--first-name">Имя:</label>
+              <input type="text" name="full-name-first-name" placeholder="Введите ваше имя*" required id="form-group-order__item-full-name--first-name">
+            </li>
+            <li class="form-group-order__item">
+              <label for="form-group-order__item-full-name--last-name">Фамилия:</label>
+              <input type="text" name="full-name-last-name" placeholder="Укажите фамилию*" required id="form-group-order__item-full-name--last-name">
+            </li>
+            <li class="form-group-order__item">
+              <label for="form-group-order__item-full-name--patronymic">Отчество:</label>
+              <input type="text" name="full-name-patronymic" placeholder="Отчество, если желаете" id="form-group-order__item-full-name--patronymic">
+            </li>
+          </ul>
+        </li>
+
+        <li class="form-group-order" aria-label="Группа «Контакты»">
+          <ul class="form-group-order__list" aria-label="Список элементов группы">
+            <li class="form-group-order__item">
+              <label for="form-group-order__item-contacts--phone">Тел</label>
+              <input type="tel" name="contacts-phone" placeholder="+7 XXX XX XX*" id="form-group-order__item-contacts--phone" required>
+            </li>
+            <li class="form-group-order__item">
+              <label for="form-group-order__item-contacts--email">E-mail</label>
+              <input type="email" name="contacts-email" placeholder="Ваш Email*" id="form-group-order__item-contacts--email" required>
+            </li>
+          </ul>
+        </li>
+
+        <li class="form-group-order" aria-label="Группа «Дополнительно»">
+          <ul class="form-group-order__list" aria-label="Список элементов группы">
+            <li class="form-group-order__item">
+              <label for="form-group-order__item-extra">Доп</label>
+              <textarea name="extra" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу" id="form-group-order__item-extra"></textarea>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+
+      <p class="form-order__info">*Поля обязательны для заполнения</p>
+      <button class="btn">Отправить заказ</button>
+    </form>
+
+  </section>
+
+</main>
+
+<footer class="page-footer">
+
+  <section class="social">
+    <h2 class="visually-hidden">«Мишка» в социальных сетях</h2>
+    <ul class="social__list">
+      <li class="social__item"><a class="btn-social btn-social--instagram" href="#">Instagram</a></li>
+      <li class="social__item"><a class="btn-social btn-social--twitter" href="#">Twitter</a></li>
+      <li class="social__item"><a class="btn-social btn-social--facebook" href="#">Facebook</a></li>
+    </ul>
+  </section>
+
+  <hr class="page-footer__hr">
+
+  <section class="copyright">
+    <h2 class="visually-hidden">Copyright</h2>
+    <a class="copyright__a" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на лендинг интенсива «Профессиональный HTML и CSS, уровень 2»" target="_blank">
+      Разработано
+    </a>
+  </section>
+
+</footer>
+
+</body>
+</html>
