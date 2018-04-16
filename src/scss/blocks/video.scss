@@ -1,5 +1,5 @@
 .video {
-  @include resetFont(); // высота строки(line-height) давала +4px
+  @include resetFont(); // высота строки(line-height) давала лишние +4px
   position: relative;
 
   &__play {
@@ -15,9 +15,9 @@
     background-image: url("../img/video__play--icon.svg");
     background-repeat: no-repeat;
     background-position: center center;
+    border: none;
 
     @include resetFont();
-    border: none;
 
     user-select: none;
     cursor: pointer;
