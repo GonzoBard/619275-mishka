@@ -30,7 +30,7 @@
 
     &:hover,
     &:focus {
-      outline: none;
+      outline-width: 0;
 
       &::after {
         background-image: url("../img/copyright__logo-hover.svg");

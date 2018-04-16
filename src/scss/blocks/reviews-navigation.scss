@@ -15,10 +15,10 @@
     background-repeat: no-repeat;
     background-position: 48% 50%;
 
-    @include fonts(0, 0, 400, normal, $color-white);
+    @include resetFont();
 
     cursor: pointer;
-    outline: none;
+    outline-width: 0;
 
     &--previous {
       background-image: url("../img/reviews-navigation__btn-icon--previous.svg");

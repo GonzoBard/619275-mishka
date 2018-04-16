@@ -1,0 +1,71 @@
+.catalog-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  &__wrap {
+    padding-top: 26px;
+    padding-left: 27px;
+    padding-right: 30px;
+    border: 1px solid $color-gallery;
+  }
+
+  &__pic {
+    width: 260px;
+    height: 195px;
+  }
+
+  &__parameters {
+    @include resetMarginPadding();
+    margin-top: 5px;
+
+    @include fonts(13px, 30px, 400, normal, $color-tundora);
+  }
+
+  &__buy {
+    padding-top: 41px;
+    padding-bottom: 27px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__price {
+    @include resetMarginPadding();
+    @include fonts(15px, 24px, 700, normal, $color-black);
+  }
+
+  &__btn-basket {
+    width: 21px;
+    height: 18px;
+
+    @include resetMarginPadding();
+    @include resetFont();
+
+    margin-top: -1px;
+    margin-left: auto;
+    margin-right: -5px;
+
+    background-color: $color-white;
+    background-image: url("../img/site-nav__item-icon-basket.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    border: none;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      outline-width: 0;
+      background-image: url("../img/site-nav__item-icon-basket-hover.svg");
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

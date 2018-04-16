@@ -6,15 +6,19 @@
   color: $color;
 }
 
+@mixin resetMarginPadding() {
+  margin: 0;
+  padding: 0;
+}
+
 @mixin resetList() {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-@mixin resetMarginPadding() {
-  margin: 0;
-  padding: 0;
+@mixin resetFont() {
+  @include fonts(0, 0, 400, normal, transparent);
 }
 
 @mixin catalog-section($icon-top, $icon-right, $bg-color, $icon-w, $icon-h, $icon-url) {

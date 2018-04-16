@@ -31,67 +31,79 @@
 
 <main class="page-main">
 
-  <section class="page-title  page-main__title">
+  <section class="page-title  page-title--catalog  page-main__title">
     <h2 class="page-title__header">Каталог товаров</h2>
   </section>
 
-  <section class="catalog">
-    <h3 class="visually-hidden">Каталог</h3>
-    <ul class="catalog__list">
-      <li class="catalog-item">
-        <a class="catalog-item__pic" href="#" aria-label="Подробное описание товара">
-          <img src="img/catalog-item__pic-bunny-jump.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
-        </a>
-        <div class="catalog-item__info">
-          <a class="catalog-item__name" href="#" aria-label="Подробное описание товара">Зайчик-попрыгайчик</a>
-          <p class="catalog-item__parameters">Рост 30 см, вес 200 г</p>
-        </div>
-        <div class="catalog-item__buy">
-          <p class="catalog-item__price">1 200 руб.</p>
-          <button class="catalog-item__btn-basket">Добавить в корзину</button>
-        </div>
-      </li>
+  <div class="catalog__container">
 
-      <li class="catalog-item">
-        <a class="catalog-item__pic" href="#" aria-label="Подробное описание товара">
-          <img src="img/catalog-item__pic-laundry-basket.jpg" alt="Корзинка для белья" width="260" height="195">
-        </a>
-        <div class="catalog-item__info">
-          <a class="catalog-item__name" href="#" aria-label="Подробное описание товара">Корзинка для белья</a>
-          <p class="catalog-item__parameters">Диаметр 15 см, высота 10 см</p>
-        </div>
-        <div class="catalog-item__buy">
-          <p class="catalog-item__price">690 руб.</p>
-          <button class="catalog-item__btn-basket">Добавить в корзину</button>
-        </div>
-      </li>
+    <section class="catalog">
+      <h3 class="visually-hidden">Каталог</h3>
 
-      <li class="catalog-item">
-        <a class="catalog-item__pic" href="#" aria-label="Подробное описание товара">
-          <img src="img/catalog-item__pic-large-toy-basket.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
-        </a>
-        <div class="catalog-item__info">
-          <a class="catalog-item__name" href="#" aria-label="Подробное описание товара">Большая корзинка для игрушек</a>
-          <p class="catalog-item__parameters">Диаметр 30 см, высота 30 см</p>
-        </div>
-        <div class="catalog-item__buy">
-          <p class="catalog-item__price">1 500 руб.</p>
-          <button class="catalog-item__btn-basket">Добавить в корзину</button>
-        </div>
-      </li>
-    </ul>
+      <ul class="catalog__list">
 
-  </section>
+        <li class="catalog-item  catalog__item">
+          <a class="catalog-item__pic" href="#" aria-label="Подробное описание товара «Зайчик-попрыгайчик»">
+            <img src="img/catalog-item__pic-bunny-jump.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
+          </a>
+          <div class="catalog-item__wrap">
+            <div class="catalog-item__info">
+              <a class="a  catalog-item__link" href="#">Зайчик-попрыгайчик</a>
+              <p class="catalog-item__parameters">Рост 30 см, вес 200 г</p>
+            </div>
+            <div class="catalog-item__buy">
+              <p class="catalog-item__price">1 200 руб.</p>
+              <button class="catalog-item__btn-basket">Добавить в корзину</button>
+            </div>
+          </div>
+        </li>
 
-  <section class="production-process">
-    <h3>Процесс производства</h3>
-    <div class="video">
-      <img class="video__flashback" src="img/video__flashback--mobile.jpg" alt="" width="260" height="150">
-      <button class="video__play">Play</button>
-    </div>
-    <p class="production-process__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-    <a class="btn" href="order-form.html">Сделать заказ</a>
-  </section>
+        <li class="catalog-item  catalog__item">
+          <a class="catalog-item__pic" href="#" aria-label="Подробное описание товара «Корзинка для белья»">
+            <img src="img/catalog-item__pic-laundry-basket.jpg" alt="Корзинка для белья" width="260" height="195">
+          </a>
+          <div class="catalog-item__wrap">
+            <div class="catalog-item__info">
+              <a class="a  catalog-item__link" href="#">Корзинка для белья</a>
+              <p class="catalog-item__parameters">Диаметр 15 см, высота 10 см</p>
+            </div>
+            <div class="catalog-item__buy">
+              <p class="catalog-item__price">690 руб.</p>
+              <button class="catalog-item__btn-basket">Добавить в корзину</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="catalog-item  catalog__item">
+          <a class="catalog-item__pic" href="#" aria-label="Подробное описание товара «Большая корзинка для игрушек»">
+            <img src="img/catalog-item__pic-large-toy-basket.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
+          </a>
+          <div class="catalog-item__wrap">
+            <div class="catalog-item__info">
+              <a class="a  catalog-item__link" href="#">Большая корзинка для игрушек</a>
+              <p class="catalog-item__parameters">Диаметр 30 см, высота 30 см</p>
+            </div>
+            <div class="catalog-item__buy">
+              <p class="catalog-item__price">1 500 руб.</p>
+              <button class="catalog-item__btn-basket">Добавить в корзину</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="production-process">
+      <h3>Процесс производства</h3>
+      <div class="video">
+        <img class="video__flashback" src="img/video__flashback--mobile.jpg" alt="" width="260" height="150">
+        <button class="video__play">Play</button>
+      </div>
+      <p class="production-process__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+      <a class="btn" href="order-form.html">Сделать заказ</a>
+    </section>
+
+  </div>
 
 </main>
 
