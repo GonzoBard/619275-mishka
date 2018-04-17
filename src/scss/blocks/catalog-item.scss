@@ -10,7 +10,13 @@
   &:hover,
   &:focus {
     .catalog-item__wrap {
-      @include itemBlockShadow();
+      @include itemBlockShadowHover();
+    }
+  }
+
+  &:active {
+    .catalog-item__wrap {
+      @include itemBlockShadowActive();
     }
   }
 }

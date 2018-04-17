@@ -88,6 +88,10 @@
   }
 }
 
-@mixin itemBlockShadow() {
+@mixin itemBlockShadowHover() {
   box-shadow: 0 6px 10px 0 rgba($color-black, 0.1);
+}
+
+@mixin itemBlockShadowActive() {
+  box-shadow: 0 3px 5px 0 rgba($color-black, 0.1);
 }

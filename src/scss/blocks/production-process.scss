@@ -9,7 +9,11 @@
 
   &:hover,
   &:focus {
-    @include itemBlockShadow();
+    @include itemBlockShadowHover();
+  }
+
+  &:active {
+    @include itemBlockShadowActive();
   }
 }
 
