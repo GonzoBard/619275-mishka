@@ -72,7 +72,7 @@ gulp.task('css', () => {
 });
 
 gulp.task('syncserver', () => {
-  browsersync.init({
+  browsersync.init({ // all init options: https://browsersync.io/docs/options
     server: {
       baseDir: paths.build
     }
