@@ -19,24 +19,24 @@
 
 .site-nav__link--search {
   background-color: $color-white;
-  background-image: url("../img/site-nav__item-icon-search.svg");
+  background-image: url("../img/icon-site-nav__item-search.svg");
   background-repeat: no-repeat;
   background-position: 2px 5px;
 
   &:hover,
   &:focus {
-    background-image: url("../img/site-nav__item-icon-search-hover.svg");
+    background-image: url("../img/icon-site-nav__item-search-hover.svg");
   }
 }
 
 .site-nav__link--basket {
   background-color: $color-white;
-  background-image: url("../img/site-nav__item-icon-basket.svg");
+  background-image: url("../img/icon-site-nav__item-basket.svg");
   background-repeat: no-repeat;
   background-position: 0 4px;
 
   &:hover,
   &:focus {
-    background-image: url("../img/site-nav__item-icon-basket-hover.svg");
+    background-image: url("../img/icon-site-nav__item-basket-hover.svg");
   }
 }

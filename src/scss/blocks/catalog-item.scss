@@ -52,7 +52,7 @@
   margin-right: -3px;
 
   background-color: $color-white;
-  background-image: url("../img/site-nav__item-icon-basket.svg");
+  background-image: url("../img/icon-site-nav__item-basket.svg");
   background-repeat: no-repeat;
   background-position: center center;
 
@@ -65,7 +65,7 @@
   &:hover,
   &:focus {
     outline-width: 0;
-    background-image: url("../img/site-nav__item-icon-basket-hover.svg");
+    background-image: url("../img/icon-site-nav__item-basket-hover.svg");
   }
 
   &:active {
