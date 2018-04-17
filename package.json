@@ -4,29 +4,33 @@
   "private": true,
   "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
+    "autoprefixer": "^8.3.x",
+    "browser-sync": "^2.23.x",
+    "del": "^3.0.x",
+    "gulp": "^3.9.x",
+    "gulp-plumber": "1.2.x",
+    "gulp-clean-css": "^3.9.x",
+    "gulp-postcss": "^7.0.x",
+    "gulp-rename": "^1.2.x",
+    "gulp-sass": "^4.0.x",
+    "run-sequence": "^2.2.x",
     "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "^8.2.0",
-    "browser-sync": "^2.23.6",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.3",
-    "gulp-postcss": "^7.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4",
-    "run-sequence": "^2.2.1",
     "stylelint": "9.2.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"src/scss/**/*.scss\" \"src/*.html\" \"src/js/*.js\"",
-    "test": "npm run editorconfig",
+    "stylelint": "stylelint \"src/scss/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build"
   },
   "editorconfig-cli": [
     "*.json",
-    "src/*.html"
+    "*.js",
+    "src/*.html",
+    "src/js/**/*.js",
+    "src/img/**/*.svg",
+    "src/sass/**/*.{sass,scss}"
   ],
   "engines": {
     "node": "8.11"
