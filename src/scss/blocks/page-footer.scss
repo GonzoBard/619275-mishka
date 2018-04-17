@@ -5,26 +5,31 @@
   background-color: $color-seashell;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
-
-  //&__hr {
-  //  width: 260px;
-  //  height: 1px;
-  //  margin-top: 26px;
-  //  margin-bottom: 20px;
-  //  border: none;
-  //  background-color: $color-mercury;
-  //}
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .page-footer__social {
-  width: 100%;
-  padding-left: 57px;
+  margin-left: 57px;
 }
 
 .page-footer__copyright {
-  width: 100%;
-  padding-left: 37px;
+  $left: 37px;
+  margin-top: 47px;
+  margin-left: $left;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -21px;
+    left: -$left;
+
+    width: 260px;
+    height: 1px;
+    background-color: $color-mercury;
+  }
 }
