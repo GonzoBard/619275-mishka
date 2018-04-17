@@ -6,6 +6,13 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+
+  &:hover,
+  &:focus {
+    .catalog-item__wrap {
+      @include itemBlockShadow();
+    }
+  }
 }
 
 .catalog-item__wrap {

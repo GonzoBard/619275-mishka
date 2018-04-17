@@ -87,3 +87,7 @@
     background-position: 0 0;
   }
 }
+
+@mixin itemBlockShadow() {
+  box-shadow: 0 6px 10px 0 rgba($color-black, 0.1);
+}

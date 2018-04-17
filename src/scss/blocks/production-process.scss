@@ -6,6 +6,11 @@
   h3 {
     @include fonts(17px, 24px, 700, normal, $color-black);
   }
+
+  &:hover,
+  &:focus {
+    @include itemBlockShadow();
+  }
 }
 
 .production-process__header {
