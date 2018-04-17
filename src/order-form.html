@@ -38,18 +38,18 @@
   <section class="form-order">
     <h3 class="visually-hidden">Форма заказа</h3>
     <p class="form-order__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-    <form action="https://echo.htmlacademy.ru" method="post">
+    <form class="form-order__form" action="https://echo.htmlacademy.ru" method="post">
       <ul class="form-order__list" aria-label="Список групп формы">
 
-        <li class="form-group-order" aria-label="Группа «Тип»">
+        <li class="form-group-order  form-group-order--type" aria-label="Группа «Тип»">
           <ul class="form-group-order__list" aria-label="Список элементов группы">
-            <li class="form-group-order__item form-group-order__item--title">Тип</li>
+            <li class="form-group-order__title">Тип</li>
             <li class="form-group-order__item">
-              <input type="radio" name="order-type" value="accessory-for-interior" id="form-group-order__item-order-type--accessory-for-interior" checked>
+              <input class="visually-hidden" type="radio" name="order-type" value="accessory-for-interior" id="form-group-order__item-order-type--accessory-for-interior" checked>
               <label for="form-group-order__item-order-type--accessory-for-interior">Аксессуар для интерьера</label>
             </li>
             <li class="form-group-order__item">
-              <input type="radio" name="order-type" value="toy-for-children" id="form-group-order__item-order-type--toy-for-children">
+              <input class="visually-hidden" type="radio" name="order-type" value="toy-for-children" id="form-group-order__item-order-type--toy-for-children">
               <label for="form-group-order__item-order-type--toy-for-children">Детская игрушка</label>
             </li>
           </ul>
@@ -57,7 +57,7 @@
 
         <li class="form-group-order" aria-label="Группа «Цвет»">
           <ul class="form-group-order__list" aria-label="Список элементов группы">
-            <li class="form-group-order__item form-group-order__item--title">Цвет</li>
+            <li class="form-group-order__title">Цвет</li>
             <li class="form-group-order__item">
               <input type="checkbox" name="color-white" id="form-group-order__item-color--white" checked>
               <label for="form-group-order__item-color--white">Белый</label>
@@ -87,7 +87,7 @@
 
         <li class="form-group-order" aria-label="Группа «ФИО»">
           <ul class="form-group-order__list" aria-label="Список элементов группы">
-            <li class="form-group-order__item form-group-order__item--title">ФИО</li>
+            <li class="form-group-order__title">ФИО</li>
             <li class="form-group-order__item">
               <label for="form-group-order__item-full-name--first-name">Имя:</label>
               <input type="text" name="full-name-first-name" placeholder="Введите ваше имя*" required id="form-group-order__item-full-name--first-name">
@@ -120,7 +120,7 @@
           <ul class="form-group-order__list" aria-label="Список элементов группы">
             <li class="form-group-order__item">
               <label for="form-group-order__item-extra">Доп</label>
-              <textarea name="extra" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу" id="form-group-order__item-extra"></textarea>
+              <textarea class="form-group-order__extra" name="extra" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу" id="form-group-order__item-extra"></textarea>
             </li>
           </ul>
         </li>
