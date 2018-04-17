@@ -3,53 +3,53 @@
 
   position: relative;
   z-index: 1000;
+}
 
-  &__list {
-    @include resetList();
+.catalog-sections__list {
+  @include resetList();
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.catalog-sections__item {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.catalog-sections__text-wrap {
+  display: inline-block;
+  vertical-align: top;
+  width: 110px;
+}
+
+.catalog-sections__a {
+  width: 100%;
+  padding-left: 28px;
+
+  @include fonts(19px, 24px, 700, normal, $color-white);
+  text-decoration: none;
+
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.08s ease;
+
+  &:hover,
+  &:focus {
+    outline-width: 0;
   }
 
-  &__item {
-    width: 100%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+  &--accessory-for-interior {
+    @include catalog-section(23px, 36px, $color-viking, 40px, 62px, "../img/catalog-sections__item-icon-bedside-night-light.svg");
   }
 
-  &__text-wrap {
-    display: inline-block;
-    vertical-align: top;
-    width: 110px;
-  }
-
-  &__a {
-    width: 100%;
-    padding-left: 28px;
-
-    @include fonts(19px, 24px, 700, normal, $color-white);
-    text-decoration: none;
-
-    cursor: pointer;
-    user-select: none;
-    transition: all 0.08s ease;
-
-    &:hover,
-    &:focus {
-      outline-width: 0;
-    }
-
-    &--accessory-for-interior {
-      @include catalog-section(23px, 36px, $color-viking, 40px, 62px, "../img/catalog-sections__item-icon-bedside-night-light.svg");
-    }
-
-    &--toy-for-children {
-      @include catalog-section(21px, 27px, $color-puerto-rico, 60px, 60px, "../img/catalog-sections__item-icon-lego.svg");
-    }
+  &--toy-for-children {
+    @include catalog-section(21px, 27px, $color-puerto-rico, 60px, 60px, "../img/catalog-sections__item-icon-lego.svg");
   }
 }

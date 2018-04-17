@@ -6,38 +6,38 @@
   h3 {
     @include fonts(17px, 24px, 700, normal, $color-black);
   }
+}
 
-  &__header {
-    @include resetMarginPadding();
-    margin-top: 25px;
-    padding-bottom: 23px;
-    padding-left: 89px;
+.production-process__header {
+  @include resetMarginPadding();
+  margin-top: 25px;
+  padding-bottom: 23px;
+  padding-left: 89px;
 
-    background-color: $color-white;
-    background-image: url("../img/production-process--icon-camera.svg");
-    background-repeat: no-repeat;
-    background-position: 33px 10px;
-  }
+  background-color: $color-white;
+  background-image: url("../img/production-process--icon-camera.svg");
+  background-repeat: no-repeat;
+  background-position: 33px 10px;
+}
 
-  &__video {
-    margin-left: -1px;
-    margin-right: -1px;
-  }
+.production-process__video {
+  margin-left: -1px;
+  margin-right: -1px;
+}
 
-  &__container {
-    margin-left: 33px;
-    margin-right: 34px;
-  }
+.production-process__container {
+  margin-left: 33px;
+  margin-right: 34px;
+}
 
-  &__intro {
-    @include resetMarginPadding();
-    margin-top: 27px;
+.production-process__intro {
+  @include resetMarginPadding();
+  margin-top: 27px;
 
-    @include fonts(13px, 24px, 400, normal, $color-tundora);
-  }
+  @include fonts(13px, 24px, 400, normal, $color-tundora);
+}
 
-  &__btn {
-    margin-top: 25px;
-    margin-bottom: 32px;
-  }
+.production-process__btn {
+  margin-top: 25px;
+  margin-bottom: 32px;
 }

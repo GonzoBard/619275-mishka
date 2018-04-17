@@ -1,92 +1,92 @@
 .advantages {
   width: 100%;
   margin-top: 34px;
+}
 
-  &__container {
-    padding-left: 20px;
-    margin-right: $indent-30;
+.advantages__container {
+  padding-left: 20px;
+  margin-right: $indent-30;
+}
+
+.advantages__header {
+  @include resetMarginPadding();
+  margin-left: 8px;
+}
+
+.advantages__list {
+  @include resetList();
+  margin-top: 2px;
+}
+
+.advantages__item {
+  display: inline-block;
+  vertical-align: top;
+
+  @include fonts(17px, 20px, 700, normal, $color-black);
+
+  &--environmentally-friendly-material {
+    width: 204px;
+    padding-top: 84px;
+    padding-left: 9px;
+
+    background-color: $color-white;
+    background-image: url("../img/advantages__item-icon--environmentally-friendly-material.svg");
+    background-repeat: no-repeat;
+    background-position: 18px 30px;
   }
 
-  &__header {
-    @include resetMarginPadding();
-    margin-left: 8px;
+  &--scandinavian-style-at-the-russian-price {
+    width: 210px;
+    padding-top: 84px;
+    padding-left: 9px;
+
+    background-color: $color-white;
+    background-image: url("../img/advantages__item-icon--scandinavian-style-at-the-russian-price.svg");
+    background-repeat: no-repeat;
+    background-position: 10px 30px;
   }
 
-  &__list {
-    @include resetList();
-    margin-top: 2px;
+  &--increases-likes-on-photos {
+    width: 200px;
+    padding-top: 82px;
+    padding-left: 9px;
+
+    background-color: $color-white;
+    background-image: url("../img/advantages__item-icon--increases-likes-on-photos.svg");
+    background-repeat: no-repeat;
+    background-position: 17px 34px;
   }
 
-  &__item {
-    display: inline-block;
-    vertical-align: top;
+  &--hand-tied-with-love-and-affection {
+    width: 221px;
+    padding-top: 84px;
+    padding-left: 10px;
 
-    @include fonts(17px, 20px, 700, normal, $color-black);
+    background-color: $color-white;
+    background-image: url("../img/advantages__item-icon--hand-tied-with-love-and-affection.svg");
+    background-repeat: no-repeat;
+    background-position: 13px 32px;
+  }
 
-    &--environmentally-friendly-material {
-      width: 204px;
-      padding-top: 84px;
-      padding-left: 9px;
+  &--support-of-domestic-manufacturer {
+    width: 260px;
+    padding-top: 82px;
+    padding-left: 10px;
 
-      background-color: $color-white;
-      background-image: url("../img/advantages__item-icon--environmentally-friendly-material.svg");
-      background-repeat: no-repeat;
-      background-position: 18px 30px;
-    }
+    background-color: $color-white;
+    background-image: url("../img/advantages__item-icon--support-of-domestic-manufacturer.svg");
+    background-repeat: no-repeat;
+    background-position: 4px 32px;
+  }
 
-    &--scandinavian-style-at-the-russian-price {
-      width: 210px;
-      padding-top: 84px;
-      padding-left: 9px;
+  &--comes-in-gift-box {
+    width: 208px;
+    padding-top: 83px;
+    padding-left: 10px;
 
-      background-color: $color-white;
-      background-image: url("../img/advantages__item-icon--scandinavian-style-at-the-russian-price.svg");
-      background-repeat: no-repeat;
-      background-position: 10px 30px;
-    }
-
-    &--increases-likes-on-photos {
-      width: 200px;
-      padding-top: 82px;
-      padding-left: 9px;
-
-      background-color: $color-white;
-      background-image: url("../img/advantages__item-icon--increases-likes-on-photos.svg");
-      background-repeat: no-repeat;
-      background-position: 17px 34px;
-    }
-
-    &--hand-tied-with-love-and-affection {
-      width: 221px;
-      padding-top: 84px;
-      padding-left: 10px;
-
-      background-color: $color-white;
-      background-image: url("../img/advantages__item-icon--hand-tied-with-love-and-affection.svg");
-      background-repeat: no-repeat;
-      background-position: 13px 32px;
-    }
-
-    &--support-of-domestic-manufacturer {
-      width: 260px;
-      padding-top: 82px;
-      padding-left: 10px;
-
-      background-color: $color-white;
-      background-image: url("../img/advantages__item-icon--support-of-domestic-manufacturer.svg");
-      background-repeat: no-repeat;
-      background-position: 4px 32px;
-    }
-
-    &--comes-in-gift-box {
-      width: 208px;
-      padding-top: 83px;
-      padding-left: 10px;
-
-      background-color: $color-white;
-      background-image: url("../img/advantages__item-icon--comes-in-gift-box.svg");
-      background-repeat: no-repeat;
-      background-position: 13px 31px;
-    }
+    background-color: $color-white;
+    background-image: url("../img/advantages__item-icon--comes-in-gift-box.svg");
+    background-repeat: no-repeat;
+    background-position: 13px 31px;
   }
 }

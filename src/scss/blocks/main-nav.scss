@@ -3,13 +3,16 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
 
-  &__item {
-    border-bottom: 1px solid $color-gallery;
-  }
+.main-nav__item {
+  border-bottom: 1px solid $color-gallery;
+}
 
-  &__new,
-  &__sale {
-    display: none;
-  }
+.main-nav__new {
+  display: none;
+}
+
+.main-nav__sale {
+  display: none;
 }

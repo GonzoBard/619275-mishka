@@ -1,42 +1,42 @@
 .site-nav {
   @include resetList();
   width: 100%;
+}
 
-  &__item {
-    padding-left: $indent-30;
-    padding-top: 26px;
-    padding-bottom: 28px;
+.site-nav__item {
+  padding-left: $indent-30;
+  padding-top: 26px;
+  padding-bottom: 28px;
+}
+
+.site-nav__link {
+  padding-left: 45px;
+
+  &:active {
+    opacity: 0.3;
   }
+}
 
-  &__link {
-    padding-left: 45px;
+.site-nav__link--search {
+  background-color: $color-white;
+  background-image: url("../img/site-nav__item-icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 2px 5px;
 
-    &--search {
-      background-color: $color-white;
-      background-image: url("../img/site-nav__item-icon-search.svg");
-      background-repeat: no-repeat;
-      background-position: 2px 5px;
+  &:hover,
+  &:focus {
+    background-image: url("../img/site-nav__item-icon-search-hover.svg");
+  }
+}
 
-      &:hover,
-      &:focus {
-        background-image: url("../img/site-nav__item-icon-search-hover.svg");
-      }
-    }
+.site-nav__link--basket {
+  background-color: $color-white;
+  background-image: url("../img/site-nav__item-icon-basket.svg");
+  background-repeat: no-repeat;
+  background-position: 0 4px;
 
-    &--basket {
-      background-color: $color-white;
-      background-image: url("../img/site-nav__item-icon-basket.svg");
-      background-repeat: no-repeat;
-      background-position: 0 4px;
-
-      &:hover,
-      &:focus {
-        background-image: url("../img/site-nav__item-icon-basket-hover.svg");
-      }
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+  &:hover,
+  &:focus {
+    background-image: url("../img/site-nav__item-icon-basket-hover.svg");
   }
 }

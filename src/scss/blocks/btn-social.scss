@@ -14,34 +14,34 @@
   user-select: none;
   outline-width: 0;
 
-  &--instagram {
-    background-image: url("../img/btn-social-icon--instagram.svg");
-
-    &:hover,
-    &:focus {
-      background-image: url("../img/btn-social-icon--instagram-hover.svg");
-    }
-  }
-
-  &--twitter {
-    background-image: url("../img/btn-social-icon--twitter.svg");
-
-    &:hover,
-    &:focus {
-      background-image: url("../img/btn-social-icon--twitter-hover.svg");
-    }
-  }
-
-  &--facebook {
-    background-image: url("../img/btn-social-icon--facebook.svg");
-
-    &:hover,
-    &:focus {
-      background-image: url("../img/btn-social-icon--facebook-hover.svg");
-    }
-  }
-
   &:active {
     opacity: 0.3;
+  }
+}
+
+.btn-social--instagram {
+  background-image: url("../img/btn-social-icon--instagram.svg");
+
+  &:hover,
+  &:focus {
+    background-image: url("../img/btn-social-icon--instagram-hover.svg");
+  }
+}
+
+.btn-social--twitter {
+  background-image: url("../img/btn-social-icon--twitter.svg");
+
+  &:hover,
+  &:focus {
+    background-image: url("../img/btn-social-icon--twitter-hover.svg");
+  }
+}
+
+.btn-social--facebook {
+  background-image: url("../img/btn-social-icon--facebook.svg");
+
+  &:hover,
+  &:focus {
+    background-image: url("../img/btn-social-icon--facebook-hover.svg");
   }
 }

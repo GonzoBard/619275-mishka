@@ -7,44 +7,44 @@
 
   @include waves(6px);
 
-  &__container {
-    margin-left: 28px;
-    margin-right: $indent-30;
-  }
-
-  &__header {
-    @include resetMarginPadding();
-  }
-
-  &__list {
-    @include resetList();
-    padding-left: 2px;
-  }
-
   blockquote {
     @include resetMarginPadding();
     margin-top: 24px;
   }
+}
 
-  &__text {
-    @include resetMarginPadding();
-    @include fonts(15px, 30px, 400, normal, $color-tundora);
-  }
+.reviews__container {
+  margin-left: 28px;
+  margin-right: $indent-30;
+}
 
-  &__author {
-    margin-top: 27px;
-  }
+.reviews__header {
+  @include resetMarginPadding();
+}
 
-  &__navigation {
-    margin-top: 29px;
-    margin-left: 2px;
-  }
+.reviews__list {
+  @include resetList();
+  padding-left: 2px;
+}
 
-  &__btn {
-    width: 99%;
-    margin-top: 38px;
-    margin-left: 2px;
+.reviews__text {
+  @include resetMarginPadding();
+  @include fonts(15px, 30px, 400, normal, $color-tundora);
+}
 
-    text-align: center;
-  }
+.reviews__author {
+  margin-top: 27px;
+}
+
+.reviews__navigation {
+  margin-top: 29px;
+  margin-left: 2px;
+}
+
+.reviews__btn {
+  width: 99%;
+  margin-top: 38px;
+  margin-left: 2px;
+
+  text-align: center;
 }

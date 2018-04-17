@@ -10,21 +10,21 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
 
-  &__header {
-    display: inline-block;
-    vertical-align: top;
-    width: 148px;
+.week-product-modal__header {
+  display: inline-block;
+  vertical-align: top;
+  width: 148px;
 
-    @include resetMarginPadding();
-    @include fonts(25px, 30px, 700, normal, $color-black);
-    text-align: center;
-  }
+  @include resetMarginPadding();
+  @include fonts(25px, 30px, 700, normal, $color-black);
+  text-align: center;
+}
 
-  &__text {
-    @include resetMarginPadding();
-    margin-top: 23px;
+.week-product-modal__text {
+  @include resetMarginPadding();
+  margin-top: 23px;
 
-    @include fonts(15px, 30px, 400, normal, $color-tundora);
-  }
+  @include fonts(15px, 30px, 400, normal, $color-tundora);
 }
