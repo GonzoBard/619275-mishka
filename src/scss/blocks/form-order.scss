@@ -1,5 +1,10 @@
 .form-order {
   padding-bottom: 55px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .form-order__intro {
@@ -12,20 +17,9 @@
 }
 
 .form-order__form {
-  margin-left: 29px;
-  margin-right: 30px;
-}
-
-.form-order__list {
-  @include resetMarginPadding();
-  @include resetList();
-
-  margin-top: 24px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  padding-top: 24px;
+  padding-left: 29px;
+  padding-right: 30px;
 }
 
 .form-order__info {
