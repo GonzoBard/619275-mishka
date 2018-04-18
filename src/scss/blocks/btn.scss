@@ -1,0 +1,27 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 14px 20px;
+
+  border: 2px solid $color-tundora;
+  background-color: $color-white;
+
+  @include fonts(18px, 20px, 700, normal, $color-tundora);
+  text-decoration: none;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  user-select: none;
+
+  &:hover,
+  &:focus {
+    outline-width: 0;
+    background-color: $color-tundora;
+    color: $color-white;
+  }
+
+  &:active {
+    background-color: $color-tundora;
+    color: rgba($color-white, 0.3);
+  }
+}

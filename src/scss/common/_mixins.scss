@@ -1,0 +1,97 @@
+@mixin fonts($size, $height, $weight, $style, $color) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  font-style: $style;
+  color: $color;
+}
+
+@mixin resetMarginPadding() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin resetList() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin resetFont() {
+  @include fonts(0, 0, 400, normal, transparent);
+}
+
+@mixin catalog-section($icon-top, $icon-right, $bg-color, $icon-w, $icon-h, $icon-url) {
+  $padding-top: 25px;
+  $padding-bottom: 30px;
+  $grow-size: 5px;
+
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  background-color: $bg-color;
+
+  position: relative;
+
+  &:hover,
+  &:focus {
+    padding-bottom: $padding-bottom + $grow-size;
+    padding-top: $padding-top - $grow-size;
+    box-shadow: 0 -#{$grow-size} 0 0 $bg-color;
+
+    &::after {
+      top: $icon-top - $grow-size;
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: $icon-top;
+    right: $icon-right;
+
+    width: $icon-w;
+    height: $icon-h;
+    margin-left: auto;
+
+    background-color: $bg-color;
+    background-image: url($icon-url);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    opacity: 0.5;
+  }
+}
+
+@mixin waves($height) {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: $height;
+    background-color: $color-white;
+    //background-image: url("../img/waves.png");
+    background-image: url("../img/waves.svg");
+    background-repeat: repeat-x;
+    background-position: 0 0;
+  }
+}
+
+@mixin itemBlockShadowHover() {
+  box-shadow: 0 6px 10px 0 rgba($color-black, 0.1);
+}
+
+@mixin itemBlockShadowActive() {
+  box-shadow: 0 3px 5px 0 rgba($color-black, 0.1);
+}

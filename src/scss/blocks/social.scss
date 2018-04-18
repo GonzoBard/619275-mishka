@@ -1,0 +1,16 @@
+.social__list {
+  @include resetList();
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.social__item:nth-child(1) {
+  margin-right: 40px;
+}
+
+.social__item:nth-child(2) {
+  margin-right: 32px;
+}

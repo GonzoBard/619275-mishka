@@ -1,0 +1,50 @@
+.reviews {
+  width: 100%;
+  margin-top: 55px;
+  padding-bottom: 45px;
+
+  position: relative;
+
+  @include waves(6px);
+
+  blockquote {
+    @include resetMarginPadding();
+    margin-top: 24px;
+  }
+}
+
+.reviews__container {
+  margin-left: 28px;
+  margin-right: $indent-30;
+}
+
+.reviews__header {
+  @include resetMarginPadding();
+}
+
+.reviews__list {
+  @include resetList();
+  padding-left: 2px;
+}
+
+.reviews__text {
+  @include resetMarginPadding();
+  @include fonts(15px, 30px, 400, normal, $color-tundora);
+}
+
+.reviews__author {
+  margin-top: 27px;
+}
+
+.reviews__navigation {
+  margin-top: 29px;
+  margin-left: 2px;
+}
+
+.reviews__btn {
+  width: 99%;
+  margin-top: 38px;
+  margin-left: 2px;
+
+  text-align: center;
+}

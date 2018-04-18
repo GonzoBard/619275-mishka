@@ -1,0 +1,18 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-nav__item {
+  border-bottom: 1px solid $color-gallery;
+}
+
+.main-nav__new {
+  display: none;
+}
+
+.main-nav__sale {
+  display: none;
+}

@@ -1,0 +1,36 @@
+.video {
+  @include resetFont(); // высота строки(line-height) давала лишние +4px
+  position: relative;
+}
+
+.video__play {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  @include resetMarginPadding();
+
+  background-color: transparent;
+  background-image: url("../img/icon-video__play.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+
+  @include resetFont();
+
+  user-select: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline-width: 0;
+    background-image: url("../img/icon-video__play-hover.svg");
+  }
+
+  &:active {
+    background-image: url("../img/icon-video__play-active.svg");
+  }
+}

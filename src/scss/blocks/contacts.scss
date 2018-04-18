@@ -1,0 +1,100 @@
+.contacts {
+  width: 100%;
+  margin-top: 41px;
+  padding-bottom: 39px;
+
+  @include fonts(15px, 30px, 400, normal, $color-tundora);
+
+  h3 {
+    font-size: 18px;
+  }
+}
+
+.contacts__container {
+  margin-left: 28px;
+  margin-right: 30px;
+  box-sizing: border-box;
+}
+
+.contacts__header {
+  @include resetMarginPadding();
+}
+
+.contacts__table {
+  width: 100%;
+  margin-top: 17px;
+  margin-left: 1px;
+  border-spacing: 0;
+
+  td {
+    padding: 9px 0 21px;
+    vertical-align: top;
+  }
+}
+
+.contacts__param-name {
+  width: 78px;
+}
+
+.contacts__mail-link {
+  padding-bottom: 4px;
+  border-bottom: 1px solid $color-downy;
+  text-decoration: none;
+
+  &:visited {
+    color: $color-tundora;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-puerto-rico;
+    border-bottom-color: $color-puerto-rico;
+  }
+
+  &:active {
+    color: rgba($color-puerto-rico, 0.3);
+    border-bottom-color: rgba($color-puerto-rico, 0.3);
+  }
+}
+
+.contacts__address-value-wrap {
+  display: inline-block;
+  vertical-align: top;
+  width: 142px;
+}
+
+.contacts__map {
+  margin-top: 16px;
+  position: relative;
+}
+
+.contacts__pin-wrap {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  background-color: transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -33px;
+
+    display: block;
+    width: 67px;
+    height: 100px;
+
+    background-color: transparent;
+    background-image: url("../img/icon-contacts__map-pin.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.contacts__btn {
+  width: 99.3%;
+  margin-top: 39px;
+  margin-left: 2px;
+
+  text-align: center;
+}

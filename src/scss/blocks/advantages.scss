@@ -1,0 +1,92 @@
+.advantages {
+  width: 100%;
+  margin-top: 34px;
+}
+
+.advantages__container {
+  padding-left: 20px;
+  margin-right: $indent-30;
+}
+
+.advantages__header {
+  @include resetMarginPadding();
+  margin-left: 8px;
+}
+
+.advantages__list {
+  @include resetList();
+  margin-top: 2px;
+}
+
+.advantages__item {
+  display: inline-block;
+  vertical-align: top;
+
+  @include fonts(17px, 20px, 700, normal, $color-black);
+
+  &--environmentally-friendly-material {
+    width: 204px;
+    padding-top: 84px;
+    padding-left: 9px;
+
+    background-color: $color-white;
+    background-image: url("../img/icon-advantages__item--environmentally-friendly-material.svg");
+    background-repeat: no-repeat;
+    background-position: 18px 30px;
+  }
+
+  &--scandinavian-style-at-the-russian-price {
+    width: 210px;
+    padding-top: 84px;
+    padding-left: 9px;
+
+    background-color: $color-white;
+    background-image: url("../img/icon-advantages__item--scandinavian-style-at-the-russian-price.svg");
+    background-repeat: no-repeat;
+    background-position: 10px 30px;
+  }
+
+  &--increases-likes-on-photos {
+    width: 200px;
+    padding-top: 82px;
+    padding-left: 9px;
+
+    background-color: $color-white;
+    background-image: url("../img/icon-advantages__item--increases-likes-on-photos.svg");
+    background-repeat: no-repeat;
+    background-position: 17px 34px;
+  }
+
+  &--hand-tied-with-love-and-affection {
+    width: 221px;
+    padding-top: 84px;
+    padding-left: 10px;
+
+    background-color: $color-white;
+    background-image: url("../img/icon-advantages__item--hand-tied-with-love-and-affection.svg");
+    background-repeat: no-repeat;
+    background-position: 13px 32px;
+  }
+
+  &--support-of-domestic-manufacturer {
+    width: 260px;
+    padding-top: 82px;
+    padding-left: 10px;
+
+    background-color: $color-white;
+    background-image: url("../img/icon-advantages__item--support-of-domestic-manufacturer.svg");
+    background-repeat: no-repeat;
+    background-position: 4px 32px;
+  }
+
+  &--comes-in-gift-box {
+    width: 208px;
+    padding-top: 83px;
+    padding-left: 10px;
+
+    background-color: $color-white;
+    background-image: url("../img/icon-advantages__item--comes-in-gift-box.svg");
+    background-repeat: no-repeat;
+    background-position: 13px 31px;
+  }
+}

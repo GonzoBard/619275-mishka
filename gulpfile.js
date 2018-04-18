@@ -1,32 +1,87 @@
-"use strict";
+// npm i --save-dev gulp gulp-sass gulp-postcss autoprefixer gulp-clean-css gulp-rename run-sequence del browser-sync
 
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var plumber = require("gulp-plumber");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
+const gulp = require('gulp');
+const del = require('del');                              // удалить директорию, файл
+const autoprefixer = require('autoprefixer');            // https://github.com/postcss/autoprefixer#gulp
+const postcss = require('gulp-postcss');                 // здесь нужен для автопрефиксера
+const sass = require('gulp-sass');                       // трансляция SCSS -> CSS
+const cleancss = require('gulp-clean-css');              // минификация CSS
+const rename = require('gulp-rename');                   // переименовать директорию, файл
+const runsequence = require('run-sequence');             // некоторые задачи надо выполнять последовательно
+const browsersync = require('browser-sync').create();    // сервер с поддержкой автообновления при изменении файлов
 
-gulp.task("style", function() {
-  gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(gulp.dest("source/css"))
-    .pipe(server.stream());
+const paths = {
+  src: {
+    fonts: './src/fonts/*.{woff2,woff}',
+    html: './src/*.html',
+    img: './src/img/**/*.{jpg,png,svg}',
+    js: './src/js/**/*.js',
+    css: './src/css',
+    scss: './src/scss/style.scss',
+    scssforwatch: './src/scss/**/*.scss'
+  },
+  output: {
+    fonts: './build/fonts',
+    html: './build',
+    img: './build/img',
+    js: './build/js',
+    css: './build/css',
+    cssName: 'bundle.min.css',
+  },
+  build: './build'
+};
+
+gulp.task('clean', () => {
+  return del(paths.build, {force: true});
 });
 
-gulp.task("serve", ["style"], function() {
-  server.init({
-    server: "source/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
+gulp.task('fonts', () => {
+  return gulp.src(paths.src.fonts)
+    .pipe(gulp.dest(paths.output.fonts));
+});
 
-  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("source/*.html").on("change", server.reload);
+gulp.task('html', () => {
+  return gulp.src(paths.src.html)
+    .pipe(gulp.dest(paths.output.html));
+});
+
+gulp.task('img', () => {
+  return gulp.src(paths.src.img)
+    .pipe(gulp.dest(paths.output.img));
+});
+
+gulp.task('js', () => {
+  return gulp.src(paths.src.js)
+    .pipe(gulp.dest(paths.output.js))
+    .pipe(browsersync.stream());
+});
+
+gulp.task('css', () => {
+  return gulp.src(paths.src.scss)
+    .pipe(sass())                                 // SCSS -> CSS
+    .pipe(postcss([autoprefixer({                 // префиксы
+      browsers: ['last 2 versions', 'not ie 10', 'Firefox ESR']
+    })]))
+    .pipe(cleancss({                              // минификация
+      level: {1: {specialComments: false}}
+    }))
+    .pipe(rename(paths.output.cssName))
+    .pipe(gulp.dest(paths.src.css))               // чтобы при разработке путь до bundle также был валидным
+    .pipe(gulp.dest(paths.output.css))
+    .pipe(browsersync.stream());
+});
+
+gulp.task('syncserver', () => {
+  browsersync.init({ // all init options: https://browsersync.io/docs/options
+    server: {
+      baseDir: paths.build
+    }
+  });
+  gulp.watch(paths.src.html, ['html']).on('change', browsersync.reload);
+  gulp.watch(paths.src.js, ['js']);
+  gulp.watch(paths.src.scssforwatch, ['css']);
+});
+
+gulp.task('build', () => {
+  runsequence('clean', ['fonts', 'html', 'img', 'js', 'css', 'syncserver']);
 });

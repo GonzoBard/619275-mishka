@@ -1,0 +1,35 @@
+.page-footer {
+  width: 100%;
+  padding: 26px 30px 30px;
+
+  background-color: $color-seashell;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.page-footer__social {
+  margin-left: 57px;
+}
+
+.page-footer__copyright {
+  $left: 37px;
+  margin-top: 47px;
+  margin-left: $left;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -21px;
+    left: -$left;
+
+    width: 260px;
+    height: 1px;
+    background-color: $color-mercury;
+  }
+}

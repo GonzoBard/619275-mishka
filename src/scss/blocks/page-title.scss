@@ -1,0 +1,42 @@
+.page-title {
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 53px;
+
+  background-color: $color-alabaster;
+
+  position: relative;
+  z-index: 100;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.page-title--index {
+  padding-top: 48px;
+  padding-bottom: 99px;
+
+  .page-title__header {
+    width: 217px;
+  }
+}
+
+.page-title__header {
+  text-align: center;
+  z-index: 300;
+}
+
+.page-title__bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  background-color: $color-alabaster;
+  background-image: url("../img/page-title__bg-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% -18px;
+}

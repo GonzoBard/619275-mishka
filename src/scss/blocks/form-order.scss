@@ -1,0 +1,40 @@
+.form-order {
+  padding-top: 22px;
+  padding-bottom: 55px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.form-order__intro {
+  @include resetMarginPadding();
+  padding-left: 30px;
+  padding-right: $indent-30;
+
+  @include fonts(13px, 24px, 400, normal, $color-tundora);
+}
+
+.form-order__form {
+  padding-top: 24px;
+  padding-left: 29px;
+  padding-right: 30px;
+}
+
+.form-order__info-required {
+  @include resetMarginPadding();
+  margin-top: 3px;
+
+  @include fonts(14px, 16px, 400, normal, $color-tundora);
+}
+
+.form-order__btn {
+  width: 100%;
+  margin-top: 31px;
+  margin-left: 1px;
+  padding-top: 17px;
+  padding-bottom: 15px;
+
+  @include fonts(17px, 16px, 700, normal, $color-tundora);
+}

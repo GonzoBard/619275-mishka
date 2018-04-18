@@ -44,7 +44,7 @@
 
         <li class="catalog-item  catalog__item">
           <a class="catalog-item__pic" href="#" aria-label="Подробное описание товара «Зайчик-попрыгайчик»">
-            <img src="img/catalog-item__pic-bunny-jump.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
+            <img src="img/catalog-item__pic-bunny-jump-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
           </a>
           <div class="catalog-item__wrap">
             <div class="catalog-item__info">
@@ -60,7 +60,7 @@
 
         <li class="catalog-item  catalog__item">
           <a class="catalog-item__pic" href="#" aria-label="Подробное описание товара «Корзинка для белья»">
-            <img src="img/catalog-item__pic-laundry-basket.jpg" alt="Корзинка для белья" width="260" height="195">
+            <img src="img/catalog-item__pic-laundry-basket-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
           </a>
           <div class="catalog-item__wrap">
             <div class="catalog-item__info">
@@ -76,7 +76,7 @@
 
         <li class="catalog-item  catalog__item">
           <a class="catalog-item__pic" href="#" aria-label="Подробное описание товара «Большая корзинка для игрушек»">
-            <img src="img/catalog-item__pic-large-toy-basket.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
+            <img src="img/catalog-item__pic-large-toy-basket-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
           </a>
           <div class="catalog-item__wrap">
             <div class="catalog-item__info">
@@ -94,13 +94,15 @@
     </section>
 
     <section class="production-process">
-      <h3>Процесс производства</h3>
-      <div class="video">
-        <img class="video__flashback" src="img/video__flashback--mobile.jpg" alt="" width="260" height="150">
+      <h3 class="production-process__header">Процесс производства</h3>
+      <div class="video  production-process__video">
+        <img class="video__flashback" src="img/video__flashback-mobile@1x.jpg" alt="" width="260" height="150">
         <button class="video__play">Play</button>
       </div>
-      <p class="production-process__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-      <a class="btn" href="order-form.html">Сделать заказ</a>
+      <div class="production-process__container">
+        <p class="production-process__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a class="btn  production-process__btn" href="order-form.html">Сделать заказ</a>
+      </div>
     </section>
 
   </div>
@@ -109,16 +111,16 @@
 
 <footer class="page-footer">
 
-  <section class="social">
+  <section class="social  page-footer__social">
     <h2 class="visually-hidden">«Мишка» в социальных сетях</h2>
     <ul class="social__list">
       <li class="social__item"><a class="btn-social btn-social--instagram" href="#">Instagram</a></li>
-      <li class="social__item"><a class="btn-social btn-social--twitter" href="#">Twitter</a></li>
       <li class="social__item"><a class="btn-social btn-social--facebook" href="#">Facebook</a></li>
+      <li class="social__item"><a class="btn-social btn-social--twitter" href="#">Twitter</a></li>
     </ul>
   </section>
 
-  <section class="copyright">
+  <section class="copyright  page-footer__copyright">
     <h2 class="visually-hidden">Copyright</h2>
     <a class="copyright__a" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на лендинг интенсива «Профессиональный HTML и CSS, уровень 2»" target="_blank">
       Разработано
