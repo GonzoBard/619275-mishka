@@ -16,8 +16,6 @@
 .form-order__list {
   @include resetMarginPadding();
   @include resetList();
-}
 
-.form-group-order:not(:first-child){
-  margin-top: 44px;
+  margin-top: 24px;
 }

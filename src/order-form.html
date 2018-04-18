@@ -55,37 +55,37 @@
           </ul>
         </li>
 
-        <li class="form-group-order" aria-label="Группа «Цвет»">
+        <li class="form-group-order  form-group-order--color" aria-label="Группа «Цвет»">
           <ul class="form-group-order__list" aria-label="Список элементов группы">
             <li class="form-group-order__title">Цвет</li>
             <li class="form-group-order__item">
-              <input type="checkbox" name="color-white" id="form-group-order__item-color--white" checked>
+              <input class="visually-hidden" type="checkbox" name="color-white" id="form-group-order__item-color--white" checked>
               <label for="form-group-order__item-color--white">Белый</label>
             </li>
             <li class="form-group-order__item">
-              <input type="checkbox" name="color-gray" id="form-group-order__item-color--gray" checked>
+              <input class="visually-hidden" type="checkbox" name="color-gray" id="form-group-order__item-color--gray" checked>
               <label for="form-group-order__item-color--gray">Серый</label>
             </li>
             <li class="form-group-order__item">
-              <input type="checkbox" name="color-tiffany" id="form-group-order__item-color--tiffany">
+              <input class="visually-hidden" type="checkbox" name="color-tiffany" id="form-group-order__item-color--tiffany">
               <label for="form-group-order__item-color--tiffany">«Тиффани»</label>
             </li>
             <li class="form-group-order__item">
-              <input type="checkbox" name="color-black" id="form-group-order__item-color--black">
+              <input class="visually-hidden" type="checkbox" name="color-black" id="form-group-order__item-color--black">
               <label for="form-group-order__item-color--black">Черный</label>
             </li>
             <li class="form-group-order__item">
-              <input type="checkbox" name="color-pink" id="form-group-order__item-color--pink">
+              <input class="visually-hidden" type="checkbox" name="color-pink" id="form-group-order__item-color--pink">
               <label for="form-group-order__item-color--pink">Розовый</label>
             </li>
             <li class="form-group-order__item">
-              <input type="checkbox" name="color-orange" id="form-group-order__item-color--orange">
+              <input class="visually-hidden" type="checkbox" name="color-orange" id="form-group-order__item-color--orange">
               <label for="form-group-order__item-color--orange">Оранжевый</label>
             </li>
           </ul>
         </li>
 
-        <li class="form-group-order" aria-label="Группа «ФИО»">
+        <li class="form-group-order  form-group-order--fio" aria-label="Группа «ФИО»">
           <ul class="form-group-order__list" aria-label="Список элементов группы">
             <li class="form-group-order__title">ФИО</li>
             <li class="form-group-order__item">
@@ -103,15 +103,22 @@
           </ul>
         </li>
 
-        <li class="form-group-order" aria-label="Группа «Контакты»">
+        <li class="form-group-order  form-group-order--phone" aria-label="Группа «Телефоны»">
           <ul class="form-group-order__list" aria-label="Список элементов группы">
+            <li class="form-group-order__title">Тел</li>
             <li class="form-group-order__item">
-              <label for="form-group-order__item-contacts--phone">Тел</label>
-              <input type="tel" name="contacts-phone" placeholder="+7 XXX XX XX*" id="form-group-order__item-contacts--phone" required>
+              <label class="visually-hidden" for="form-group-order__item-phone">Телефон</label>
+              <input type="tel" name="phone" placeholder="+7 XXX XX XX*" id="form-group-order__item-phone" required>
             </li>
+          </ul>
+        </li>
+
+        <li class="form-group-order  form-group-order--email" aria-label="Группа «Электронная почта»">
+          <ul class="form-group-order__list" aria-label="Список элементов группы">
+            <li class="form-group-order__title">E-mail</li>
             <li class="form-group-order__item">
-              <label for="form-group-order__item-contacts--email">E-mail</label>
-              <input type="email" name="contacts-email" placeholder="Ваш Email*" id="form-group-order__item-contacts--email" required>
+              <label class="visually-hidden" for="form-group-order__item-email">E-mail</label>
+              <input type="email" name="email" placeholder="Ваш Email*" id="form-group-order__item-email" required>
             </li>
           </ul>
         </li>
