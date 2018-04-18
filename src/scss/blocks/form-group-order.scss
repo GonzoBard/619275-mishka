@@ -8,7 +8,8 @@
     opacity: 0.3;
   }
 
-  input {
+  input,
+  textarea {
     @include fonts(17px, 18px, 400, normal, $color-tundora);
   }
 
@@ -229,6 +230,13 @@
     padding-bottom: 16px;
     border: none;
     border-bottom: 2px solid $color-black;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline-width: 0;
+      border-color: $color-downy-light;
+    }
   }
 }
 
@@ -237,7 +245,7 @@
   padding-top: 21px;
 
   .form-group-order__title {
-    margin-bottom: 23px;
+    margin-bottom: 18px;
     padding-left: 2px;
   }
 
@@ -260,10 +268,24 @@
 
   input {
     width: 100%;
-    padding-top: 0;
+    padding-top: 5px;
     padding-bottom: 16px;
+    padding-right: 40px;
     border: none;
     border-bottom: 2px solid $color-black;
+
+    background-color: $color-white;
+    background-image: url("../img/icon-form-group-order__item-contacts--phone.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 6px) 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline-width: 0;
+      border-color: $color-downy-light;
+      background-image: url("../img/icon-form-group-order__item-contacts--phone-hover.svg");
+    }
   }
 }
 
@@ -272,7 +294,7 @@
   padding-top: 22px;
 
   .form-group-order__title {
-    margin-bottom: 23px;
+    margin-bottom: 18px;
     padding-left: 3px;
   }
 
@@ -296,10 +318,23 @@
 
   input {
     width: 100%;
-    padding-top: 0;
+    padding-top: 5px;
     padding-bottom: 16px;
     border: none;
     border-bottom: 2px solid $color-black;
+
+    background-color: $color-white;
+    background-image: url("../img/icon-form-group-order__item-contacts--email.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 2px) 5px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline-width: 0;
+      border-color: $color-downy-light;
+      background-image: url("../img/icon-form-group-order__item-contacts--email-hover.svg");
+    }
   }
 }
 
@@ -320,6 +355,13 @@
     margin-left: 1px;
     padding: 15px 14px;
     border: 2px solid $color-black;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline-width: 0;
+      border-color: $color-downy-light;
+    }
   }
 }
 
