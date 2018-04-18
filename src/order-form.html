@@ -43,7 +43,7 @@
 
         <li class="form-group-order  form-group-order--type" aria-label="Группа «Тип»">
           <ul class="form-group-order__list" aria-label="Список элементов группы">
-            <li class="form-group-order__title">Тип</li>
+            <li class="form-group-order__title"><p class="form-group-order__title-text">Тип</p></li>
             <li class="form-group-order__item">
               <input class="visually-hidden" type="radio" name="order-type" value="accessory-for-interior" id="form-group-order__item-order-type--accessory-for-interior" checked>
               <label for="form-group-order__item-order-type--accessory-for-interior">Аксессуар для интерьера</label>
@@ -57,7 +57,7 @@
 
         <li class="form-group-order  form-group-order--color" aria-label="Группа «Цвет»">
           <ul class="form-group-order__list" aria-label="Список элементов группы">
-            <li class="form-group-order__title">Цвет</li>
+            <li class="form-group-order__title"><p class="form-group-order__title-text">Цвет</p></li>
             <li class="form-group-order__item">
               <input class="visually-hidden" type="checkbox" name="color-white" id="form-group-order__item-color--white" checked>
               <label for="form-group-order__item-color--white">Белый</label>
@@ -87,7 +87,7 @@
 
         <li class="form-group-order  form-group-order--fio" aria-label="Группа «ФИО»">
           <ul class="form-group-order__list" aria-label="Список элементов группы">
-            <li class="form-group-order__title">ФИО</li>
+            <li class="form-group-order__title"><p class="form-group-order__title-text">ФИО</p></li>
             <li class="form-group-order__item">
               <label for="form-group-order__item-full-name--first-name">Имя:</label>
               <input type="text" name="full-name-first-name" placeholder="Введите ваше имя*" required id="form-group-order__item-full-name--first-name">
@@ -105,7 +105,7 @@
 
         <li class="form-group-order  form-group-order--phone" aria-label="Группа «Телефоны»">
           <ul class="form-group-order__list" aria-label="Список элементов группы">
-            <li class="form-group-order__title">Тел</li>
+            <li class="form-group-order__title"><p class="form-group-order__title-text">Тел</p></li>
             <li class="form-group-order__item">
               <label class="visually-hidden" for="form-group-order__item-phone">Телефон</label>
               <input type="tel" name="phone" placeholder="+7 XXX XX XX*" id="form-group-order__item-phone" required>
@@ -115,7 +115,7 @@
 
         <li class="form-group-order  form-group-order--email" aria-label="Группа «Электронная почта»">
           <ul class="form-group-order__list" aria-label="Список элементов группы">
-            <li class="form-group-order__title">E-mail</li>
+            <li class="form-group-order__title"><p class="form-group-order__title-text">E-mail</p></li>
             <li class="form-group-order__item">
               <label class="visually-hidden" for="form-group-order__item-email">E-mail</label>
               <input type="email" name="email" placeholder="Ваш Email*" id="form-group-order__item-email" required>
@@ -123,11 +123,12 @@
           </ul>
         </li>
 
-        <li class="form-group-order" aria-label="Группа «Дополнительно»">
+        <li class="form-group-order  form-group-order--extra" aria-label="Группа «Дополнительно»">
           <ul class="form-group-order__list" aria-label="Список элементов группы">
+            <li class="form-group-order__title"><p class="form-group-order__title-text">Доп</p></li>
             <li class="form-group-order__item">
-              <label for="form-group-order__item-extra">Доп</label>
-              <textarea class="form-group-order__extra" name="extra" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу" id="form-group-order__item-extra"></textarea>
+              <label class="visually-hidden" for="form-group-order__item-extra">Дополнительно</label>
+              <textarea name="extra" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу" id="form-group-order__item-extra"></textarea>
             </li>
           </ul>
         </li>
@@ -135,7 +136,7 @@
       </ul>
 
       <p class="form-order__info">*Поля обязательны для заполнения</p>
-      <button class="btn">Отправить заказ</button>
+      <button class="btn  form-order__btn">Отправить заказ</button>
     </form>
 
   </section>

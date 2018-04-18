@@ -1,3 +1,7 @@
+.form-order {
+  padding-bottom: 55px;
+}
+
 .form-order__intro {
   @include resetMarginPadding();
   margin-top: 22px;
@@ -8,7 +12,6 @@
 }
 
 .form-order__form {
-  //width: 100%;
   margin-left: 29px;
   margin-right: 30px;
 }
@@ -18,4 +21,26 @@
   @include resetList();
 
   margin-top: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.form-order__info {
+  @include resetMarginPadding();
+  margin-top: 3px;
+
+  @include fonts(14px, 16px, 400, normal, $color-tundora);
+}
+
+.form-order__btn {
+  width: 100%;
+  margin-top: 31px;
+  margin-left: 1px;
+  padding-top: 17px;
+  padding-bottom: 15px;
+
+  @include fonts(17px, 16px, 700, normal, $color-tundora);
 }
