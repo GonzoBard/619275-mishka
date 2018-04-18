@@ -1,4 +1,5 @@
 .form-order {
+  padding-top: 22px;
   padding-bottom: 55px;
 
   display: flex;
@@ -9,9 +10,8 @@
 
 .form-order__intro {
   @include resetMarginPadding();
-  margin-top: 22px;
-  margin-left: 30px;
-  margin-right: $indent-30;
+  padding-left: 30px;
+  padding-right: $indent-30;
 
   @include fonts(13px, 24px, 400, normal, $color-tundora);
 }
@@ -22,7 +22,7 @@
   padding-right: 30px;
 }
 
-.form-order__info {
+.form-order__info-required {
   @include resetMarginPadding();
   margin-top: 3px;
 
