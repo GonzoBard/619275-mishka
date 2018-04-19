@@ -8,6 +8,18 @@ function MainNavigationMenu() {
   var siteNavigation = document.getElementById("site-nav");
   var hideClassName = "cut-from-content";
 
+  this.whatToDo = function () {
+    // 1) Меню всегда открыто, если ширина экрана больше 320px
+    // 2) Иначе смотреть в localStorage
+    // 3) Если что-то не так с localStorage, то меню открыто
+    // 4) Иначе применить значение из localStorage
+    return this.isScreenMoreThan320() || this.getValueFromStorage();
+  };
+
+  this.init = function () {
+    this.setState(this.whatToDo());
+  };
+
   this.setState = function (value) {
     isOpen = value;
     if (isOpen) {
@@ -34,18 +46,8 @@ function MainNavigationMenu() {
     }
   };
 
-  this.init = function () {
-    this.setState(this.whatDo());
-  };
-
   this.screenResized = function () {
-    this.changeState(this.whatDo(), false);
-  };
-
-  this.whatDo = function () {
-    // 1) Если ширина экрана больше 320px, то меню всегда открыто
-    // 2) в противном случае смотреть значение в localStorage
-    return this.isScreenMoreThan320() || this.getValueFromStorage();
+    this.changeState(this.whatToDo(), false);
   };
 
   this.isScreenMoreThan320 = function () {
@@ -55,7 +57,9 @@ function MainNavigationMenu() {
         btnContainer.classList.add(hideClassName);
       }
     } else {
-      btnContainer.classList.remove(hideClassName);
+      if (btnContainer.classList.contains(hideClassName)) {
+        btnContainer.classList.remove(hideClassName);
+      }
     }
     return result;
   };
@@ -102,9 +106,8 @@ function MainNavigationMenu() {
         storage.length !== 0;
     }
   };
-
-  this.init();
 }
 
 var mainNavigationMenu = new MainNavigationMenu();
+mainNavigationMenu.init();
 window.addEventListener("resize", mainNavigationMenu.screenResized.bind(mainNavigationMenu));
