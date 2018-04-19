@@ -110,4 +110,5 @@ function MainNavigationMenu() {
 
 var mainNavigationMenu = new MainNavigationMenu();
 mainNavigationMenu.init();
+
 window.addEventListener("resize", mainNavigationMenu.screenResized.bind(mainNavigationMenu));
