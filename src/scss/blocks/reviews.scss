@@ -8,7 +8,7 @@
   @include waves(6px);
 
   blockquote {
-    @include resetMarginPadding();
+    @include reset-margin-padding();
     margin-top: 24px;
   }
 }
@@ -19,11 +19,11 @@
 }
 
 .reviews__header {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
 }
 
 .reviews__list {
-  @include resetList();
+  @include reset-list();
   padding-left: 2px;
 
   display: flex;
@@ -34,7 +34,7 @@
 }
 
 .reviews__text {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   @include fonts(15px, 30px, 400, normal, $color-tundora);
 }
 

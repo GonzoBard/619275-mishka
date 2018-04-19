@@ -17,7 +17,7 @@
 }
 
 .contacts__header {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
 }
 
 .contacts__table {

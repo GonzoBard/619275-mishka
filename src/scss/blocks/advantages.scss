@@ -9,12 +9,12 @@
 }
 
 .advantages__header {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   margin-left: 8px;
 }
 
 .advantages__list {
-  @include resetList();
+  @include reset-list();
   margin-top: 2px;
 }
 

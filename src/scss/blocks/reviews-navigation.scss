@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
   background-position: 48% 50%;
 
-  @include resetFont();
+  @include reset-font();
 
   cursor: pointer;
   outline-width: 0;

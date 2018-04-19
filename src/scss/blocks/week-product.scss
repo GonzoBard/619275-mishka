@@ -14,11 +14,11 @@
 }
 
 .week-product__header {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
 }
 
 .week-product__label {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   margin-top: 5px;
 
   @include fonts(17px, 20px, 700, normal, $color-downy);
@@ -62,7 +62,7 @@
 .week-product__price {
   text-align: center;
 
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   @include fonts(17px, 24px, 700, normal, $color-tundora);
 }
 

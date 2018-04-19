@@ -9,16 +9,16 @@
 
   &:hover,
   &:focus {
-    @include itemBlockShadowHover();
+    @include catalog-item-shadow-hover();
   }
 
   &:active {
-    @include itemBlockShadowActive();
+    @include catalog-item-shadow-active();
   }
 }
 
 .production-process__header {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   margin-top: 25px;
   padding-bottom: 23px;
   padding-left: 89px;
@@ -40,7 +40,7 @@
 }
 
 .production-process__intro {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   margin-top: 27px;
 
   @include fonts(13px, 24px, 400, normal, $color-tundora);

@@ -9,7 +9,7 @@
 }
 
 .form-add-product__list {
-  @include resetList();
+  @include reset-list();
   margin-top: 25px;
 
   display: flex;

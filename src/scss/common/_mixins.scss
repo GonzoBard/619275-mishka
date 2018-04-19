@@ -1,3 +1,21 @@
+@mixin mobile-media() {
+  @media (min-width: $mobile-grid-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet-media() {
+  @media (min-width: $tablet-grid-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop-media() {
+  @media (min-width: $desktop-grid-breakpoint) {
+    @content;
+  }
+}
+
 @mixin fonts($size, $height, $weight, $style, $color) {
   font-size: $size;
   line-height: $height;
@@ -6,18 +24,18 @@
   color: $color;
 }
 
-@mixin resetMarginPadding() {
+@mixin reset-margin-padding() {
   margin: 0;
   padding: 0;
 }
 
-@mixin resetList() {
+@mixin reset-list() {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-@mixin resetFont() {
+@mixin reset-font() {
   @include fonts(0, 0, 400, normal, transparent);
 }
 
@@ -71,6 +89,14 @@
   }
 }
 
+@mixin catalog-item-shadow-hover() {
+  box-shadow: 0 6px 10px 0 rgba($color-black, 0.1);
+}
+
+@mixin catalog-item-shadow-active() {
+  box-shadow: 0 3px 5px 0 rgba($color-black, 0.1);
+}
+
 @mixin waves($height) {
   &::after {
     content: "";
@@ -86,12 +112,4 @@
     background-repeat: repeat-x;
     background-position: 0 0;
   }
-}
-
-@mixin itemBlockShadowHover() {
-  box-shadow: 0 6px 10px 0 rgba($color-black, 0.1);
-}
-
-@mixin itemBlockShadowActive() {
-  box-shadow: 0 3px 5px 0 rgba($color-black, 0.1);
 }

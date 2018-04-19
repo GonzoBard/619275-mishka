@@ -9,7 +9,7 @@
 }
 
 .catalog__list {
-  @include resetList();
+  @include reset-list();
 }
 
 .catalog__item {

@@ -9,7 +9,7 @@
 }
 
 .form-order__intro {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   padding-left: 30px;
   padding-right: $indent-30;
 
@@ -23,7 +23,7 @@
 }
 
 .form-order__info-required {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   margin-top: 3px;
 
   @include fonts(14px, 16px, 400, normal, $color-tundora);

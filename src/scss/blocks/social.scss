@@ -1,5 +1,5 @@
 .social__list {
-  @include resetList();
+  @include reset-list();
 
   display: flex;
   flex-direction: row;

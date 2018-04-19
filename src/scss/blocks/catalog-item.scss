@@ -10,13 +10,13 @@
   &:hover,
   &:focus {
     .catalog-item__wrap {
-      @include itemBlockShadowHover();
+      @include catalog-item-shadow-hover();
     }
   }
 
   &:active {
     .catalog-item__wrap {
-      @include itemBlockShadowActive();
+      @include catalog-item-shadow-active();
     }
   }
 }
@@ -38,7 +38,7 @@
 }
 
 .catalog-item__parameters {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   margin-top: 5px;
 
   @include fonts(13px, 30px, 400, normal, $color-tundora);
@@ -57,7 +57,7 @@
 }
 
 .catalog-item__price {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   @include fonts(15px, 24px, 700, normal, $color-black);
 }
 
@@ -66,7 +66,7 @@
   width: 21px;
   height: 18px;
 
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   margin-top: -1px;
   margin-left: auto;
   margin-right: -3px;
@@ -76,7 +76,7 @@
   background-repeat: no-repeat;
   background-position: center center;
 
-  @include resetFont();
+  @include reset-font();
 
   border: none;
   user-select: none;

@@ -20,8 +20,8 @@
 }
 
 .form-group-order__list {
-  @include resetMarginPadding();
-  @include resetList();
+  @include reset-margin-padding();
+  @include reset-list();
 
   display: flex;
   flex-direction: column;
@@ -53,7 +53,7 @@
 }
 
 .form-group-order__title-text {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   @include fonts(17px, 16px, 700, normal, $color-downy);
   text-transform: uppercase;
 }
