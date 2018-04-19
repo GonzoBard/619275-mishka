@@ -7,6 +7,7 @@
 
 .main-nav__item {
   border-bottom: 1px solid $color-gallery;
+  position: relative;
 }
 
 .main-nav__new {
@@ -15,4 +16,34 @@
 
 .main-nav__sale {
   display: none;
+}
+
+.main-nav__btn-toggle {
+  border: none;
+  background-color: $color-white;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @include resetFont();
+
+  user-select: none;
+  cursor: pointer;
+
+  position: absolute;
+
+  &--close {
+    top: 29px;
+    right: 30px;
+    width: 21px;
+    height: 20px;
+    background-image: url("../img/icon-main-nav__item-close.svg");
+  }
+
+  &--open {
+    top: 32px;
+    right: 32px;
+    width: 20px;
+    height: 14px;
+    background-image: url("../img/icon-main-nav__item-open.svg");
+  }
 }
