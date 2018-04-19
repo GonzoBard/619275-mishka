@@ -5,6 +5,11 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 35px;
 }
 
 .social__item:nth-child(1) {
