@@ -1,0 +1,25 @@
+.a {
+  @include fonts(17px, 24px, 700, normal, $color-black);
+  text-decoration: none;
+
+  cursor: pointer;
+  user-select: none;
+
+  &:hover,
+  &:focus {
+    outline-width: 0;
+    color: rgba($color-black, 0.6);
+  }
+
+  &:active {
+    color: rgba($color-black, 0.3);
+  }
+
+  &--another-from-styleguide {
+    @include fonts(15px, 24px, 700, normal, $color-black);
+  }
+
+  &--copyright {
+    @include fonts(19px, 18px, 700, normal, $color-black);
+  }
+}

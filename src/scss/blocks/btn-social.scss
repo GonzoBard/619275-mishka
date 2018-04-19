@@ -1,0 +1,47 @@
+.btn-social {
+  display: inline-block;
+  vertical-align: middle;
+  width: 23px;
+  height: 28px;
+
+  border: none;
+  background-color: $color-seashell;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+
+  @include fonts(0, 0, 400, normal, transparent);
+
+  user-select: none;
+  outline-width: 0;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.btn-social--instagram {
+  background-image: url("../img/icon-btn-social--instagram.svg");
+
+  &:hover,
+  &:focus {
+    background-image: url("../img/icon-btn-social--instagram-hover.svg");
+  }
+}
+
+.btn-social--twitter {
+  background-image: url("../img/icon-btn-social--twitter.svg");
+
+  &:hover,
+  &:focus {
+    background-image: url("../img/icon-btn-social--twitter-hover.svg");
+  }
+}
+
+.btn-social--facebook {
+  background-image: url("../img/icon-btn-social--facebook.svg");
+
+  &:hover,
+  &:focus {
+    background-image: url("../img/icon-btn-social--facebook-hover.svg");
+  }
+}

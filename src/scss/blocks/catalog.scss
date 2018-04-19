@@ -1,0 +1,18 @@
+.catalog {
+  margin-top: 30px;
+}
+
+.catalog__container {
+  margin-left: $indent-30;
+  margin-right: $indent-30;
+  margin-bottom: 58px;
+}
+
+.catalog__list {
+  @include resetList();
+}
+
+.catalog__item {
+  margin-bottom: 30px;
+}
+

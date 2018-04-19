@@ -1,0 +1,14 @@
+.page-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  h2 {
+    @include fonts(27px, 30px, 700, normal, $color-diesel);
+  }
+
+  h3 {
+    @include fonts(25px, 30px, 700, normal, $color-black);
+  }
+}

@@ -1,0 +1,31 @@
+.form-group-add-product {
+  label {
+    display: inline-block;
+    vertical-align: middle;
+    width: 82px;
+    height: 52px;
+
+    border: 2px solid rgba($color-tundora, 0.1);
+
+    @include fonts(17px, 52px, 700, normal, $color-tundora);
+    text-align: center;
+    text-transform: uppercase;
+
+    user-select: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      outline-width: 0;
+      border-color: rgba($color-tundora, 0.3);
+    }
+
+    &:active {
+      border-color: $color-downy;
+    }
+  }
+
+  input:checked ~ label {
+    border-color: $color-downy;
+  }
+}

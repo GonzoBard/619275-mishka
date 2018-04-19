@@ -1,0 +1,44 @@
+.copyright {
+  padding-top: 7px;
+  padding-bottom: 2px;
+}
+
+.copyright__a {
+  @include fonts(19px, 18px, 700, normal, $color-black);
+  text-decoration: none;
+
+  cursor: pointer;
+  user-select: none;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -57px;
+
+    width: 27px;
+    height: 34px;
+    margin-left: 29px;
+
+    background-color: transparent;
+    background-image: url("../img/copyright__logo.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-clip: border-box;
+  }
+
+  &:hover,
+  &:focus {
+    outline-width: 0;
+
+    &::after {
+      background-image: url("../img/copyright__logo-hover.svg");
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

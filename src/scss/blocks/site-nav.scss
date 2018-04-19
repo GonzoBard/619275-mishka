@@ -1,0 +1,42 @@
+.site-nav {
+  @include resetList();
+  width: 100%;
+}
+
+.site-nav__item {
+  padding-left: $indent-30;
+  padding-top: 26px;
+  padding-bottom: 28px;
+}
+
+.site-nav__link {
+  padding-left: 45px;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.site-nav__link--search {
+  background-color: $color-white;
+  background-image: url("../img/icon-site-nav__item-search.svg");
+  background-repeat: no-repeat;
+  background-position: 2px 5px;
+
+  &:hover,
+  &:focus {
+    background-image: url("../img/icon-site-nav__item-search-hover.svg");
+  }
+}
+
+.site-nav__link--basket {
+  background-color: $color-white;
+  background-image: url("../img/icon-site-nav__item-basket.svg");
+  background-repeat: no-repeat;
+  background-position: 0 4px;
+
+  &:hover,
+  &:focus {
+    background-image: url("../img/icon-site-nav__item-basket-hover.svg");
+  }
+}
