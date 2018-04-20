@@ -48,6 +48,10 @@
   }
 }
 
+/*
+  GRID
+*/
+
 @include tablet-media {
   .main-nav {
     position: relative;
@@ -112,14 +116,12 @@
   .main-nav__catalog {
     order: 1;
     position: static;
-
     border-bottom: 1px solid $color-gallery;
   }
 
   .main-nav__order {
     order: 2;
     position: static;
-
     border-bottom: 1px solid $color-gallery;
     border-left: 1px solid $color-gallery;
   }
