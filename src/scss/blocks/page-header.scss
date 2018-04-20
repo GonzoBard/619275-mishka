@@ -47,6 +47,6 @@
 
 @include media-desktop {
   .page-header__info {
-    right: $indent-tablet * 2;
+    right: $indent-desktop;
   }
 }

@@ -46,10 +46,83 @@
   }
 
   &--accessory-for-interior {
-    @include catalog-section(23px, 36px, $color-viking, 40px, 62px, "../img/icon-catalog-sections__item-bedside-night-light.svg");
+    @include catalog-section(30px, 23px, 36px, $color-viking, 40px, 62px, "../img/icon-catalog-sections__item-bedside-night-light.svg");
   }
 
   &--toy-for-children {
-    @include catalog-section(21px, 27px, $color-puerto-rico, 60px, 60px, "../img/icon-catalog-sections__item-lego.svg");
+    @include catalog-section(30px, 21px, 27px, $color-puerto-rico, 60px, 60px, "../img/icon-catalog-sections__item-lego.svg");
+  }
+}
+
+/*
+  GRID
+*/
+
+@include media-tablet {
+  .catalog-sections {
+    margin-top: -115px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2000;
+      top: calc(100% - 24px);
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 24px;
+      background-color: transparent;
+      background-image: url("../img/wave-catalog-section-tablet.svg");
+      background-repeat: repeat-x;
+      background-position: 0 0;
+    }
+  }
+
+  .catalog-sections__list {
+    padding-right: $indent-tablet;
+    padding-left: $indent-tablet;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .catalog-sections__a {
+    @include fonts(20px, 30px, 700, normal, $color-white);
+
+    &--accessory-for-interior {
+      @include catalog-section(40px, 23px, 36px, $color-viking, 40px, 62px, "../img/icon-catalog-sections__item-bedside-night-light.svg");
+    }
+
+    &--toy-for-children {
+      @include catalog-section(40px, 21px, 27px, $color-puerto-rico, 60px, 60px, "../img/icon-catalog-sections__item-lego.svg");
+    }
+  }
+}
+
+@include media-desktop {
+  .catalog-sections {
+    margin-top: -115px;
+
+    &::after {
+      top: calc(100% - 34px);
+      height: 34px;
+      background-image: url("../img/wave-catalog-section-desktop.svg");
+    }
+  }
+
+  .catalog-sections__list {
+    padding-right: $indent-desktop;
+    padding-left: $indent-desktop;
+  }
+
+  .catalog-sections__a {
+    &--accessory-for-interior {
+      @include catalog-section(50px, 23px, 36px, $color-viking, 40px, 62px, "../img/icon-catalog-sections__item-bedside-night-light.svg");
+    }
+
+    &--toy-for-children {
+      @include catalog-section(50px, 21px, 27px, $color-puerto-rico, 60px, 60px, "../img/icon-catalog-sections__item-lego.svg");
+    }
   }
 }

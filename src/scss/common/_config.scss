@@ -1,10 +1,13 @@
+//
 // GRID
+//
 $grid-breakpoint-mobile: 320px;
 $grid-breakpoint-tablet: 768px;
 $grid-breakpoint-desktop: 1150px;
 
 $indent-mobile: 30px;
 $indent-tablet: 50px;
+$indent-desktop: $indent-tablet * 2;
 
 $container-max-width-mobile: 260px;
 $container-max-width-tablet: 668px;

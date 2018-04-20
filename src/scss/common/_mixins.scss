@@ -39,9 +39,8 @@
   @include fonts(0, 0, 400, normal, transparent);
 }
 
-@mixin catalog-section($icon-top, $icon-right, $bg-color, $icon-w, $icon-h, $icon-url) {
+@mixin catalog-section($padding-bottom, $icon-top, $icon-right, $bg-color, $icon-w, $icon-h, $icon-url) {
   $padding-top: 25px;
-  $padding-bottom: 30px;
   $grow-size: 5px;
 
   padding-top: $padding-top;
@@ -107,7 +106,6 @@
     width: 100%;
     height: $height;
     background-color: $color-white;
-    //background-image: url("../img/waves.png");
     background-image: url("../img/waves.svg");
     background-repeat: repeat-x;
     background-position: 0 0;
