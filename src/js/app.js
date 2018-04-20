@@ -1,4 +1,4 @@
-function MainNavigationMenu() {
+function MainNavigationMenu(screenWidthToOpenAllTime) {
 
   var isOpen;
   var valueName = "mainNavigationMenuIsOpen";
@@ -9,11 +9,11 @@ function MainNavigationMenu() {
   var hideClassName = "cut-from-content";
 
   this.whatToDo = function () {
-    // 1) Меню всегда открыто, если ширина экрана больше $tablet-grid-breakpoint = 768px
+    // 1) Меню всегда открыто, если ширина экрана >= ширине screenWidthToOpenAllTime
     // 2) Иначе смотреть в localStorage
-    // 3) Если что-то не так с localStorage, то меню открыто
+    // 3) Если что-то не так с localStorage, то меню всегда открыто
     // 4) Иначе применить значение из localStorage
-    return this.isScreenMoreThanOrEqual768() || this.getValueFromStorage();
+    return this.isScreenMustBeOpenAllTime() || this.getValueFromStorage();
   };
 
   this.init = function () {
@@ -50,8 +50,8 @@ function MainNavigationMenu() {
     this.changeState(this.whatToDo(), false);
   };
 
-  this.isScreenMoreThanOrEqual768 = function () {
-    result = this.getScreenWidth() >= 768;
+  this.isScreenMustBeOpenAllTime = function () {
+    result = this.getScreenWidth() >= screenWidthToOpenAllTime;
     if (result) {
       if (!btnContainer.classList.contains(hideClassName)) {
         btnContainer.classList.add(hideClassName);
@@ -108,7 +108,7 @@ function MainNavigationMenu() {
   };
 }
 
-var mainNavigationMenu = new MainNavigationMenu();
+var mainNavigationMenu = new MainNavigationMenu(768);
 mainNavigationMenu.init();
 
 window.addEventListener("resize", mainNavigationMenu.screenResized.bind(mainNavigationMenu));
