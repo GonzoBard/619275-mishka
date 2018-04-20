@@ -37,7 +37,7 @@ function MainNavigationMenu() {
     }
   };
 
-  this.changeState = function (value, needSave = true) {
+  this.changeState = function (value, needSave) {
     if (value !== isOpen) { // если next состояние отличается от текущего
       this.setState(value);
       if (needSave) { // при изменении ширины экрана мы не сохраняем состояние в localStorage
