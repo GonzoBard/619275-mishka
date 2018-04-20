@@ -52,7 +52,7 @@
   GRID
 */
 
-@include tablet-media {
+@include media-tablet {
   .main-nav {
     position: relative;
 
@@ -103,7 +103,7 @@
   }
 }
 
-@include desktop-media {
+@include media-desktop {
   .main-nav__logo {
     position: absolute;
     z-index: 15000;

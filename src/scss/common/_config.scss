@@ -1,14 +1,14 @@
 // GRID
-$mobile-grid-breakpoint: 320px;
-$tablet-grid-breakpoint: 768px;
-$desktop-grid-breakpoint: 1150px;
+$grid-breakpoint-mobile: 320px;
+$grid-breakpoint-tablet: 768px;
+$grid-breakpoint-desktop: 1150px;
 
-$mobile-container-max-width: 260px;
-$tablet-container-max-width: 668px;
-$desktop-container-max-width: 1050px;
+$indent-mobile: 30px;
+$indent-tablet: 50px;
 
-$mobile-indent: 30px;
-$tablet-indent: 50px;
+$container-max-width-mobile: 260px;
+$container-max-width-tablet: 668px;
+$container-max-width-desktop: 1050px;
 
 //
 // COLORS,

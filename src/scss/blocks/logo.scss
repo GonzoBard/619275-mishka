@@ -17,12 +17,12 @@
   GRID
 */
 
-@include tablet-media {
+@include media-tablet {
   .logo {
     width: 650px;
     padding-top: 15px;
     padding-bottom: 14px;
-    padding-left: $tablet-indent;
+    padding-left: $indent-tablet;
 
     justify-content: flex-start;
   }

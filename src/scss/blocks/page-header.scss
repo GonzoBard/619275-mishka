@@ -15,22 +15,22 @@
   padding-right: 0;
   padding-left: 0;
 
-  @include mobile-media {
-    max-width: $mobile-grid-breakpoint;
+  @include media-mobile {
+    max-width: $grid-breakpoint-mobile;
   }
 
-  @include tablet-media {
-    max-width: $tablet-grid-breakpoint;
+  @include media-tablet {
+    max-width: $grid-breakpoint-tablet;
   }
 
-  @include desktop-media {
-    max-width: $desktop-grid-breakpoint;
-    padding-right: $tablet-indent;
-    padding-left: $tablet-indent;
+  @include media-desktop {
+    max-width: $grid-breakpoint-desktop;
+    padding-right: $indent-tablet;
+    padding-left: $indent-tablet;
   }
 }
 
-@include tablet-media {
+@include media-tablet {
   .page-header {
     position: relative;
   }
@@ -39,14 +39,14 @@
     position: absolute;
     z-index: 10000;
     top: 86px;
-    right: $tablet-indent;
+    right: $indent-tablet;
 
     display: block;
   }
 }
 
-@include desktop-media {
+@include media-desktop {
   .page-header__info {
-    right: $tablet-indent * 2;
+    right: $indent-tablet * 2;
   }
 }

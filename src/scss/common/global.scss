@@ -1,5 +1,5 @@
 body {
-  min-width: $mobile-grid-breakpoint;
+  min-width: $grid-breakpoint-mobile;
 
   font-family: "Open Sans", "Arial", sans-serif;
 
@@ -10,45 +10,45 @@ body {
   GRID
 */
 
-.container {
+.container { // с отступами + фиксированная max-width
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: $mobile-indent;
-  padding-left: $mobile-indent;
+  padding-right: $indent-mobile;
+  padding-left: $indent-mobile;
 
-  @include mobile-media {
-    max-width: $mobile-grid-breakpoint;
+  @include media-mobile {
+    max-width: $grid-breakpoint-mobile;
   }
 
-  @include tablet-media {
-    max-width: $tablet-grid-breakpoint;
-    padding-right: $tablet-indent;
-    padding-left: $tablet-indent;
+  @include media-tablet {
+    max-width: $grid-breakpoint-tablet;
+    padding-right: $indent-tablet;
+    padding-left: $indent-tablet;
   }
 
-  @include desktop-media {
-    max-width: $desktop-grid-breakpoint;
+  @include media-desktop {
+    max-width: $grid-breakpoint-desktop;
   }
 }
 
-.container-fluid {
+.container-fluid { // без отступов + фиксированная max-width
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-right: 0;
   padding-left: 0;
 
-  @include mobile-media {
-    max-width: $mobile-grid-breakpoint;
+  @include media-mobile {
+    max-width: $grid-breakpoint-mobile;
   }
 
-  @include tablet-media {
-    max-width: $tablet-grid-breakpoint;
+  @include media-tablet {
+    max-width: $grid-breakpoint-tablet;
   }
 
-  @include desktop-media {
-    max-width: $desktop-grid-breakpoint;
+  @include media-desktop {
+    max-width: $grid-breakpoint-desktop;
   }
 }
 

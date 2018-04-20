@@ -45,7 +45,7 @@
   GRID
 */
 
-@include tablet-media {
+@include media-tablet {
   .site-nav__item {
     padding-left: 0;
     padding-top: 27px;
@@ -68,13 +68,13 @@
 
   .site-nav__link--basket {
     padding-left: 82px;
-    padding-right: $tablet-indent;
+    padding-right: $indent-tablet;
     background-position: 30px 4px;
   }
 
   .site-nav__link--catalog {
     @include fonts(15px, 24px, 700, normal, $color-black);
-    padding-left: $tablet-indent;
+    padding-left: $indent-tablet;
   }
 
   .site-nav__link--order {
@@ -82,7 +82,7 @@
   }
 }
 
-@include desktop-media {
+@include media-desktop {
   .site-nav__link--catalog {
     @include fonts(17px, 24px, 700, normal, $color-black);
     padding-right: 20px;
@@ -96,7 +96,7 @@
 
   .site-nav__link--new {
     @include fonts(15px, 24px, 700, normal, $color-black);
-    padding-left: $tablet-indent;
+    padding-left: $indent-tablet;
   }
 
   .site-nav__link--sale {
