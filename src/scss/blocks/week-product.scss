@@ -8,11 +8,6 @@
   @include waves(6px);
 }
 
-.week-product__container {
-  margin-left: $indent-30;
-  margin-right: $indent-30;
-}
-
 .week-product__header {
   @include reset-margin-padding();
 }

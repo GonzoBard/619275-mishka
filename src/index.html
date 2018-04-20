@@ -10,17 +10,22 @@
 
 <h1 class="visually-hidden">Магазин «Мишка»</h1>
 
-<header class="page-header">
+<header class="page-header  page-header--grid">
   <nav class="main-nav">
     <h2 class="visually-hidden">Основная навигация</h2>
-    <div class="logo  main-nav__item">
-      <img class="logo__pic" src="img/page-header__logo-mishka-mobile.svg" alt="Логотип магазина «Мишка»" width="86" height="35">
+    <div class="logo  main-nav__logo  main-nav__item">
+      <picture>
+        <source srcset="img/page-header__logo-mishka-desktop.svg" type="image/svg+xml" media="(min-width: 1150px)">
+        <source srcset="img/page-header__logo-mishka-tablet.svg" type="image/svg+xml" media="(min-width: 768px)">
+        <img src="img/page-header__logo-mishka-mobile.svg" alt="Логотип магазина «Мишка»">
+      </picture>
+      <!--<img src="img/page-header__logo-mishka-mobile.svg" alt="Логотип магазина «Мишка»" width="86" height="35">-->
       <div class="cut-from-content  main-nav__toggle-wrap" id="main-nav__toggle-wrap">
         <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--close" id="main-nav__btn-toggle--close" onclick="mainNavigationMenu.changeState(false)">Закрыть меню</button>
         <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--open" id="main-nav__btn-toggle--open" onclick="mainNavigationMenu.changeState(true)">Открыть меню</button>
       </div>
     </div>
-    <ul class="site-nav" id="site-nav" aria-label="Главная навигация">
+    <ul class="site-nav  main-nav__site" id="site-nav" aria-label="Навигация по сайту">
       <li class="site-nav__item  main-nav__item  main-nav__catalog"><a class="a  site-nav__link  site-nav__link--catalog" href="catalog.html">Каталог товаров</a></li>
       <li class="site-nav__item  main-nav__item  main-nav__order"><a class="a  site-nav__link  site-nav__link--order" href="order-form.html">Вязание на заказ</a></li>
       <li class="site-nav__item  main-nav__item  main-nav__search"><a class="a  site-nav__link  site-nav__link--search" href="#">Поиск по сайту</a></li>
@@ -34,7 +39,7 @@
 
 <main class="page-main">
 
-  <section class="page-title  page-title--index  page-main__title">
+  <section class="page-title  page-title--index  page-main__title  container-fluid">
     <h2 class="page-title__header">Милые штуки ручной работы для дома</h2>
     <div class="page-title__bg-wrap"></div>
   </section>
@@ -49,35 +54,33 @@
     </ul>
   </section>
 
-  <section class="week-product">
-    <div class="week-product__container">
-      <h3 class="visually-hidden">Товар недели</h3>
-      <h3 class="week-product__header">Вязаные корзинки</h3>
-      <p class="week-product__label">Товар недели</p>
-      <div class="week-product__description">
-        <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <table class="week-product__description-table">
-          <tbody>
-          <tr class="week-product__description-line">
-            <td class="week-product__param-name">Цвет:</td>
-            <td class="week-product__param-value">«Тиффани»/серый</td>
-          </tr>
-          <tr class="week-product__description-line">
-            <td class="week-product__param-name">Диаметр:</td>
-            <td class="week-product__param-value">25 см</td>
-          </tr>
-          <tr class="week-product__description-line">
-            <td class="week-product__param-name">Высота:</td>
-            <td class="week-product__param-value">15 см</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-      <img class="week-product__pic" src="img/week-product__pic-knitted-baskets-mobile@1x.jpg" alt="Вязаные корзинки" width="260" height="315">
-      <div class="week-product__buy">
-        <p class="week-product__price">Цена: 990 руб.</p>
-        <button class="btn  week-product__btn-order">Заказать</button>
-      </div>
+  <section class="week-product  container">
+    <h3 class="visually-hidden">Товар недели</h3>
+    <h3 class="week-product__header">Вязаные корзинки</h3>
+    <p class="week-product__label">Товар недели</p>
+    <div class="week-product__description">
+      <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+      <table class="week-product__description-table">
+        <tbody>
+        <tr class="week-product__description-line">
+          <td class="week-product__param-name">Цвет:</td>
+          <td class="week-product__param-value">«Тиффани»/серый</td>
+        </tr>
+        <tr class="week-product__description-line">
+          <td class="week-product__param-name">Диаметр:</td>
+          <td class="week-product__param-value">25 см</td>
+        </tr>
+        <tr class="week-product__description-line">
+          <td class="week-product__param-name">Высота:</td>
+          <td class="week-product__param-value">15 см</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <img class="week-product__pic" src="img/week-product__pic-knitted-baskets-mobile@1x.jpg" alt="Вязаные корзинки" width="260" height="315">
+    <div class="week-product__buy">
+      <p class="week-product__price">Цена: 990 руб.</p>
+      <button class="btn  week-product__btn-order">Заказать</button>
     </div>
   </section>
 

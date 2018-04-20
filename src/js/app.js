@@ -9,11 +9,11 @@ function MainNavigationMenu() {
   var hideClassName = "cut-from-content";
 
   this.whatToDo = function () {
-    // 1) Меню всегда открыто, если ширина экрана больше 320px
+    // 1) Меню всегда открыто, если ширина экрана больше $tablet-grid-breakpoint = 768px
     // 2) Иначе смотреть в localStorage
     // 3) Если что-то не так с localStorage, то меню открыто
     // 4) Иначе применить значение из localStorage
-    return this.isScreenMoreThan320() || this.getValueFromStorage();
+    return this.isScreenMoreThanOrEqual768() || this.getValueFromStorage();
   };
 
   this.init = function () {
@@ -50,8 +50,8 @@ function MainNavigationMenu() {
     this.changeState(this.whatToDo(), false);
   };
 
-  this.isScreenMoreThan320 = function () {
-    result = this.getScreenWidth() > 320;
+  this.isScreenMoreThanOrEqual768 = function () {
+    result = this.getScreenWidth() >= 768;
     if (result) {
       if (!btnContainer.classList.contains(hideClassName)) {
         btnContainer.classList.add(hideClassName);

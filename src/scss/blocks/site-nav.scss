@@ -40,3 +40,63 @@
     background-image: url("../img/icon-site-nav__item-basket-hover.svg");
   }
 }
+
+@include tablet-media {
+  .site-nav__item {
+    padding-left: 0;
+    padding-top: 27px;
+  }
+
+  .site-nav__link {
+    padding-left: 0;
+  }
+
+  .site-nav__link--search {
+    display: inline-block;
+    vertical-align: middle;
+    width: 83px;
+    height: 24px;
+
+    background-position: center center;
+
+    @include reset-font();
+  }
+
+  .site-nav__link--basket {
+    padding-left: 82px;
+    padding-right: $tablet-indent;
+    background-position: 30px 4px;
+  }
+
+  .site-nav__link--catalog {
+    @include fonts(15px, 24px, 700, normal, $color-black);
+    padding-left: $tablet-indent;
+  }
+
+  .site-nav__link--order {
+    @include fonts(15px, 24px, 700, normal, $color-black);
+  }
+}
+
+@include desktop-media {
+  .site-nav__link--catalog {
+    @include fonts(17px, 24px, 700, normal, $color-black);
+    padding-right: 20px;
+  }
+
+  .site-nav__link--order {
+    @include fonts(17px, 24px, 700, normal, $color-black);
+    padding-left: 20px;
+    padding-right: 250px;
+  }
+
+  .site-nav__link--new {
+    @include fonts(15px, 24px, 700, normal, $color-black);
+    padding-left: $tablet-indent;
+  }
+
+  .site-nav__link--sale {
+    @include fonts(15px, 24px, 700, normal, $color-black);
+    padding-left: 25px;
+  }
+}

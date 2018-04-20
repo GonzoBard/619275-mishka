@@ -62,11 +62,11 @@ gulp.task('css', () => {
     .pipe(postcss([autoprefixer({                 // префиксы
       browsers: ['last 2 versions', 'not ie 10', 'Firefox ESR']
     })]))
+    .pipe(rename(paths.output.cssName))
+    .pipe(gulp.dest(paths.src.css))               // чтобы при разработке также был валидным путь до bundle в html
     .pipe(cleancss({                              // минификация
       level: {1: {specialComments: false}}
     }))
-    .pipe(rename(paths.output.cssName))
-    .pipe(gulp.dest(paths.src.css))               // чтобы при разработке путь до bundle также был валидным
     .pipe(gulp.dest(paths.output.css))
     .pipe(browsersync.stream());
 });

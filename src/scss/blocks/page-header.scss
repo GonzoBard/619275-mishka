@@ -1,5 +1,48 @@
 .page-header__info {
   display: none;
 
-  @include fonts(14px, 24px, 400, normal, $color-tundora);
+  @include fonts(15px, 24px, 400, normal, $color-tundora);
+}
+
+.page-header--grid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 0;
+
+  @include mobile-media {
+    max-width: $mobile-grid-breakpoint;
+  }
+
+  @include tablet-media {
+    max-width: $tablet-grid-breakpoint;
+  }
+
+  @include desktop-media {
+    max-width: $desktop-grid-breakpoint;
+    padding-right: $tablet-indent;
+    padding-left: $tablet-indent;
+  }
+}
+
+@include tablet-media {
+  .page-header {
+    position: relative;
+  }
+
+  .page-header__info {
+    position: absolute;
+    z-index: 10000;
+    top: 86px;
+    right: $tablet-indent;
+
+    display: block;
+  }
+}
+
+@include desktop-media {
+  .page-header__info {
+    right: $tablet-indent * 2;
+  }
 }
