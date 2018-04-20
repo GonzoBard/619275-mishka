@@ -6,12 +6,16 @@ body {
   @include fonts(15px, normal, 400, normal, $color-tundora);
 }
 
+/*
+  GRID
+*/
+
 .container {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: $mobile-indent;
+  padding-left: $mobile-indent;
 
   @include mobile-media {
     max-width: $mobile-container-max-width;
@@ -19,13 +23,42 @@ body {
 
   @include tablet-media {
     max-width: $tablet-container-max-width;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: $tablet-indent;
+    padding-left: $tablet-indent;
   }
 
   @include desktop-media {
     max-width: $desktop-container-max-width;
   }
+}
+
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $mobile-indent;
+  padding-left: $mobile-indent;
+
+  @include mobile-media {
+    max-width: $mobile-grid-breakpoint;
+  }
+
+  @include tablet-media {
+    max-width: $tablet-grid-breakpoint;
+    padding-right: $tablet-indent;
+    padding-left: $tablet-indent;
+  }
+
+  @include desktop-media {
+    max-width: $desktop-grid-breakpoint;
+  }
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 /*
