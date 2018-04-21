@@ -1,11 +1,9 @@
 .advantages {
-  width: 100%;
   margin-top: 34px;
 }
 
 .advantages__container {
-  padding-left: 20px;
-  margin-right: $indent-30;
+  margin-left: -10px;
 }
 
 .advantages__header {
@@ -88,5 +86,39 @@
     background-image: url("../img/icon-advantages__item--comes-in-gift-box.svg");
     background-repeat: no-repeat;
     background-position: 13px 31px;
+  }
+}
+
+/*
+  GRID
+*/
+
+@include media-tablet {
+  .advantages {
+    margin-top: 50px;
+  }
+
+  .advantages__container {
+    margin-left: 0;
+  }
+
+  .advantages__list {
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@include media-desktop {
+  .advantages {
+    margin-top: 60px;
+  }
+
+  .advantages__container {
+    padding-left: 175px;
   }
 }

@@ -1,5 +1,4 @@
 .week-product {
-  width: 100%;
   margin-top: 27px;
   padding-bottom: 35px;
 
@@ -69,12 +68,6 @@
   GRID
 */
 
-.week-product__container {
-  @include media-desktop {
-    padding-left: 175px;
-  }
-}
-
 @include media-tablet {
   .week-product {
     @include waves-tablet();
@@ -137,6 +130,7 @@
   }
 
   .week-product__container {
+    padding-left: 175px;
     padding-bottom: 70px;
 
     position: relative;
