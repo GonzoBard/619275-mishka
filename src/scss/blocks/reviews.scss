@@ -14,8 +14,7 @@
 }
 
 .reviews__container {
-  margin-left: 28px;
-  margin-right: $indent-30;
+  margin-left: -2px;
 }
 
 .reviews__header {
@@ -53,4 +52,98 @@
   margin-left: 2px;
 
   text-align: center;
+}
+
+/*
+  GRID
+*/
+
+@include media-tablet {
+  .reviews {
+    padding-bottom: 110px;
+    padding-top: 75px;
+
+    @include waves-tablet();
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 350px;
+      height: 457px;
+      background-color: $color-alto;
+      background-image: url("../img/reviews__bg-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  .reviews__container {
+    margin-left: 0;
+  }
+
+  .reviews__list {
+    margin-top: 30px;
+  }
+
+  .reviews__text {
+    @include fonts(17px, 30px, 400, normal, $color-tundora);
+  }
+
+  .reviews__author {
+    margin-top: 55px;
+  }
+
+  .reviews__navigation {
+    position: absolute;
+    bottom: 115px;
+    right: $indent-tablet;
+  }
+
+  .reviews__btn {
+    position: absolute;
+    top: 0;
+    right: $indent-tablet;
+
+    width: 175px;
+    margin-top: 75px;
+
+    font-size: 17px;
+  }
+}
+
+@include media-desktop {
+  .reviews {
+    padding-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      left: $indent-tablet;
+    }
+  }
+
+  .reviews__container {
+    padding-left: $indent-desktop-container-left;
+    padding-bottom: 180px;
+
+    background-color: transparent;
+    background-image: url("../img/waves-tablet.svg");
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+  }
+
+  .reviews__author {
+    margin-top: 25px;
+  }
+
+  .reviews__navigation {
+    bottom: 180px;
+    right: $indent-tablet;
+  }
 }

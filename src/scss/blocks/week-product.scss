@@ -82,7 +82,7 @@
   .week-product__label {
     position: absolute;
     top: 5px;
-    right: $indent-desktop;
+    right: $indent-tablet * 2;
 
     display: inline-block;
     vertical-align: top;
@@ -130,7 +130,7 @@
   }
 
   .week-product__container {
-    padding-left: 175px;
+    padding-left: $indent-desktop-container-left;
     padding-bottom: 70px;
 
     position: relative;
