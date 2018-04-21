@@ -50,12 +50,14 @@ body {
   @include media-desktop {
     max-width: $grid-breakpoint-desktop;
   }
+}
 
-  &--desktop-unlimit {
-    @include media-desktop {
-      max-width: 100%;
-    }
-  }
+.container-unlim { // без отступов, без ограничений по ширине
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 /*

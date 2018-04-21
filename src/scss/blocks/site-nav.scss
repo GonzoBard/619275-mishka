@@ -4,7 +4,7 @@
 }
 
 .site-nav__item {
-  padding-left: $indent-30;
+  padding-left: $indent-mobile;
   padding-top: 26px;
   padding-bottom: 28px;
 }
@@ -45,6 +45,12 @@
   GRID
 */
 
+@include media-mobile {
+  .site-nav__link {
+    width: $grid-breakpoint-mobile;
+  }
+}
+
 @include media-tablet {
   .site-nav__item {
     padding-left: 0;
@@ -52,6 +58,7 @@
   }
 
   .site-nav__link {
+    width: auto;
     padding-left: 0;
   }
 
@@ -85,13 +92,13 @@
 @include media-desktop {
   .site-nav__link--catalog {
     @include fonts(17px, 24px, 700, normal, $color-black);
-    padding-right: 20px;
+    //padding-right: 20px;
   }
 
   .site-nav__link--order {
     @include fonts(17px, 24px, 700, normal, $color-black);
     padding-left: 20px;
-    padding-right: 250px;
+    //padding-right: 150px;
   }
 
   .site-nav__link--new {

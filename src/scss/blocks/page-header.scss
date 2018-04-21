@@ -11,6 +11,8 @@
 @include media-tablet {
   .page-header {
     position: relative;
+
+    border-bottom: 1px solid $color-gallery;
   }
 
   .page-header__info {
@@ -20,5 +22,11 @@
     right: $indent-tablet;
 
     display: block;
+  }
+}
+
+@include media-desktop {
+  .page-header {
+    border-bottom: none;
   }
 }

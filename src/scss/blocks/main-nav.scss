@@ -8,6 +8,11 @@
 .main-nav__item {
   border-bottom: 1px solid $color-gallery;
   position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-nav__new {
@@ -54,11 +59,21 @@
 
 @include media-tablet {
   .main-nav {
+    max-width: $grid-breakpoint-tablet;
+    margin-right: auto;
+    margin-left: auto;
+
     position: relative;
 
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+  }
+
+  .main-nav__item {
+    border-bottom: none;
+
+    justify-content: flex-start;
   }
 
   .main-nav__site {
@@ -104,11 +119,16 @@
 }
 
 @include media-desktop {
+  .main-nav {
+    max-width: $grid-breakpoint-desktop;
+    border-bottom: 1px solid $color-gallery;
+  }
+
   .main-nav__logo {
     position: absolute;
     z-index: 15000;
     top: -10;
-    left: 400px;
+    left: 440px;
     width: 113px;
     border: none;
   }
@@ -116,13 +136,13 @@
   .main-nav__catalog {
     order: 1;
     position: static;
-    border-bottom: 1px solid $color-gallery;
+    width: 233px;
   }
 
   .main-nav__order {
     order: 2;
     position: static;
-    border-bottom: 1px solid $color-gallery;
+    flex-grow: 1;
     border-left: 1px solid $color-gallery;
   }
 
@@ -132,6 +152,8 @@
 
   .main-nav__basket {
     order: 4;
+    flex-grow: 0;
+    width: 317px;
   }
 
   .main-nav__new {
