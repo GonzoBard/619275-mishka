@@ -112,8 +112,9 @@
   }
 
   .catalog-sections__list {
-    padding-right: $indent-desktop;
-    padding-left: $indent-desktop;
+    max-width: $grid-breakpoint-desktop;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .catalog-sections__a {

@@ -45,6 +45,26 @@
   GRID
 */
 
+.page-title--grid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 0;
+
+  @include media-mobile {
+    max-width: $grid-breakpoint-mobile;
+  }
+
+  @include media-tablet {
+    max-width: $grid-breakpoint-tablet;
+  }
+
+  @include media-desktop {
+    max-width: 100%;
+  }
+}
+
 @include media-tablet {
   .page-title--index {
     padding-top: 100px;
@@ -56,7 +76,7 @@
   }
 
   .page-title__bg-wrap {
-    background-image: url("../img/page-title__bg-desktop@1x.jpg");
+    background-image: url("../img/page-title__bg-tablet@1x.jpg");
   }
 }
 
