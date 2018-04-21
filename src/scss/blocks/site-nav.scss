@@ -1,16 +1,17 @@
 .site-nav {
   @include reset-list();
-  width: 100%;
 }
 
 .site-nav__item {
-  padding-left: $indent-mobile;
   padding-top: 26px;
   padding-bottom: 28px;
+  padding-left: $indent-mobile; // на mobile относится к сетке
+  padding-right: $indent-mobile; // на mobile относится к сетке
 }
 
 .site-nav__link {
-  padding-left: 45px;
+  width: $content-width-mobile; // на mobile жестко задам ширину контентной области, относится к сетке
+  padding-left: 45px; // на mobile общий отступ для иконок
 
   &:active {
     opacity: 0.3;
@@ -45,28 +46,23 @@
   GRID
 */
 
-@include media-mobile {
-  .site-nav__link {
-    width: $grid-breakpoint-mobile;
-  }
-}
-
 @include media-tablet {
   .site-nav__item {
-    padding-left: 0;
-    padding-top: 27px;
+    padding-left: 0; // выкл., пришедший с mobile, сеточный отступ
+    padding-right: 0; // выкл., пришедший с mobile, сеточный отступ
   }
 
   .site-nav__link {
-    width: auto;
-    padding-left: 0;
+    width: auto; // выкл., пришедшее с mobile, ограничение контентной области, относится к сетке
+    padding-left: 0; // выкл., пришедшее с mobile, общий отступ для иконок
   }
 
   .site-nav__link--search {
     display: inline-block;
     vertical-align: middle;
-    width: 83px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
+    margin-left: 30px;
 
     background-position: center center;
 
@@ -74,8 +70,7 @@
   }
 
   .site-nav__link--basket {
-    padding-left: 82px;
-    padding-right: $indent-tablet;
+    padding-left: 82px; // отступ для иконки
     background-position: 30px 4px;
   }
 
@@ -92,13 +87,12 @@
 @include media-desktop {
   .site-nav__link--catalog {
     @include fonts(17px, 24px, 700, normal, $color-black);
-    //padding-right: 20px;
+    padding-left: 0; // выкл., пришедший с tablet
   }
 
   .site-nav__link--order {
     @include fonts(17px, 24px, 700, normal, $color-black);
     padding-left: 20px;
-    //padding-right: 150px;
   }
 
   .site-nav__link--new {

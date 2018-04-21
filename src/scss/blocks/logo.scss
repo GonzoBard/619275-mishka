@@ -1,12 +1,6 @@
 .logo {
-  width: 100%;
   padding-top: 22px;
   padding-bottom: 18px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 .logo__link {
@@ -19,11 +13,7 @@
 
 @include media-tablet {
   .logo {
-    width: 650px;
     padding-top: 15px;
     padding-bottom: 14px;
-    padding-left: $indent-tablet;
-
-    justify-content: flex-start;
   }
 }

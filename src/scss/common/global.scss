@@ -10,7 +10,7 @@ body {
   GRID
 */
 
-.container { // с отступами + фиксированная max-width
+.grid-container { // с отступами + фиксированная max-width
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -32,7 +32,7 @@ body {
   }
 }
 
-.container-fluid { // без отступов + фиксированная max-width
+.grid-container-fluid { // без отступов + фиксированная max-width
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -52,7 +52,7 @@ body {
   }
 }
 
-.container-unlim { // без отступов, без ограничений по ширине
+.grid-container-unlim { // без отступов, без ограничений по ширине
   width: 100%;
   margin-right: 0;
   margin-left: 0;

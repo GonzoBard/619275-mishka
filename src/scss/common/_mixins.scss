@@ -39,6 +39,14 @@
   @include fonts(0, 0, 400, normal, transparent);
 }
 
+@mixin take-menu-item-out-of-flow($z-index, $top, $left) {
+  position: absolute;
+  z-index: $z-index;
+  top: $top;
+  left: $left;
+  border: none;
+}
+
 @mixin catalog-section($padding-bottom, $icon-top, $icon-right, $bg-color, $icon-w, $icon-h, $icon-url) {
   $padding-top: 25px;
   $grow-size: 5px;

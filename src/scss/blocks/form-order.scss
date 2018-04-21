@@ -11,7 +11,7 @@
 .form-order__intro {
   @include reset-margin-padding();
   padding-left: 30px;
-  padding-right: $indent-30;
+  padding-right: $indent-mobile;
 
   @include fonts(13px, 24px, 400, normal, $color-tundora);
 }
