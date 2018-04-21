@@ -101,6 +101,8 @@
 
   .week-product__description {
     p {
+      margin-top: 50px;
+
       @include fonts(17px, 30px, 400, normal, $color-tundora);
     }
   }
@@ -116,7 +118,7 @@
   }
 
   .week-product__buy {
-    margin-top: 49px;
+    margin-top: 50px;
   }
 
   .week-product__price {
@@ -127,6 +129,7 @@
 @include media-desktop {
   .week-product {
     margin-top: 100px;
+    padding-bottom: 0;
 
     &::after {
       display: none;
@@ -134,13 +137,15 @@
   }
 
   .week-product__container {
+    padding-bottom: 70px;
+
     position: relative;
 
     @include waves-desktop();
   }
 
   .week-product__wrap {
-    padding-right: calc(50% + 130px);
+    padding-right: calc(50% + 139px);
   }
 
   .week-product__header {
@@ -153,9 +158,21 @@
     left: $indent-tablet;
   }
 
+  .week-product__description-table {
+    margin-top: 55px;
+  }
+
   .week-product__pic {
-    top: -130px;
+    top: -160px;
     right: 0;
     z-index: 100;
+  }
+
+  .week-product__buy {
+    margin-top: 100px;
+  }
+
+  .week-product__btn-order {
+    margin-top: 35px;
   }
 }

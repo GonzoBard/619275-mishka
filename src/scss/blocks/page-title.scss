@@ -6,7 +6,6 @@
   background-color: $color-alabaster;
 
   position: relative;
-  z-index: 100;
 
   display: flex;
   flex-direction: column;
@@ -66,6 +65,23 @@
 }
 
 @include media-tablet {
+  .page-title {
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2000;
+      top: calc(100% - 14px);
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 24px;
+      background-color: transparent;
+      background-image: url("../img/wave-page-title-tablet.svg");
+      background-repeat: repeat-x;
+      background-position: 0 0;
+    }
+  }
+
   .page-title--index {
     padding-top: 100px;
     padding-bottom: 453px;
@@ -81,6 +97,13 @@
 }
 
 @include media-desktop {
+  .page-title {
+    &::after {
+      height: 34px;
+      background-image: url("../img/wave-page-title-desktop.svg");
+    }
+  }
+
   .page-title--index {
     padding-top: 91px;
     padding-bottom: 433px;
