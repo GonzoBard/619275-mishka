@@ -1,14 +1,24 @@
 .page-footer {
   width: 100%;
-  padding: 26px 30px 30px;
+  padding-top: 26px;
+  padding-bottom: 30px;
 
   background-color: $color-seashell;
+}
+
+.page-footer__container {
+  padding-right: $indent-mobile;
+  padding-left: $indent-mobile;
 
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
+}
+
+.page-footer__logo {
+  display: none;
 }
 
 .page-footer__social {
@@ -31,5 +41,43 @@
     width: 260px;
     height: 1px;
     background-color: $color-mercury;
+  }
+}
+
+/*
+  GRID
+*/
+
+@include media-tablet {
+  .page-footer__container {
+    padding-right: $indent-tablet;
+    padding-left: $indent-tablet;
+
+    justify-content: space-between;
+  }
+
+  .page-footer__logo {
+    display: block;
+  }
+
+  .page-footer__social {
+    margin-left: 85px;
+  }
+
+  .page-footer__copyright {
+    margin-top: 0;
+    margin-left: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@include media-desktop {
+  .page-footer__container {
+    max-width: $grid-breakpoint-desktop;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
