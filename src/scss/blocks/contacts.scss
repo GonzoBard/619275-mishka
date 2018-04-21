@@ -3,6 +3,8 @@
   margin-top: 41px;
   padding-bottom: 39px;
 
+  position: relative;
+
   @include fonts(15px, 30px, 400, normal, $color-tundora);
 
   h3 {
@@ -11,13 +13,18 @@
 }
 
 .contacts__container {
-  margin-left: 28px;
-  margin-right: 30px;
-  box-sizing: border-box;
+  margin-left: -2px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .contacts__header {
   @include reset-margin-padding();
+
+  align-self: flex-start;
 }
 
 .contacts__table {
@@ -65,6 +72,8 @@
 
 .contacts__map {
   margin-top: 16px;
+  margin-right: -$indent-mobile;
+  margin-left: -$indent-mobile;
   position: relative;
 }
 
@@ -92,9 +101,104 @@
 }
 
 .contacts__btn {
-  width: 99.3%;
+  width: $container-max-width-mobile;
   margin-top: 39px;
   margin-left: 2px;
 
   text-align: center;
+}
+
+/*
+  GRID
+*/
+
+@include media-tablet {
+  .contacts {
+    margin-top: 60px;
+    padding-bottom: 57px;
+
+    background-color: transparent;
+    background-image: url("../img/contacts__flag-tablet.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - #{$indent-tablet}) 0;
+
+    h3 {
+      @include fonts(43px, 50px, 700, normal, $color-black);
+    }
+  }
+
+  .contacts__container {
+    margin-left: 0;
+  }
+
+  .contacts__table {
+    margin-top: 55px;
+  }
+
+  .contacts__tbody {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .contacts__table-row {
+    width: 50%;
+  }
+
+  .contacts__address-value-wrap {
+    width: 180px;
+  }
+
+  .contacts__map {
+    margin-top: 55px;
+    margin-right: -$indent-tablet;
+    margin-left: -$indent-tablet;
+  }
+
+  .contacts__btn {
+    width: 230px;
+    margin-top: 57px;
+  }
+}
+
+@include media-desktop {
+  .contacts {
+    margin-top: 130px;
+    margin-bottom: 105px;
+
+    background-position: ($indent-tablet * 2) 0;
+
+    h3 {
+      @include fonts(53px, 57px, 700, normal, $color-black);
+    }
+  }
+
+  .contacts__container {
+    padding-left: $indent-desktop-container-left;
+    align-items: flex-start;
+  }
+
+  .contacts__tbody {
+    flex-direction: column;
+  }
+
+  .contacts__table-row {
+    width: 100%;
+  }
+
+  .contacts__table-row:not(:first-child) {
+    margin-top: 10px;
+  }
+
+  .contacts__map-wrap {
+    position: relative;
+  }
+
+  .contacts__map {
+    position: absolute;
+    top: -400px;
+    right: $indent-tablet;
+    width: 50%;
+  }
 }

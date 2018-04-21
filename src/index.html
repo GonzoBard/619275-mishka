@@ -173,25 +173,27 @@
     </div>
   </section>
 
-  <section class="contacts">
+  <section class="contacts  container">
     <div class="contacts__container">
       <h3 class="contacts__header">Контакты</h3>
       <table class="contacts__table">
-        <tbody>
-        <tr>
+        <tbody class="contacts__tbody">
+        <tr class="contacts__table-row">
           <td class="contacts__param-name">e-mail:</td>
           <td><a class="contacts__mail-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
         </tr>
-        <tr>
+        <tr class="contacts__table-row">
           <td class="contacts__param-name">адрес:</td>
           <td><span class="contacts__address-value-wrap">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span></td>
         </tr>
         </tbody>
       </table>
     </div>
-    <div class="contacts__map">
-      <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A61d2d97bceb3caa51bd0ded8cc4f967f3fa8e90d548727e939478bef95e1c7e2&amp;width=100%25&amp;height=457&amp;lang=ru_RU&amp;scroll=false"></script>
-      <div class="contacts__pin-wrap"></div>
+    <div class="contacts__map-wrap">
+      <div class="contacts__map">
+        <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A61d2d97bceb3caa51bd0ded8cc4f967f3fa8e90d548727e939478bef95e1c7e2&amp;width=100%25&amp;height=457&amp;lang=ru_RU&amp;scroll=false"></script>
+        <div class="contacts__pin-wrap"></div>
+      </div>
     </div>
     <div class="contacts__container">
       <a class="btn  contacts__btn" href="stub-feedback.html">Напишите нам</a>
