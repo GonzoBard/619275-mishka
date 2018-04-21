@@ -10,15 +10,17 @@
 
 <h1 class="visually-hidden">Форма обратной связи с магазином «Мишка»</h1>
 
-<header class="page-header  page-header--grid">
+<header class="page-header  container-fluid">
   <nav class="main-nav">
     <h2 class="visually-hidden">Основная навигация</h2>
     <div class="logo  main-nav__logo  main-nav__item">
-      <picture>
-        <source srcset="img/page-header__logo-mishka-desktop.svg" type="image/svg+xml" media="(min-width: 1150px)">
-        <source srcset="img/page-header__logo-mishka-tablet.svg" type="image/svg+xml" media="(min-width: 768px)">
-        <img src="img/page-header__logo-mishka-mobile.svg" alt="Логотип магазина «Мишка»">
-      </picture>
+      <a class="logo__link" href="index.html">
+        <picture>
+          <source srcset="img/page-header__logo-mishka-desktop.svg" type="image/svg+xml" media="(min-width: 1150px)">
+          <source srcset="img/page-header__logo-mishka-tablet.svg" type="image/svg+xml" media="(min-width: 768px)">
+          <img src="img/page-header__logo-mishka-mobile.svg" alt="Логотип магазина «Мишка»">
+        </picture>
+      </a>
       <div class="cut-from-content  main-nav__toggle-wrap" id="main-nav__toggle-wrap">
         <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--close" id="main-nav__btn-toggle--close" onclick="mainNavigationMenu.changeState(false, true)">Закрыть меню</button>
         <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--open" id="main-nav__btn-toggle--open" onclick="mainNavigationMenu.changeState(true, true)">Открыть меню</button>
@@ -38,7 +40,7 @@
 
 <main class="page-main">
 
-  <section class="page-title  page-title--catalog  page-main__title">
+  <section class="page-title  page-title--catalog  page-main__title  container-fluid  container-fluid--desktop-unlimit">
     <h2 class="page-title__header">Обратная связь</h2>
   </section>
 

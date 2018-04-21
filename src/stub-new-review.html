@@ -10,19 +10,23 @@
 
 <h1 class="visually-hidden">Добавление отзыва о продукции магазина «Мишка»</h1>
 
-<header class="page-header">
+<header class="page-header  container-fluid">
   <nav class="main-nav">
     <h2 class="visually-hidden">Основная навигация</h2>
-    <div class="logo  main-nav__item">
+    <div class="logo  main-nav__logo  main-nav__item">
       <a class="logo__link" href="index.html">
-        <img class="logo__pic" src="img/page-header__logo-mishka-mobile.svg" alt="Логотип магазина «Мишка»" width="86" height="35">
+        <picture>
+          <source srcset="img/page-header__logo-mishka-desktop.svg" type="image/svg+xml" media="(min-width: 1150px)">
+          <source srcset="img/page-header__logo-mishka-tablet.svg" type="image/svg+xml" media="(min-width: 768px)">
+          <img src="img/page-header__logo-mishka-mobile.svg" alt="Логотип магазина «Мишка»">
+        </picture>
       </a>
       <div class="cut-from-content  main-nav__toggle-wrap" id="main-nav__toggle-wrap">
-        <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--close" id="main-nav__btn-toggle--close" onclick="mainNavigationMenu.changeState(false)">Закрыть меню</button>
-        <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--open" id="main-nav__btn-toggle--open" onclick="mainNavigationMenu.changeState(true)">Открыть меню</button>
+        <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--close" id="main-nav__btn-toggle--close" onclick="mainNavigationMenu.changeState(false, true)">Закрыть меню</button>
+        <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--open" id="main-nav__btn-toggle--open" onclick="mainNavigationMenu.changeState(true, true)">Открыть меню</button>
       </div>
     </div>
-    <ul class="site-nav" id="site-nav" aria-label="Главная навигация">
+    <ul class="site-nav  main-nav__site" id="site-nav" aria-label="Навигация по сайту">
       <li class="site-nav__item  main-nav__item  main-nav__catalog"><a class="a  site-nav__link  site-nav__link--catalog" href="catalog.html">Каталог товаров</a></li>
       <li class="site-nav__item  main-nav__item  main-nav__order"><a class="a  site-nav__link  site-nav__link--order" href="order-form.html">Вязание на заказ</a></li>
       <li class="site-nav__item  main-nav__item  main-nav__search"><a class="a  site-nav__link  site-nav__link--search" href="#">Поиск по сайту</a></li>
@@ -36,7 +40,7 @@
 
 <main class="page-main">
 
-  <section class="page-title  page-title--catalog  page-main__title">
+  <section class="page-title  page-title--catalog  page-main__title  container-fluid  container-fluid--desktop-unlimit">
     <h2 class="page-title__header">Новый отзыв</h2>
   </section>
 
