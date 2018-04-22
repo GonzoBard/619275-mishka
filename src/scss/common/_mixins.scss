@@ -155,3 +155,20 @@
     background-position: 0 0;
   }
 }
+
+@mixin put-review-bg($left: 0) {
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: $left;
+    display: block;
+    width: 350px;
+    height: 457px;
+    background-color: $color-alto;
+    background-image: url("../img/reviews__bg-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}

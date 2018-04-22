@@ -140,7 +140,7 @@
   }
 
   .week-product__container {
-    padding-left: $indent-desktop-left;
+    padding-left: $indent-desktop-left + $indent-tablet; // becouse box model
     padding-bottom: 93px;
 
     @include wave-after-desktop(); // ставлю волну на псевдо-элементе
@@ -157,7 +157,7 @@
 
   .week-product__label {
     top: 10px;
-    left: $indent-tablet;
+    left: $indent-tablet * 2;
   }
 
   .week-product__description-table {
