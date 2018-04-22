@@ -172,3 +172,21 @@
     background-position: 0 0;
   }
 }
+
+@mixin form-group-order-list() {
+  max-width: $grid-breakpoint-mobile;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $indent-mobile;
+  padding-right: $indent-mobile;
+
+  @include media-tablet {
+    max-width: $grid-breakpoint-tablet;
+    padding-left: $indent-tablet;
+    padding-right: $indent-tablet;
+  }
+
+  @include media-desktop {
+    max-width: $grid-breakpoint-desktop;
+  }
+}

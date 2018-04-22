@@ -2,6 +2,8 @@
   width: 100%;
   padding-bottom: 10px;
 
+  position: relative;
+
   input::placeholder,
   textarea::placeholder { /* Most modern browsers support this now. */
     @include fonts(17px, 18px, 400, normal, $color-tundora);
@@ -22,6 +24,7 @@
 .form-group-order__list {
   @include reset-margin-padding();
   @include reset-list();
+  @include form-group-order-list();
 
   display: flex;
   flex-direction: column;
@@ -31,6 +34,11 @@
 
 .form-group-order__item {
   @include fonts(17px, 18px, 700, normal, $color-black);
+}
+
+.form-group-order__title-wrap {
+  @include form-group-order-list();
+  position: relative;
 }
 
 .form-group-order__title {
@@ -59,6 +67,8 @@
 }
 
 .form-group-order--type {
+  background-color: $color-white;
+
   .form-group-order__title {
     margin-bottom: 26px;
   }
@@ -126,6 +136,7 @@
 
 .form-group-order--color {
   padding-top: 21px;
+  background-color: $color-seashell;
 
   .form-group-order__title {
     margin-bottom: 26px;
@@ -195,6 +206,7 @@
 .form-group-order--fio {
   padding-top: 23px;
   padding-left: -1px;
+  background-color: $color-white;
 
   .form-group-order__title {
     margin-bottom: 26px;
@@ -243,6 +255,7 @@
 .form-group-order--phone {
   margin-left: -2px;
   padding-top: 21px;
+  background-color: $color-seashell;
 
   .form-group-order__title {
     margin-bottom: 18px;
@@ -292,6 +305,7 @@
 .form-group-order--email {
   margin-left: -2px;
   padding-top: 22px;
+  background-color: $color-seashell;
 
   .form-group-order__title {
     margin-bottom: 18px;
@@ -303,7 +317,6 @@
   }
 
   .form-group-order__item {
-    //outline: 1px dashed blue;
     width: 100%;
 
     display: flex;
@@ -340,6 +353,7 @@
 
 .form-group-order--extra {
   padding-top: 22px;
+  background-color: $color-white;
 
   .form-group-order__title {
     margin-bottom: 25px;
@@ -365,4 +379,126 @@
   }
 }
 
+/*
+  ADAPTIVE
+*/
 
+@include media-tablet {
+  .form-group-order__item {
+    font-size: 19px;
+  }
+
+  .form-group-order__title {
+    position: absolute;
+    top: 17px;
+    left: $indent-tablet;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .form-group-order__list {
+    @include media-tablet {
+      padding-left: $indent-tablet-left;
+    }
+
+    @include media-desktop {
+      padding-left: $indent-desktop-left + 50px; // becouse box model
+    }
+  }
+
+  .form-group-order--type {
+    label {
+      padding-top: 15px;
+      padding-bottom: 30px;
+
+      &::before {
+        top: 0;
+        left: -61px;
+        display: block;
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    input {
+      &:checked ~ label::after {
+        top: 15px;
+        left: -46px;
+        display: block;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .form-group-order--color {
+    label {
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      &::before {
+        top: -1px;
+        left: -62px;
+        width: 54px;
+        height: 52px;
+      }
+    }
+
+    input {
+      &:checked ~ label::after {
+        top: 13px;
+        left: -49px;
+        width: 29px;
+        height: 16px;
+      }
+    }
+
+    .form-group-order__list {
+      //padding-left: $indent-tablet-left;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .form-group-order__item {
+      width: 250.5px;
+    }
+  }
+
+  .form-group-order--fio {
+    .form-group-order__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    label {
+      margin-right: 30px;
+    }
+  }
+
+  .form-group-order--extra {
+    textarea {
+      width: 547px;
+    }
+  }
+}
+
+@include media-desktop {
+  .form-group-order__title {
+    top: 17px;
+    left: 105px;
+  }
+
+  .form-group-order--extra {
+    textarea {
+      width: 870px;
+    }
+  }
+}

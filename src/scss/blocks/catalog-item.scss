@@ -92,6 +92,10 @@
   }
 }
 
+/*
+  ADAPTIVE
+*/
+
 @include media-tablet {
   .catalog-item {
     width: $content-width-tablet;
