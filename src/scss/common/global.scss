@@ -1,8 +1,63 @@
 body {
-  min-width: 320px;
+  min-width: $grid-breakpoint-mobile;
+
   font-family: "Open Sans", "Arial", sans-serif;
 
   @include fonts(15px, normal, 400, normal, $color-tundora);
+}
+
+/*
+  ADAPTIVE
+*/
+
+.grid { // с отступами + фиксированная max-width
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $indent-mobile;
+  padding-left: $indent-mobile;
+
+  @include media-mobile {
+    max-width: $grid-breakpoint-mobile;
+  }
+
+  @include media-tablet {
+    max-width: $grid-breakpoint-tablet;
+    padding-right: $indent-tablet;
+    padding-left: $indent-tablet;
+  }
+
+  @include media-desktop {
+    max-width: $grid-breakpoint-desktop;
+  }
+}
+
+.grid-fluid { // без отступов + фиксированная max-width
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 0;
+
+  @include media-mobile {
+    max-width: $grid-breakpoint-mobile;
+  }
+
+  @include media-tablet {
+    max-width: $grid-breakpoint-tablet;
+  }
+
+  @include media-desktop {
+    max-width: $grid-breakpoint-desktop;
+  }
+}
+
+.grid-unlim { // без отступов, без ограничений по ширине
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 /*
@@ -23,4 +78,15 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.cut-from-content {
+  display: none;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
 }

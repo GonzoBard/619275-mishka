@@ -1,5 +1,32 @@
 .page-header__info {
   display: none;
 
-  @include fonts(14px, 24px, 400, normal, $color-tundora);
+  @include fonts(15px, 24px, 400, normal, $color-tundora);
+}
+
+/*
+  ADAPTIVE
+*/
+
+@include media-tablet {
+  .page-header {
+    position: relative;
+
+    border-bottom: 1px solid $color-gallery;
+  }
+
+  .page-header__info {
+    position: absolute;
+    z-index: 10000;
+    top: 86px;
+    right: $indent-tablet;
+
+    display: block;
+  }
+}
+
+@include media-desktop {
+  .page-header {
+    border-bottom: none;
+  }
 }

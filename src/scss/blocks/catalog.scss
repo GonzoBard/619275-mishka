@@ -1,18 +1,40 @@
 .catalog {
   margin-top: 30px;
-}
-
-.catalog__container {
-  margin-left: $indent-30;
-  margin-right: $indent-30;
-  margin-bottom: 58px;
+  margin-bottom: 1px;
 }
 
 .catalog__list {
-  @include resetList();
+  @include reset-list();
 }
 
 .catalog__item {
   margin-bottom: 30px;
 }
 
+/*
+  ADAPTIVE
+*/
+
+@include media-tablet {
+  .catalog__item {
+    margin-bottom: 55px;
+  }
+}
+
+@include media-desktop {
+  .catalog__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .catalog__item {
+    margin-right: 51px;
+  }
+
+  .catalog__item:nth-child(3n) {
+    margin-right: 0;
+  }
+}

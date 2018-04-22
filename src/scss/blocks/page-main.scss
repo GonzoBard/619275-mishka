@@ -11,4 +11,22 @@
   h3 {
     @include fonts(25px, 30px, 700, normal, $color-black);
   }
+
+  @include media-tablet {
+    h2,
+    h3 {
+      @include fonts(43px, 50px, 700, normal, $color-black);
+    }
+  }
+
+  @include media-desktop {
+    h2,
+    h3 {
+      @include fonts(53px, 57px, 700, normal, $color-black);
+    }
+  }
+}
+
+.page-main_stub-info {
+  padding: 30px;
 }

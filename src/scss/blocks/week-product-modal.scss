@@ -1,7 +1,6 @@
 .week-product-modal {
   width: 320px;
-  padding-top: 33px;
-  padding-bottom: 45px;
+  padding: 33px 29px 45px;
 
   border: 1px solid $color-silver;
   box-shadow: 0 5px 10px 0 rgba($color-swamp, 0.25);
@@ -17,13 +16,13 @@
   vertical-align: top;
   width: 148px;
 
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   @include fonts(25px, 30px, 700, normal, $color-black);
   text-align: center;
 }
 
 .week-product-modal__text {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   margin-top: 23px;
 
   @include fonts(15px, 30px, 400, normal, $color-tundora);

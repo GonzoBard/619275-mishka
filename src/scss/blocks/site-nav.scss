@@ -1,16 +1,17 @@
 .site-nav {
-  @include resetList();
-  width: 100%;
+  @include reset-list();
 }
 
 .site-nav__item {
-  padding-left: $indent-30;
   padding-top: 26px;
   padding-bottom: 28px;
+  padding-left: $indent-mobile; // на mobile относится к сетке
+  padding-right: $indent-mobile; // на mobile относится к сетке
 }
 
 .site-nav__link {
-  padding-left: 45px;
+  width: $content-width-mobile; // на mobile жестко задам ширину контентной области, относится к сетке
+  padding-left: 45px; // на mobile общий отступ для иконок
 
   &:active {
     opacity: 0.3;
@@ -38,5 +39,69 @@
   &:hover,
   &:focus {
     background-image: url("../img/icon-site-nav__item-basket-hover.svg");
+  }
+}
+
+/*
+  ADAPTIVE
+*/
+
+@include media-tablet {
+  .site-nav__item {
+    padding-left: 0; // выкл., пришедший с mobile, сеточный отступ
+    padding-right: 0; // выкл., пришедший с mobile, сеточный отступ
+  }
+
+  .site-nav__link {
+    width: auto; // выкл., пришедшее с mobile, ограничение контентной области, относится к сетке
+    padding-left: 0; // выкл., пришедшее с mobile, общий отступ для иконок
+  }
+
+  .site-nav__link--search {
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    margin-left: 30px;
+
+    background-position: center center;
+
+    @include reset-font();
+  }
+
+  .site-nav__link--basket {
+    padding-left: 82px; // отступ для иконки
+    background-position: 30px 4px;
+  }
+
+  .site-nav__link--catalog {
+    @include fonts(15px, 24px, 700, normal, $color-black);
+    padding-left: $indent-tablet;
+  }
+
+  .site-nav__link--order {
+    @include fonts(15px, 24px, 700, normal, $color-black);
+  }
+}
+
+@include media-desktop {
+  .site-nav__link--catalog {
+    @include fonts(17px, 24px, 700, normal, $color-black);
+    padding-left: 0; // выкл., пришедший с tablet
+  }
+
+  .site-nav__link--order {
+    @include fonts(17px, 24px, 700, normal, $color-black);
+    padding-left: 20px;
+  }
+
+  .site-nav__link--new {
+    @include fonts(15px, 24px, 700, normal, $color-black);
+    padding-left: $indent-tablet;
+  }
+
+  .site-nav__link--sale {
+    @include fonts(15px, 24px, 700, normal, $color-black);
+    padding-left: 25px;
   }
 }

@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
   background-position: 48% 50%;
 
-  @include resetFont();
+  @include reset-font();
 
   cursor: pointer;
   outline-width: 0;
@@ -40,5 +40,19 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+/*
+  ADAPTIVE
+*/
+
+@include media-tablet {
+  .reviews-navigation {
+    width: 170px;
+  }
+
+  .reviews-navigation__btn {
+    border: none;
   }
 }

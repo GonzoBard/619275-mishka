@@ -3,32 +3,38 @@
   margin-top: 55px;
   padding-bottom: 45px;
 
-  position: relative;
-
-  @include waves(6px);
+  @include wave-bg-mobile();
 
   blockquote {
-    @include resetMarginPadding();
+    @include reset-margin-padding();
     margin-top: 24px;
   }
 }
 
 .reviews__container {
-  margin-left: 28px;
-  margin-right: $indent-30;
+  padding-left: $indent-mobile;
+  padding-right: $indent-mobile;
+
+  position: relative;
 }
 
 .reviews__header {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
 }
 
 .reviews__list {
-  @include resetList();
+  @include reset-list();
   padding-left: 2px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
 }
 
 .reviews__text {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   @include fonts(15px, 30px, 400, normal, $color-tundora);
 }
 
@@ -47,4 +53,88 @@
   margin-left: 2px;
 
   text-align: center;
+}
+
+/*
+  ADAPTIVE
+*/
+
+@include media-tablet {
+  .reviews {
+    padding-top: 75px;
+    padding-bottom: 110px;
+
+    @include wave-bg-tablet();
+    @include put-review-bg();
+    position: relative;
+  }
+
+  .reviews__container {
+    padding-left: $indent-tablet;
+    padding-right: $indent-tablet;
+  }
+
+  .reviews__list {
+    margin-top: 30px;
+  }
+
+  .reviews__text {
+    @include fonts(17px, 30px, 400, normal, $color-tundora);
+  }
+
+  .reviews__author {
+    margin-top: 55px;
+  }
+
+  .reviews__navigation {
+    position: absolute;
+    right: $indent-tablet;
+    bottom: 0;
+  }
+
+  .reviews__btn {
+    position: absolute;
+    top: 0;
+    right: $indent-tablet;
+
+    width: 175px;
+    margin-top: 0;
+
+    font-size: 17px;
+  }
+}
+
+@include media-desktop {
+  .reviews {
+    padding-top: 0; // выкл. отступа с tablet
+    padding-bottom: 0; // выкл. отступа с tablet
+
+    &::before {
+      display: none; // выкл. волны с tablet
+    }
+    background: none; // выкл. фона с tablet
+  }
+
+  .reviews__container {
+    padding-top: 75px;
+    padding-bottom: 180px;
+    padding-left: $indent-desktop-left + $indent-tablet; // becouse box model
+
+    @include wave-after-desktop();
+    @include put-review-bg($indent-tablet);
+  }
+
+  .reviews__author {
+    margin-top: 25px;
+  }
+
+  .reviews__navigation {
+    bottom: 180px;
+    right: $indent-tablet;
+  }
+
+  .reviews__btn {
+    top: 75px;
+    right: $indent-tablet;
+  }
 }

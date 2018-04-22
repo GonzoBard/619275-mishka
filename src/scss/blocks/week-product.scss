@@ -3,22 +3,22 @@
   margin-top: 27px;
   padding-bottom: 35px;
 
-  position: relative;
-
-  @include waves(6px);
+  @include wave-bg-mobile();
 }
 
 .week-product__container {
-  margin-left: $indent-30;
-  margin-right: $indent-30;
+  padding-left: $indent-mobile;
+  padding-right: $indent-mobile;
+
+  position: relative;
 }
 
 .week-product__header {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
 }
 
 .week-product__label {
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   margin-top: 5px;
 
   @include fonts(17px, 20px, 700, normal, $color-downy);
@@ -26,6 +26,8 @@
 }
 
 .week-product__description {
+  margin-bottom: 28px;
+
   p {
     margin-top: 23px;
 
@@ -51,10 +53,6 @@
   width: 98px;
 }
 
-.week-product__pic {
-  margin-top: 28px;
-}
-
 .week-product__buy {
   margin-top: 20px;
 }
@@ -62,7 +60,7 @@
 .week-product__price {
   text-align: center;
 
-  @include resetMarginPadding();
+  @include reset-margin-padding();
   @include fonts(17px, 24px, 700, normal, $color-tundora);
 }
 
@@ -70,4 +68,113 @@
   width: 100%;
   margin-top: 26px;
   font-size: 17px;
+}
+
+/*
+  ADAPTIVE
+*/
+
+@include media-tablet {
+  .week-product {
+    @include wave-bg-tablet();
+    padding-bottom: 67px;
+  }
+
+  .week-product__container {
+    padding-left: $indent-tablet;
+    padding-right: $indent-tablet;
+  }
+
+  .week-product__wrap {
+    padding-right: calc(50% + 44px);
+
+    position: relative;
+  }
+
+  .week-product__label {
+    position: absolute;
+    top: 5px;
+    right: $indent-tablet * 2;
+
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+
+    @include fonts(17px, 17px, 700, normal, $color-downy);
+    text-indent: 8px;
+  }
+
+  .week-product__description {
+    p {
+      margin-top: 50px;
+
+      @include fonts(17px, 30px, 400, normal, $color-tundora);
+    }
+  }
+
+  .week-product__description-table {
+    margin-top: 45px;
+  }
+
+  .week-product__pic {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .week-product__buy {
+    margin-top: 50px;
+  }
+
+  .week-product__price {
+    @include fonts(20px, 24px, 700, normal, $color-tundora);
+  }
+}
+
+@include media-desktop {
+  .week-product {
+    margin-top: 100px;
+    padding-bottom: 0;
+
+    background: none; // выкл. волну на фоне
+  }
+
+  .week-product__container {
+    padding-left: $indent-desktop-left + $indent-tablet; // becouse box model
+    padding-bottom: 93px;
+
+    @include wave-after-desktop(); // ставлю волну на псевдо-элементе
+  }
+
+  .week-product__wrap {
+    padding-right: calc(50% + 139px);
+  }
+
+  .week-product__header {
+    position: relative;
+    z-index: 150;
+  }
+
+  .week-product__label {
+    top: 10px;
+    left: $indent-tablet * 2;
+  }
+
+  .week-product__description-table {
+    margin-top: 55px;
+  }
+
+  .week-product__pic {
+    top: -160px;
+    right: 0;
+    z-index: 100;
+  }
+
+  .week-product__buy {
+    margin-top: 100px;
+  }
+
+  .week-product__btn-order {
+    margin-top: 35px;
+  }
 }
