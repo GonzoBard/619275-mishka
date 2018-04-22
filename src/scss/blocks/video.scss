@@ -1,5 +1,9 @@
 .video {
   @include reset-font(); // высота строки(line-height) давала лишние +4px
+}
+
+.video__wrap { // этот элемент нужен, чтобы не ставить position: relative на блоке .video
+  width: 100%;
   position: relative;
 }
 
