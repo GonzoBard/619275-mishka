@@ -1,10 +1,16 @@
 .week-product {
+  width: 100%;
   margin-top: 27px;
   padding-bottom: 35px;
 
-  position: relative;
+  @include wave-bg-mobile();
+}
 
-  @include waves-mobile();
+.week-product__container {
+  padding-left: $indent-mobile;
+  padding-right: $indent-mobile;
+
+  position: relative;
 }
 
 .week-product__header {
@@ -65,12 +71,18 @@
 }
 
 /*
-  GRID
+  ADAPTIVE
 */
 
 @include media-tablet {
   .week-product {
-    @include waves-tablet();
+    @include wave-bg-tablet();
+    padding-bottom: 67px;
+  }
+
+  .week-product__container {
+    padding-left: $indent-tablet;
+    padding-right: $indent-tablet;
   }
 
   .week-product__wrap {
@@ -124,18 +136,14 @@
     margin-top: 100px;
     padding-bottom: 0;
 
-    &::after {
-      display: none;
-    }
+    background: none; // выкл. волну на фоне
   }
 
   .week-product__container {
     padding-left: $indent-desktop-left;
-    padding-bottom: 70px;
+    padding-bottom: 93px;
 
-    position: relative;
-
-    @include waves-desktop();
+    @include wave-after-desktop(); // ставлю волну на псевдо-элементе
   }
 
   .week-product__wrap {

@@ -104,7 +104,7 @@
   box-shadow: 0 3px 5px 0 rgba($color-black, 0.1);
 }
 
-@mixin waves($height, $bg-url) {
+@mixin wave-after($height, $bg-url) {
   &::after {
     content: "";
     position: absolute;
@@ -120,14 +120,38 @@
   }
 }
 
-@mixin waves-mobile() {
-  @include waves(6px, "../img/waves-mobile.svg");
+@mixin wave-bg($bg-url) {
+  background-color: transparent;
+  background-image: url($bg-url);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
 }
 
-@mixin waves-tablet() {
-  @include waves(17px, "../img/waves-tablet.svg");
+@mixin wave-bg-mobile() {
+  @include wave-bg("../img/wave-mobile.svg");
 }
 
-@mixin waves-desktop() {
-  @include waves(23px, "../img/waves-tablet.svg");
+@mixin wave-bg-tablet() {
+  @include wave-bg("../img/wave-tablet.svg");
+}
+
+@mixin wave-bg-desktop() {
+  @include wave-bg("../img/wave-desktop.svg");
+}
+
+@mixin wave-after-desktop() {
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - #{23px});
+    left: $indent-tablet;
+    display: block;
+    width: $content-width-desktop;
+    height: 23px;
+
+    background-color: transparent;
+    background-image: url("../img/wave-desktop.svg");
+    background-repeat: repeat-x;
+    background-position: 0 0;
+  }
 }

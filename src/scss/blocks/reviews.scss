@@ -5,16 +5,23 @@
 
   position: relative;
 
-  @include waves-mobile();
+  @include wave-bg-mobile();
 
   blockquote {
     @include reset-margin-padding();
     margin-top: 24px;
   }
+  outline: 1px solid;
 }
 
 .reviews__container {
-  margin-left: -2px;
+  //margin-left: -2px;
+  padding-left: $indent-mobile;
+  padding-right: $indent-mobile;
+
+  position: relative;
+
+  outline: 1px dashed;
 }
 
 .reviews__header {
@@ -55,7 +62,7 @@
 }
 
 /*
-  GRID
+  ADAPTIVE
 */
 
 @include media-tablet {
@@ -63,7 +70,7 @@
     padding-bottom: 110px;
     padding-top: 75px;
 
-    @include waves-tablet();
+    @include wave-bg-tablet();
 
     &::before {
       content: "";
@@ -82,7 +89,9 @@
   }
 
   .reviews__container {
-    margin-left: 0;
+    //margin-left: 0;
+    padding-left: $indent-tablet;
+    padding-right: $indent-tablet;
   }
 
   .reviews__list {
@@ -99,8 +108,8 @@
 
   .reviews__navigation {
     position: absolute;
-    bottom: 115px;
     right: $indent-tablet;
+    bottom: 0;
   }
 
   .reviews__btn {
@@ -109,7 +118,7 @@
     right: $indent-tablet;
 
     width: 175px;
-    margin-top: 75px;
+    margin-top: 0;
 
     font-size: 17px;
   }
@@ -119,12 +128,10 @@
   .reviews {
     padding-bottom: 0;
 
-    &::after {
-      display: none;
-    }
+    background: none;
 
     &::before {
-      left: $indent-tablet;
+      display: none;
     }
   }
 
@@ -132,10 +139,22 @@
     padding-left: $indent-desktop-left;
     padding-bottom: 180px;
 
-    background-color: transparent;
-    background-image: url("../img/waves-tablet.svg");
-    background-repeat: repeat-x;
-    background-position: 0 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 350px;
+      height: 457px;
+      background-color: $color-alto;
+      background-image: url("../img/reviews__bg-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    @include wave-after-desktop();
   }
 
   .reviews__author {
