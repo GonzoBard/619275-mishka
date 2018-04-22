@@ -13,8 +13,6 @@
 }
 
 .contacts__container {
-  margin-left: -2px;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -31,6 +29,7 @@
   width: 100%;
   margin-top: 17px;
   margin-left: 1px;
+  margin-bottom: 16px;
   border-spacing: 0;
 
   td {
@@ -71,9 +70,6 @@
 }
 
 .contacts__map {
-  margin-top: 16px;
-  margin-right: -$indent-mobile;
-  margin-left: -$indent-mobile;
   position: relative;
 }
 
@@ -117,22 +113,21 @@
     margin-top: 60px;
     padding-bottom: 57px;
 
-    background-color: transparent;
-    background-image: url("../img/contacts__flag-tablet.svg");
-    background-repeat: no-repeat;
-    background-position: calc(100% - #{$indent-tablet}) 0;
-
     h3 {
       @include fonts(43px, 50px, 700, normal, $color-black);
     }
   }
 
-  .contacts__container {
-    margin-left: 0;
+  .contacts__container--before-map {
+    background-color: transparent;
+    background-image: url("../img/contacts__flag-tablet.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - #{$indent-tablet}) 0;
   }
 
   .contacts__table {
     margin-top: 55px;
+    margin-bottom: 55px;
   }
 
   .contacts__tbody {
@@ -150,12 +145,6 @@
     width: 180px;
   }
 
-  .contacts__map {
-    margin-top: 55px;
-    margin-right: -$indent-tablet;
-    margin-left: -$indent-tablet;
-  }
-
   .contacts__btn {
     width: 230px;
     margin-top: 57px;
@@ -165,9 +154,8 @@
 @include media-desktop {
   .contacts {
     margin-top: 130px;
-    margin-bottom: 105px;
-
-    background-position: ($indent-tablet * 2) 0;
+    margin-bottom: 90px;
+    padding-bottom: 0;
 
     h3 {
       @include fonts(53px, 57px, 700, normal, $color-black);
@@ -175,8 +163,12 @@
   }
 
   .contacts__container {
-    padding-left: $indent-desktop-left;
     align-items: flex-start;
+    padding-left: $indent-desktop-left + $indent-tablet; // becouse box model
+  }
+
+  .contacts__container--before-map {
+    background-position: ($indent-tablet * 2) 0;
   }
 
   .contacts__tbody {
@@ -192,13 +184,23 @@
   }
 
   .contacts__map-wrap {
+    width: $content-width-desktop;
+    margin-left: auto;
+    margin-right: auto;
+
     position: relative;
+
+    outline: 1px solid red;
   }
 
   .contacts__map {
     position: absolute;
     top: -400px;
-    right: $indent-tablet;
+    right: 0;
     width: 50%;
+  }
+
+  .contacts__btn {
+    margin-top: 6px;
   }
 }
