@@ -10,7 +10,7 @@
 
 <h1 class="visually-hidden">Каталог магазина «Мишка»</h1>
 
-<header class="page-header  container-fluid">
+<header class="page-header  grid-unlim">
   <nav class="main-nav">
     <h2 class="visually-hidden">Основная навигация</h2>
     <div class="logo  main-nav__logo  main-nav__item">
@@ -34,13 +34,13 @@
       <li class="site-nav__item  main-nav__item  main-nav__new"><a class="a  site-nav__link  site-nav__link--new" href="#">Новые поступления</a></li>
       <li class="site-nav__item  main-nav__item  main-nav__sale"><a class="a  site-nav__link  site-nav__link--sale" href="#">Распродажа</a></li>
     </ul>
+    <p class="page-header__info">Бесплатная доставка по России</p>
   </nav>
-  <p class="page-header__info">Бесплатная доставка по России</p>
 </header>
 
 <main class="page-main">
 
-  <section class="page-title  page-title--catalog  page-main__title  container-fluid  container-fluid--desktop-unlimit">
+  <section class="page-title  page-title--catalog  page-main__title  grid-unlim">
     <h2 class="page-title__header">Каталог товаров</h2>
   </section>
 
@@ -120,21 +120,29 @@
 
 <footer class="page-footer">
 
-  <section class="social  page-footer__social">
-    <h2 class="visually-hidden">«Мишка» в социальных сетях</h2>
-    <ul class="social__list">
-      <li class="social__item"><a class="btn-social btn-social--instagram" href="#">Instagram</a></li>
-      <li class="social__item"><a class="btn-social btn-social--facebook" href="#">Facebook</a></li>
-      <li class="social__item"><a class="btn-social btn-social--twitter" href="#">Twitter</a></li>
-    </ul>
-  </section>
+  <div class="page-footer__container  grid">
 
-  <section class="copyright  page-footer__copyright">
-    <h2 class="visually-hidden">Copyright</h2>
-    <a class="copyright__a" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на лендинг интенсива «Профессиональный HTML и CSS, уровень 2»" target="_blank">
-      Разработано
-    </a>
-  </section>
+    <div class="page-footer__logo">
+      <img src="img/page-footer__logo.svg" alt="Логотип магазина «Мишка» в подвале" width="102" height="34">
+    </div>
+
+    <section class="social  page-footer__social">
+      <h2 class="visually-hidden">«Мишка» в социальных сетях</h2>
+      <ul class="social__list">
+        <li class="social__item"><a class="btn-social btn-social--instagram" href="#">Instagram</a></li>
+        <li class="social__item"><a class="btn-social btn-social--facebook" href="#">Facebook</a></li>
+        <li class="social__item"><a class="btn-social btn-social--twitter" href="#">Twitter</a></li>
+      </ul>
+    </section>
+
+    <section class="copyright  page-footer__copyright">
+      <h2 class="visually-hidden">Copyright</h2>
+      <a class="copyright__a" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на лендинг интенсива «Профессиональный HTML и CSS, уровень 2»" target="_blank">
+        Разработано
+      </a>
+    </section>
+
+  </div>
 
 </footer>
 

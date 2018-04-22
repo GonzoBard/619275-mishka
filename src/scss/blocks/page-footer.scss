@@ -7,13 +7,10 @@
 }
 
 .page-footer__container {
-  padding-right: $indent-mobile;
-  padding-left: $indent-mobile;
-
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -22,13 +19,13 @@
 }
 
 .page-footer__social {
-  margin-left: 57px;
+  margin-left: -5px;
 }
 
 .page-footer__copyright {
   $left: 37px;
   margin-top: 37px;
-  margin-left: $left;
+  margin-left: 0;
 
   position: relative;
 
@@ -50,10 +47,9 @@
 
 @include media-tablet {
   .page-footer__container {
-    padding-right: $indent-tablet;
-    padding-left: $indent-tablet;
-
+    flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   .page-footer__logo {
@@ -71,13 +67,5 @@
     &::before {
       display: none;
     }
-  }
-}
-
-@include media-desktop {
-  .page-footer__container {
-    max-width: $grid-breakpoint-desktop;
-    margin-right: auto;
-    margin-left: auto;
   }
 }
