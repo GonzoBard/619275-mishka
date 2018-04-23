@@ -1,3 +1,21 @@
+@mixin media-mobile() {
+  @media (min-width: $grid-breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin media-tablet() {
+  @media (min-width: $grid-breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin media-desktop() {
+  @media (min-width: $grid-breakpoint-desktop) {
+    @content;
+  }
+}
+
 @mixin fonts($size, $height, $weight, $style, $color) {
   font-size: $size;
   line-height: $height;
@@ -6,24 +24,31 @@
   color: $color;
 }
 
-@mixin resetMarginPadding() {
+@mixin reset-margin-padding() {
   margin: 0;
   padding: 0;
 }
 
-@mixin resetList() {
+@mixin reset-list() {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-@mixin resetFont() {
+@mixin reset-font() {
   @include fonts(0, 0, 400, normal, transparent);
 }
 
-@mixin catalog-section($icon-top, $icon-right, $bg-color, $icon-w, $icon-h, $icon-url) {
+@mixin take-menu-item-out-of-flow($z-index, $top, $left) {
+  position: absolute;
+  z-index: $z-index;
+  top: $top;
+  left: $left;
+  border: none;
+}
+
+@mixin catalog-section($padding-bottom, $icon-top, $icon-right, $bg-color, $icon-w, $icon-h, $icon-url) {
   $padding-top: 25px;
-  $padding-bottom: 30px;
   $grow-size: 5px;
 
   padding-top: $padding-top;
@@ -71,7 +96,15 @@
   }
 }
 
-@mixin waves($height) {
+@mixin catalog-item-shadow-hover() {
+  box-shadow: 0 6px 10px 0 rgba($color-black, 0.1);
+}
+
+@mixin catalog-item-shadow-active() {
+  box-shadow: 0 3px 5px 0 rgba($color-black, 0.1);
+}
+
+@mixin wave-after($height, $bg-url) {
   &::after {
     content: "";
     position: absolute;
@@ -81,17 +114,79 @@
     width: 100%;
     height: $height;
     background-color: $color-white;
-    //background-image: url("../img/waves.png");
-    background-image: url("../img/waves.svg");
+    background-image: url($bg-url);
     background-repeat: repeat-x;
     background-position: 0 0;
   }
 }
 
-@mixin itemBlockShadowHover() {
-  box-shadow: 0 6px 10px 0 rgba($color-black, 0.1);
+@mixin wave-bg($bg-url) {
+  background-color: transparent;
+  background-image: url($bg-url);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
 }
 
-@mixin itemBlockShadowActive() {
-  box-shadow: 0 3px 5px 0 rgba($color-black, 0.1);
+@mixin wave-bg-mobile() {
+  @include wave-bg("../img/wave-mobile.svg");
+}
+
+@mixin wave-bg-tablet() {
+  @include wave-bg("../img/wave-tablet.svg");
+}
+
+@mixin wave-bg-desktop() {
+  @include wave-bg("../img/wave-desktop.svg");
+}
+
+@mixin wave-after-desktop() {
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - #{23px});
+    left: $indent-tablet;
+    display: block;
+    width: $content-width-desktop;
+    height: 23px;
+
+    background-color: transparent;
+    background-image: url("../img/wave-desktop.svg");
+    background-repeat: repeat-x;
+    background-position: 0 0;
+  }
+}
+
+@mixin put-review-bg($left: 0) {
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: $left;
+    display: block;
+    width: 350px;
+    height: 457px;
+    background-color: $color-alto;
+    background-image: url("../img/reviews__bg-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+@mixin form-group-order-list() {
+  max-width: $grid-breakpoint-mobile;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $indent-mobile;
+  padding-right: $indent-mobile;
+
+  @include media-tablet {
+    max-width: $grid-breakpoint-tablet;
+    padding-left: $indent-tablet;
+    padding-right: $indent-tablet;
+  }
+
+  @include media-desktop {
+    max-width: $grid-breakpoint-desktop;
+  }
 }
