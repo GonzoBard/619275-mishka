@@ -85,7 +85,7 @@
         </picture>
         <div class="week-product__buy">
           <p class="week-product__price">Цена: 990 руб.</p>
-          <a class="btn  week-product__btn-order" onclick="addToBasketModal.open(event);" href="stub-add-to-basket.html" target="_blank">
+          <a class="btn  week-product__btn-order" onclick="addToBasketModal.open(event);" href="stub-add-to-basket.html">
             Заказать
           </a>
         </div>
@@ -175,7 +175,7 @@
   </section>
 
   <section class="add-to-basket-modal  grid-unlim  visually-hidden" id="add-to-basket-modal" onclick="addToBasketModal.close();">
-    <div class="add-to-basket-modal__container  grid" onclick="event.stopPropagation();">
+    <div class="add-to-basket-modal__container  grid-modal" onclick="event.stopPropagation();">
       <h3 class="visually-hidden">Форма добавления товара в корзину</h3>
       <h3 class="add-to-basket-modal__header">Добавить в корзину</h3>
       <p class="add-to-basket-modal__text">Выберите размер:</p>

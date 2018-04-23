@@ -65,7 +65,7 @@
           </div>
           <div class="catalog-item__buy">
             <p class="catalog-item__price">1 200 руб.</p>
-            <a class="catalog-item__btn-basket" onclick="addToBasketModal.open(event);" href="stub-add-to-basket.html" target="_blank">
+            <a class="catalog-item__btn-basket" onclick="addToBasketModal.open(event);" href="stub-add-to-basket.html">
               Добавить в корзину
             </a>
           </div>
@@ -87,7 +87,7 @@
           </div>
           <div class="catalog-item__buy">
             <p class="catalog-item__price">690 руб.</p>
-            <a class="catalog-item__btn-basket" onclick="addToBasketModal.open(event);" href="stub-add-to-basket.html" target="_blank">
+            <a class="catalog-item__btn-basket" onclick="addToBasketModal.open(event);" href="stub-add-to-basket.html">
               Добавить в корзину
             </a>
           </div>
@@ -109,7 +109,7 @@
           </div>
           <div class="catalog-item__buy">
             <p class="catalog-item__price">1 500 руб.</p>
-            <a class="catalog-item__btn-basket" onclick="addToBasketModal.open(event);" href="stub-add-to-basket.html" target="_blank">
+            <a class="catalog-item__btn-basket" onclick="addToBasketModal.open(event);" href="stub-add-to-basket.html">
               Добавить в корзину
             </a>
           </div>
@@ -139,32 +139,34 @@
     </div>
   </section>
 
-  <section class="add-to-basket-modal  visually-hidden" id="add-to-basket-modal">
-    <h3 class="visually-hidden">Форма добавления товара в корзину</h3>
-    <h3 class="add-to-basket-modal__header">Добавить в корзину</h3>
-    <p class="add-to-basket-modal__text">Выберите размер:</p>
-    <form class="form-add-product" action="https://echo.htmlacademy.ru" method="post">
+  <section class="add-to-basket-modal  grid-unlim  visually-hidden" id="add-to-basket-modal" onclick="addToBasketModal.close();">
+    <div class="add-to-basket-modal__container  grid-modal" onclick="event.stopPropagation();">
+      <h3 class="visually-hidden">Форма добавления товара в корзину</h3>
+      <h3 class="add-to-basket-modal__header">Добавить в корзину</h3>
+      <p class="add-to-basket-modal__text">Выберите размер:</p>
+      <form class="form-add-product" action="https://echo.htmlacademy.ru" method="post">
 
-      <ul class="form-add-product__list" aria-label="Список размеров">
+        <ul class="form-add-product__list" aria-label="Список размеров">
 
-        <li class="form-group-add-product" aria-label="Размер «s»">
-          <input class="visually-hidden" type="radio" name="size" value="s" id="form-group-add-product__size-s" checked>
-          <label for="form-group-add-product__size-s">s</label>
-        </li>
+          <li class="form-group-add-product" aria-label="Размер «s»">
+            <input class="visually-hidden" type="radio" name="size" value="s" id="form-group-add-product__size-s" checked>
+            <label for="form-group-add-product__size-s">s</label>
+          </li>
 
-        <li class="form-group-add-product" aria-label="Размер «m»">
-          <input class="visually-hidden" type="radio" name="size" value="m" id="form-group-add-product__size-m">
-          <label for="form-group-add-product__size-m">m</label>
-        </li>
+          <li class="form-group-add-product" aria-label="Размер «m»">
+            <input class="visually-hidden" type="radio" name="size" value="m" id="form-group-add-product__size-m">
+            <label for="form-group-add-product__size-m">m</label>
+          </li>
 
-        <li class="form-group-add-product" aria-label="Размер «l»">
-          <input class="visually-hidden" type="radio" name="size" value="l" id="form-group-add-product__size-l">
-          <label for="form-group-add-product__size-l">l</label>
-        </li>
+          <li class="form-group-add-product" aria-label="Размер «l»">
+            <input class="visually-hidden" type="radio" name="size" value="l" id="form-group-add-product__size-l">
+            <label for="form-group-add-product__size-l">l</label>
+          </li>
 
-      </ul>
-      <button class="btn form-add-product__btn" onclick="addToBasketModal.close();">Добавить</button>
-    </form>
+        </ul>
+        <button class="btn form-add-product__btn" onclick="addToBasketModal.close();">Добавить</button>
+      </form>
+    </div>
   </section>
 
 </main>

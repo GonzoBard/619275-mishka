@@ -14,6 +14,14 @@ function AddToBasketModal() {
     bodyClassList.remove(overflowClassName);
     modal.classList.add(hideClassName);
   };
+
+  this.escKeyPressed = function (event) {
+    event = event || window.event;
+    if (event.keyCode === 27) {
+      this.close();
+    }
+  };
 }
 
 var addToBasketModal = new AddToBasketModal();
+document.addEventListener("keydown", addToBasketModal.escKeyPressed.bind(addToBasketModal));
