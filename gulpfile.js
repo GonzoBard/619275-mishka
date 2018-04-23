@@ -27,7 +27,7 @@ const paths = {
     img: "./build/img",
     js: "./build/js",
     css: "./build/css",
-    cssName: "bundle.min.css",
+    minCssFilename: "bundle.min.css",
   },
   build: "./build"
 };
@@ -54,6 +54,9 @@ gulp.task("img", () => {
 gulp.task("js", () => {
   return gulp.src(paths.src.js)
     .pipe(minjs())
+    .pipe(rename({
+      suffix: ".min"
+    }))
     .pipe(gulp.dest(paths.output.js))
     .pipe(browsersync.stream());
 });
@@ -64,7 +67,7 @@ gulp.task("css", () => {
     .pipe(postcss([autoprefixer({                 // префиксы
       browsers: ["last 2 versions", "not ie 10", "Firefox ESR"]
     })]))
-    .pipe(rename(paths.output.cssName))
+    .pipe(rename(paths.output.minCssFilename))
     .pipe(gulp.dest(paths.src.css))               // чтобы при разработке также был валидным путь до bundle в html
     .pipe(mincss({                                // минификация
       level: {1: {specialComments: false}}
