@@ -1,4 +1,4 @@
-.week-product-modal {
+.add-to-basket-modal {
   width: 320px;
   padding: 33px 29px 45px;
 
@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.week-product-modal__header {
+.add-to-basket-modal__header {
   display: inline-block;
   vertical-align: top;
   width: 148px;
@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-.week-product-modal__text {
+.add-to-basket-modal__text {
   @include reset-margin-padding();
   margin-top: 23px;
 

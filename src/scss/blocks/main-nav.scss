@@ -130,6 +130,9 @@
   }
 
   .main-nav__logo {
+    width: 149px;
+    height: 72px;
+
     @include take-menu-item-out-of-flow(15000, 0, 490px);
     @include reset-margin-padding();
   }
