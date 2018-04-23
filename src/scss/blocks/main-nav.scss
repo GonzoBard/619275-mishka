@@ -80,6 +80,10 @@
     align-items: flex-start; // специально
   }
 
+  .main-nav__toggle-wrap { // кнопка open/close главной навигации видима, только если размер экрана < tablet
+    display: none;
+  }
+
   .main-nav__item {
     border-bottom: none; // на tablet нижняя граница стоит на блоке .page-header
     justify-content: flex-start;
@@ -93,6 +97,10 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
+    &.cut-from-content { // на tablet и выше меню всегда открыто
+      display: flex;
+    }
   }
 
   .main-nav__logo {

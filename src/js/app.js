@@ -1,23 +1,23 @@
-function MainNavigationMenu(screenWidthToOpenAllTime) {
+function MainNavigationMenu() {
+
+  // 1) Меню всегда открыто, если ширина экрана >= tablet,
+  //      определяется селектором: (для @media tablet) .main-nav__site.cut-from-content { display: flex;}
+  //    Глобальная видимость кнопки переключения меню
+  //      определяется селектором: (для @media tablet) .main-nav__toggle-wrap { display: none; }
+  //
+  // 2) Иначе смотреть в localStorage
+  // 3) Если что-то не так с localStorage, то меню всегда открыто
+  // 4) Иначе применить значение из localStorage
 
   var isOpen;
   var valueName = "mainNavigationMenuIsOpen";
-  var btnContainer = document.getElementById("main-nav__toggle-wrap");
   var btnClose = document.getElementById("main-nav__btn-toggle--close");
   var btnOpen = document.getElementById("main-nav__btn-toggle--open");
-  var siteNavigation = document.getElementById("site-nav");
+  var siteNavigation = document.getElementById("main-nav__site");
   var hideClassName = "cut-from-content";
 
-  this.whatToDo = function () {
-    // 1) Меню всегда открыто, если ширина экрана >= ширине screenWidthToOpenAllTime
-    // 2) Иначе смотреть в localStorage
-    // 3) Если что-то не так с localStorage, то меню всегда открыто
-    // 4) Иначе применить значение из localStorage
-    return this.isScreenMustBeOpenAllTime() || this.getValueFromStorage();
-  };
-
   this.init = function () {
-    this.setState(this.whatToDo());
+    this.setState(this.getValueFromStorage());
   };
 
   this.setState = function (value) {
@@ -37,46 +37,21 @@ function MainNavigationMenu(screenWidthToOpenAllTime) {
     }
   };
 
-  this.changeState = function (value, needSave) {
+  this.changeState = function (value) {
     if (value !== isOpen) { // если next состояние отличается от текущего
       this.setState(value);
-      if (needSave) { // при изменении ширины экрана мы не сохраняем состояние в localStorage
-        this.saveValueToStorage();
-      }
+      this.saveValueToStorage();
     }
-  };
-
-  this.screenResized = function () {
-    this.changeState(this.whatToDo(), false);
-  };
-
-  this.isScreenMustBeOpenAllTime = function () {
-    result = this.getScreenWidth() >= screenWidthToOpenAllTime;
-    if (result) {
-      if (!btnContainer.classList.contains(hideClassName)) {
-        btnContainer.classList.add(hideClassName);
-      }
-    } else {
-      if (btnContainer.classList.contains(hideClassName)) {
-        btnContainer.classList.remove(hideClassName);
-      }
-    }
-    return result;
-  };
-
-  this.getScreenWidth = function () {
-    // https://stackoverflow.com/questions/1248081/get-the-browser-viewport-dimensions-with-javascript#8876069
-    return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   };
 
   this.saveValueToStorage = function () {
-    if (this.storageAvailable('localStorage')) {
+    if (this.storageAvailable("localStorage")) {
       localStorage.setItem(valueName, isOpen);
     }
   };
 
   this.getValueFromStorage = function () {
-    if (this.storageAvailable('localStorage') && localStorage.hasOwnProperty(valueName)) {
+    if (this.storageAvailable("localStorage") && localStorage.hasOwnProperty(valueName)) {
       return localStorage[valueName] === "true";
     } else {
       return true;
@@ -86,7 +61,7 @@ function MainNavigationMenu(screenWidthToOpenAllTime) {
   this.storageAvailable = function (type) { // https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#Feature-detecting_localStorage
     try {
       var storage = window[type],
-        x = '__storage_test__';
+        x = "__storage_test__";
       storage.setItem(x, x);
       storage.removeItem(x);
       return true;
@@ -99,16 +74,14 @@ function MainNavigationMenu(screenWidthToOpenAllTime) {
         e.code === 1014 ||
         // test name field too, because code might not be present
         // everything except Firefox
-        e.name === 'QuotaExceededError' ||
+        e.name === "QuotaExceededError" ||
         // Firefox
-        e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-        // acknowledge QuotaExceededError only if there's something already stored
+        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+        // acknowledge QuotaExceededError only if there"s something already stored
         storage.length !== 0;
     }
   };
 }
 
-var mainNavigationMenu = new MainNavigationMenu(768);
+var mainNavigationMenu = new MainNavigationMenu();
 mainNavigationMenu.init();
-
-window.addEventListener("resize", mainNavigationMenu.screenResized.bind(mainNavigationMenu));
