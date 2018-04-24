@@ -1,7 +1,7 @@
 .reviews {
   width: 100%;
   margin-top: 55px;
-  padding-bottom: 45px;
+  padding-bottom: 50px;
 
   @include wave-bg-mobile();
 
@@ -24,6 +24,7 @@
 
 .reviews__list {
   @include reset-list();
+  margin-left: -2px;
   padding-left: 2px;
 
   display: flex;
@@ -40,6 +41,11 @@
 
 .reviews__author {
   margin-top: 27px;
+  letter-spacing: 0.12px;
+}
+
+.review-author__contact {
+  letter-spacing: -0.1px;
 }
 
 .reviews__navigation {
@@ -61,8 +67,9 @@
 
 @include media-tablet {
   .reviews {
-    padding-top: 75px;
-    padding-bottom: 110px;
+    margin-top: -12px;
+    padding-top: 77px;
+    padding-bottom: 132px;
 
     @include wave-bg-tablet();
     @include put-review-bg();
@@ -74,8 +81,13 @@
     padding-right: $indent-tablet;
   }
 
+  .reviews__header {
+    margin-left: -5px;
+  }
+
   .reviews__list {
-    margin-top: 30px;
+    margin-top: 25px;
+    margin-left: -3px;
   }
 
   .reviews__text {
@@ -83,18 +95,18 @@
   }
 
   .reviews__author {
-    margin-top: 55px;
+    margin-top: 58px;
   }
 
   .reviews__navigation {
     position: absolute;
-    right: $indent-tablet;
-    bottom: 0;
+    right: $indent-tablet + 2px;
+    bottom: 2px;
   }
 
   .reviews__btn {
     position: absolute;
-    top: 0;
+    top: 2px;
     right: $indent-tablet;
 
     width: 175px;
@@ -106,6 +118,7 @@
 
 @include media-desktop {
   .reviews {
+    margin-top: -5px;
     padding-top: 0; // выкл. отступа с tablet
     padding-bottom: 0; // выкл. отступа с tablet
 
@@ -116,25 +129,34 @@
   }
 
   .reviews__container {
-    padding-top: 75px;
-    padding-bottom: 180px;
+    padding-top: 70px;
+    padding-bottom: 185px;
     padding-left: $indent-desktop-left + $indent-tablet; // becouse box model
 
     @include wave-after-desktop();
     @include put-review-bg($indent-tablet);
   }
 
+  .reviews__header {
+    margin-left: -4px;
+  }
+
+  .reviews__list {
+    width: 790px;
+    margin-left: -2px;
+  }
+
   .reviews__author {
-    margin-top: 25px;
+    margin-top: 40px;
   }
 
   .reviews__navigation {
-    bottom: 180px;
-    right: $indent-tablet;
+    bottom: 189px;
+    right: $indent-tablet + 2px;
   }
 
   .reviews__btn {
-    top: 75px;
+    top: 79px;
     right: $indent-tablet;
   }
 }

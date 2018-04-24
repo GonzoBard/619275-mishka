@@ -27,7 +27,7 @@
     <ul class="site-nav  main-nav__site" id="main-nav__site" aria-label="Навигация по сайту">
       <li class="site-nav__item  main-nav__item  main-nav__catalog"><a class="a  site-nav__link  site-nav__link--catalog" href="catalog.html">Каталог товаров</a></li>
       <li class="site-nav__item  main-nav__item  main-nav__order"><a class="a  site-nav__link  site-nav__link--order" href="order-form.html">Вязание на заказ</a></li>
-      <li class="site-nav__item  main-nav__item  main-nav__search"><a class="a  site-nav__link  site-nav__link--search" href="#">Поиск по сайту</a></li>
+      <li class="site-nav__item  main-nav__item  main-nav__search  site-nav__item--search"><a class="a  site-nav__link  site-nav__link--search" href="#">Поиск по сайту</a></li>
       <li class="site-nav__item  main-nav__item  main-nav__basket"><a class="a  site-nav__link  site-nav__link--basket" href="#">Корзина: пока пуста</a></li>
       <li class="site-nav__item  main-nav__item  main-nav__new"><a class="a  site-nav__link  site-nav__link--new" href="#">Новые поступления</a></li>
       <li class="site-nav__item  main-nav__item  main-nav__sale"><a class="a  site-nav__link  site-nav__link--sale" href="#">Распродажа</a></li>
@@ -85,38 +85,12 @@
         </picture>
         <div class="week-product__buy">
           <p class="week-product__price">Цена: 990 руб.</p>
-          <button class="btn  week-product__btn-order">Заказать</button>
+          <a class="btn  week-product__btn-order" onclick="addToBasketModal.open(event);" href="stub-add-to-basket.html">
+            Заказать
+          </a>
         </div>
       </div>
     </div>
-  </section>
-
-  <section class="week-product-modal  visually-hidden">
-    <h3 class="visually-hidden">Форма добавления товара недели в корзину</h3>
-    <h3 class="week-product-modal__header">Добавить в корзину</h3>
-    <p class="week-product-modal__text">Выберите размер:</p>
-    <form class="form-add-product" action="https://echo.htmlacademy.ru" method="post">
-
-      <ul class="form-add-product__list" aria-label="Список размеров">
-
-        <li class="form-group-add-product" aria-label="Размер «s»">
-          <input class="visually-hidden" type="radio" name="size" value="s" id="form-group-add-product__size-s" checked>
-          <label for="form-group-add-product__size-s">s</label>
-        </li>
-
-        <li class="form-group-add-product" aria-label="Размер «m»">
-          <input class="visually-hidden" type="radio" name="size" value="m" id="form-group-add-product__size-m">
-          <label for="form-group-add-product__size-m">m</label>
-        </li>
-
-        <li class="form-group-add-product" aria-label="Размер «l»">
-          <input class="visually-hidden" type="radio" name="size" value="l" id="form-group-add-product__size-l">
-          <label for="form-group-add-product__size-l">l</label>
-        </li>
-
-      </ul>
-      <button class="btn form-add-product__btn">Добавить</button>
-    </form>
   </section>
 
   <section class="advantages  grid">
@@ -136,7 +110,7 @@
   <section class="reviews">
     <div class="reviews__container  grid-fluid">
       <h3 class="reviews__header">Отзывы</h3>
-      <ul class="reviews__list">
+      <ul class="reviews__list" id="reviews__list">
         <li class="reviews__item">
           <blockquote>
             <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
@@ -157,7 +131,7 @@
         </li>
         <li class="reviews__item  cut-from-content">
           <blockquote>
-            <p class="reviews__text">У нас вязаная кукла Фрея. Всем рекомендуем. Она очень мягкая и гибкая (не поломается). Кукла не большая, её рост около 40 см, и (не знаю задумано ли так производителем), но её очень удобно обнимать, даже взрослому) Вот такая у нас вязаная кукла Фрея...</p>
+            <p class="reviews__text">У нас вязаная кукла Фрея. Всем рекомендуем. Она очень мягкая и гибкая (не поломается). Кукла небольшая, её рост около 40 см, и (не знаю задумано ли так производителем), но её очень удобно обнимать, даже взрослому). Вот такая у нас вязаная кукла Фрея...</p>
             <cite class="review-author  reviews__author">
               <span class="review-author__name">Елена Скороходова</span>
               <span class="review-author__contact">LUSY</span>
@@ -166,8 +140,8 @@
         </li>
       </ul>
       <div class="reviews-navigation  reviews__navigation" aria-label="Навигация по отзывам">
-        <button class="reviews-navigation__btn reviews-navigation__btn--previous">Previous</button>
-        <button class="reviews-navigation__btn reviews-navigation__btn--next">Next</button>
+        <button class="reviews-navigation__btn reviews-navigation__btn--previous" onclick="reviewSlider.prev();">Previous</button>
+        <button class="reviews-navigation__btn reviews-navigation__btn--next" onclick="reviewSlider.next();">Next</button>
       </div>
       <a class="btn reviews__btn" href="stub-new-review.html">Написать</a>
     </div>
@@ -190,15 +164,45 @@
       </table>
     </div>
     <div class="contacts__map-wrap">
-      <div class="contacts__map">
-        <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A61d2d97bceb3caa51bd0ded8cc4f967f3fa8e90d548727e939478bef95e1c7e2&amp;width=100%25&amp;height=457&amp;lang=ru_RU&amp;scroll=false"></script>
-        <div class="contacts__pin-wrap"></div>
+      <div class="contacts__map" id="contacts__map">
+        <img src="img/contacts__map@1x.jpg" width="1149" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
       </div>
     </div>
     <div class="contacts__container  contacts__container--after-map  grid">
       <a class="btn  contacts__btn" href="stub-feedback.html">Напишите нам</a>
     </div>
   </section>
+
+  <section class="add-to-basket-modal  grid-unlim  visually-hidden" id="add-to-basket-modal" onclick="addToBasketModal.close();">
+    <div class="add-to-basket-modal__container  grid-modal" onclick="event.stopPropagation();">
+      <h3 class="visually-hidden">Форма добавления товара в корзину</h3>
+      <h3 class="add-to-basket-modal__header">Добавить в корзину</h3>
+      <p class="add-to-basket-modal__text">Выберите размер:</p>
+      <form class="form-add-product" action="https://echo.htmlacademy.ru" method="post">
+
+        <ul class="form-add-product__list" aria-label="Список размеров">
+
+          <li class="form-group-add-product" aria-label="Размер «s»">
+            <input class="visually-hidden" type="radio" name="size" value="s" id="form-group-add-product__size-s" checked>
+            <label for="form-group-add-product__size-s">s</label>
+          </li>
+
+          <li class="form-group-add-product" aria-label="Размер «m»">
+            <input class="visually-hidden" type="radio" name="size" value="m" id="form-group-add-product__size-m">
+            <label for="form-group-add-product__size-m">m</label>
+          </li>
+
+          <li class="form-group-add-product" aria-label="Размер «l»">
+            <input class="visually-hidden" type="radio" name="size" value="l" id="form-group-add-product__size-l">
+            <label for="form-group-add-product__size-l">l</label>
+          </li>
+
+        </ul>
+        <button class="btn form-add-product__btn" onclick="addToBasketModal.close();">Добавить</button>
+      </form>
+    </div>
+  </section>
+
 </main>
 
 <footer class="page-footer">
@@ -229,6 +233,10 @@
 
 </footer>
 
-<script src="js/app.js"></script>
+<script src="js/app.min.js"></script>
+<script src="js/addToBasket.min.js"></script>
+<script src="js/reviewSlider.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script src="js/map.min.js"></script>
 </body>
 </html>

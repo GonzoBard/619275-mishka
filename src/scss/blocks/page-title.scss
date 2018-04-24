@@ -2,7 +2,7 @@
   padding-top: 48px;
   padding-bottom: 53px;
 
-  background-color: $color-alabaster;
+  background-color: $color-seashell;
 
   position: relative;
 
@@ -15,6 +15,8 @@
 .page-title--index {
   padding-top: 48px;
   padding-bottom: 305px;
+
+  background-color: $color-alabaster;
 
   .page-title__header {
     width: 217px;
@@ -49,7 +51,7 @@
       content: "";
       position: absolute;
       z-index: 2000;
-      top: calc(100% - 14px);
+      top: calc(100% - 8px);
       left: 0;
       display: block;
       width: 100%;
@@ -62,33 +64,62 @@
   }
 
   .page-title--index {
-    padding-top: 100px;
+    padding-top: 117px;
     padding-bottom: 453px;
 
     .page-title__header {
       width: 517px;
+      letter-spacing: 0.15px;
     }
+  }
+
+  .page-title--catalog,
+  .page-title--order-form {
+    &::after {
+      top: calc(100% - 10px);
+      left: 0;
+    }
+  }
+
+  .page-title--catalog {
+    padding-top: 59px;
+    padding-bottom: 44px;
+  }
+
+  .page-title--order-form {
+    padding-top: 57px;
+    padding-bottom: 46px;
   }
 
   .page-title__bg-wrap {
     background-image: url("../img/page-title__bg-tablet@1x.jpg");
+    background-position: 50% 0;
   }
 }
 
 @include media-desktop {
   .page-title {
     &::after {
+      top: calc(100% - 13px);
+      left: 0;
       height: 34px;
       background-image: url("../img/wave-page-title-desktop.svg");
     }
   }
 
   .page-title--index {
-    padding-top: 91px;
-    padding-bottom: 433px;
+    padding-top: 109px;
+    padding-bottom: 430px;
 
     .page-title__header {
       width: 620px;
     }
   }
+
+  .page-title--catalog,
+  .page-title--order-form {
+    padding-top: 49px;
+    padding-bottom: 55px;
+  }
 }
+

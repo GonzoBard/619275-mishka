@@ -30,3 +30,16 @@
     border-color: $color-downy;
   }
 }
+
+/*
+  ADAPTIVE
+*/
+
+@include media-tablet {
+  .form-group-add-product {
+    label {
+      width: 111px;
+      height: 52px;
+    }
+  }
+}

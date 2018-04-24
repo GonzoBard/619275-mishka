@@ -1,7 +1,7 @@
 .week-product {
   width: 100%;
   margin-top: 27px;
-  padding-bottom: 35px;
+  padding-bottom: 40px;
 
   @include wave-bg-mobile();
 }
@@ -68,6 +68,7 @@
   width: 100%;
   margin-top: 26px;
   font-size: 17px;
+  text-align: center;
 }
 
 /*
@@ -77,6 +78,8 @@
 @include media-tablet {
   .week-product {
     @include wave-bg-tablet();
+    margin-top: 33px;
+    margin-left: -5px;
     padding-bottom: 67px;
   }
 
@@ -93,8 +96,8 @@
 
   .week-product__label {
     position: absolute;
-    top: 5px;
-    right: $indent-tablet * 2;
+    top: 7px;
+    right: 97px;
 
     display: inline-block;
     vertical-align: top;
@@ -106,24 +109,34 @@
 
   .week-product__description {
     p {
-      margin-top: 50px;
+      margin-top: 49px;
+      margin-left: 1px;
 
       @include fonts(17px, 30px, 400, normal, $color-tundora);
     }
   }
 
   .week-product__description-table {
-    margin-top: 45px;
+    margin-top: 36px;
+    margin-left: 3px;
+  }
+
+  .week-product__param-name {
+    width: 96px;
   }
 
   .week-product__pic {
     position: absolute;
-    top: 0;
+    top: 8px;
     right: 0;
   }
 
   .week-product__buy {
-    margin-top: 50px;
+    margin-top: 56px;
+  }
+
+  .week-product__btn-order {
+    margin-top: 34px;
   }
 
   .week-product__price {
@@ -133,7 +146,7 @@
 
 @include media-desktop {
   .week-product {
-    margin-top: 100px;
+    margin-top: 108px;
     padding-bottom: 0;
 
     background: none; // выкл. волну на фоне
@@ -141,7 +154,7 @@
 
   .week-product__container {
     padding-left: $indent-desktop-left + $indent-tablet; // becouse box model
-    padding-bottom: 93px;
+    padding-bottom: 96px;
 
     @include wave-after-desktop(); // ставлю волну на псевдо-элементе
   }
@@ -151,30 +164,42 @@
   }
 
   .week-product__header {
+    margin-left: -2px;
     position: relative;
     z-index: 150;
+    letter-spacing: -0.175px;
   }
 
   .week-product__label {
     top: 10px;
-    left: $indent-tablet * 2;
+    left: $indent-tablet * 2 - 2px;
+  }
+
+  .week-product__description {
+    p {
+      margin-top: 49px;
+      margin-left: 2px;
+    }
   }
 
   .week-product__description-table {
-    margin-top: 55px;
+    margin-top: 48px;
   }
 
   .week-product__pic {
-    top: -160px;
-    right: 0;
+    top: -159px;
+    right: -2px;
     z-index: 100;
   }
 
   .week-product__buy {
-    margin-top: 100px;
+    margin-top: 110px;
+    margin-left: -3px;
   }
 
   .week-product__btn-order {
-    margin-top: 35px;
+    margin-top: 33px;
+    margin-left: 5px;
+    width: 292px;
   }
 }

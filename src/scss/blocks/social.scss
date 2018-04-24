@@ -1,5 +1,6 @@
 .social__list {
   @include reset-list();
+  width: 142px;
 
   display: flex;
   flex-direction: row;
