@@ -95,21 +95,55 @@
 
 @include media-tablet {
   .advantages {
-    margin-top: 50px;
+    margin-top: 51px;
   }
 
   .advantages__container {
-    margin-left: 0;
+    margin-left: -12px;
   }
 
   .advantages__list {
-    height: 400px;
+    height: 550px;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    //align-items: flex-start;
+    align-content: flex-start;
     flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    margin-right: 86px;
+    margin-top: 18px;
+    margin-left: 3px;
+    margin-bottom: 9px;
+
+    @include fonts(20px, 22px, 700, normal, $color-black);
+
+    &--environmentally-friendly-material {
+      width: 217px;
+    }
+
+    &--scandinavian-style-at-the-russian-price {
+      width: 244px;
+    }
+
+    &--increases-likes-on-photos {
+      width: 240px;
+    }
+
+    &--hand-tied-with-love-and-affection {
+      width: 258px;
+    }
+
+    &--support-of-domestic-manufacturer {
+      width: 303px;
+    }
+
+    &--comes-in-gift-box {
+      width: 248px;
+    }
   }
 }
 

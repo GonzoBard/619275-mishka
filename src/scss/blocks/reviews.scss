@@ -61,8 +61,9 @@
 
 @include media-tablet {
   .reviews {
-    padding-top: 75px;
-    padding-bottom: 110px;
+    margin-top: -12px;
+    padding-top: 77px;
+    padding-bottom: 132px;
 
     @include wave-bg-tablet();
     @include put-review-bg();
@@ -70,12 +71,17 @@
   }
 
   .reviews__container {
+    margin-left: -3px;
     padding-left: $indent-tablet;
     padding-right: $indent-tablet;
   }
 
+  .reviews__header {
+    margin-left: -2px;
+  }
+
   .reviews__list {
-    margin-top: 30px;
+    margin-top: 25px;
   }
 
   .reviews__text {
@@ -83,19 +89,19 @@
   }
 
   .reviews__author {
-    margin-top: 55px;
+    margin-top: 57px;
   }
 
   .reviews__navigation {
     position: absolute;
-    right: $indent-tablet;
-    bottom: 0;
+    right: $indent-tablet - 1px;
+    bottom: 2px;
   }
 
   .reviews__btn {
     position: absolute;
-    top: 0;
-    right: $indent-tablet;
+    top: 2px;
+    right: $indent-tablet - 3px;
 
     width: 175px;
     margin-top: 0;
