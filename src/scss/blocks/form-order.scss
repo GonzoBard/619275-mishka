@@ -30,6 +30,7 @@
 .form-order__info-required {
   @include reset-margin-padding();
   margin-top: 3px;
+  margin-left: -1px;
 
   @include fonts(14px, 16px, 400, normal, $color-tundora);
 }
@@ -50,6 +51,7 @@
 @include media-tablet {
   .form-order__intro {
     @include fonts(17px, 30px, 400, normal, $color-tundora);
+    margin-top: 51px;
   }
 
   .form-order__footer {
