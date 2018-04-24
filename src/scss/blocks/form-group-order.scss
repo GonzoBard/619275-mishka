@@ -30,6 +30,14 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+
+  @include media-tablet {
+    padding-left: $indent-tablet-left + $indent-tablet + 19px; // becouse box model
+  }
+
+  @include media-desktop {
+    padding-left: $indent-desktop-left + 50px; // becouse box model
+  }
 }
 
 .form-group-order__item {
@@ -234,6 +242,7 @@
 
   input {
     width: 100%;
+    margin-left: -1px;
     padding-top: 7px;
     padding-bottom: 16px;
     border: none;
@@ -282,7 +291,7 @@
     border: none;
     border-bottom: 2px solid $color-black;
 
-    background-color: $color-white;
+    background-color: transparent;
     background-image: url("../img/icon-form-group-order__item-contacts--phone.svg");
     background-repeat: no-repeat;
     background-position: calc(100% - 6px) 0;
@@ -331,7 +340,7 @@
     border: none;
     border-bottom: 2px solid $color-black;
 
-    background-color: $color-white;
+    background-color: transparent;
     background-image: url("../img/icon-form-group-order__item-contacts--email.svg");
     background-repeat: no-repeat;
     background-position: calc(100% - 2px) 5px;
@@ -358,7 +367,9 @@
   }
 
   textarea {
-    width: 100%;
+    min-width: $content-width-mobile;
+    width: $content-width-mobile;
+    max-width: $content-width-mobile;
     height: 142px;
     margin-left: 0;
     padding: 15px 14px;
@@ -376,16 +387,6 @@
 /*
   ADAPTIVE
 */
-
-.form-group-order__list {
-  @include media-tablet {
-    padding-left: $indent-tablet-left + $indent-tablet + 19px; // becouse box model
-  }
-
-  @include media-desktop {
-    padding-left: $indent-desktop-left + 50px; // becouse box model
-  }
-}
 
 @include media-tablet {
   .form-group-order__item {
@@ -517,25 +518,68 @@
   .form-group-order--phone,
   .form-group-order--email {
     background-color: $color-seashell;
+
+    .form-group-order__title {
+      top: 18px;
+      left: $indent-tablet;
+    }
+
+    .form-group-order__list {
+      padding-left: 218px;
+    }
   }
 
   .form-group-order--phone {
+    margin-left: 0;
     padding-top: 50px;
-
-    .form-group-order__list {
-      padding-left: 220px;
-    }
+    padding-bottom: 5px;
 
     input {
       padding-top: 16px;
       padding-left: 17px;
+      letter-spacing: 0.85px;
+      background-position: calc(100% - 26px) 11px;
+    }
+  }
+
+  .form-group-order--email {
+    margin-left: 0;
+    padding-top: 19px;
+    padding-bottom: 50px;
+
+    input {
+      padding-top: 16px;
+      padding-left: 17px;
+      letter-spacing: 0.85px;
+      background-position: calc(100% - 22px) 16px;
     }
   }
 
   .form-group-order--extra {
-    textarea {
-      width: 547px;
+    margin-top: 28px;
+
+    .form-group-order__list {
+      padding-left: 217px;
     }
+
+    textarea {
+      min-width: 501px;
+      width: 501px;
+      max-width: 501px;
+      padding-top: 13.5px;
+      padding-left: 15px;
+
+      font-size: 19px;
+      letter-spacing: 1.1px;
+    }
+  }
+
+  .form-order__footer {
+    margin-top: 41px;
+  }
+
+  .form-order__info-required {
+    margin-top: -4px;
   }
 }
 
