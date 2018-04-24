@@ -16,8 +16,13 @@
 */
 
 @include media-tablet {
+  .catalog {
+    margin-top: 80px;
+    margin-bottom: -1px;
+  }
+
   .catalog__item {
-    margin-bottom: 55px;
+    margin-bottom: 54px;
   }
 }
 

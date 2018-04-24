@@ -1,6 +1,6 @@
 .production-process__container {
   width: 100%;
-  margin-bottom: 57px;
+  margin-bottom: 58px;
 
   border: 1px solid $color-gallery;
 
@@ -20,9 +20,10 @@
 
 .production-process__header {
   @include reset-margin-padding();
-  margin-top: 25px;
+  margin-top: 23px;
   padding-bottom: 23px;
   padding-left: 89px;
+  letter-spacing: 0.1px;
 
   background-color: $color-white;
   background-image: url("../img/icon-production-process--camera.svg");
@@ -42,7 +43,7 @@
 
 .production-process__intro {
   @include reset-margin-padding();
-  margin-top: 27px;
+  margin-top: 28px;
 
   @include fonts(13px, 24px, 400, normal, $color-tundora);
 }
@@ -50,6 +51,10 @@
 .production-process__btn {
   margin-top: 25px;
   margin-bottom: 32px;
+  font-size: 17px;
+  width: 192px;
+  padding-left: 23px;
+  letter-spacing: 0.2px;
 }
 
 /*
@@ -58,6 +63,12 @@
 
 @include media-tablet {
   .production-process__container {
+    margin-bottom: 63px;
+
+    h3 {
+      font-size: 20px;
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -70,13 +81,22 @@
 
   .production-process__header {
     order: 2;
-    font-size: 20px;
+    z-index: 1000;
+    margin-top: -1px;
+    padding-top: 38px;
+    padding-left: 105px;
+    padding-bottom: 5px;
+    letter-spacing: 0.2px;
 
-    background-position: 33px 0;
+    background-position: 41px 38px;
+    border-top: 1px solid $color-gallery;
   }
 
   .production-process__data-wrap {
     order: 3;
+    margin-top: 10px;
+    margin-left: 39px;
+    margin-right: 36px;
 
     display: flex;
     flex-direction: column;
@@ -85,10 +105,18 @@
   }
 
   .production-process__intro {
+    margin-top: 17px;
+
     font-size: 15px;
+    line-height: 30px;
   }
 
   .production-process__btn {
+    width: 584px;
+    margin-top: 35px;
+    margin-left: 2px;
+    margin-bottom: 45px;
+    padding-left: 20px;
     text-align: center;
   }
 }

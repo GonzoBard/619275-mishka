@@ -111,7 +111,7 @@
   }
 
   .catalog-item__data-wrap {
-    padding: 26px 31px 30px;
+    padding: 26px 31px 10px 26px;
 
     display: flex;
     flex-direction: column;
@@ -120,21 +120,31 @@
   }
 
   .catalog-item__link {
+    display: inline-block;
+    vertical-align: top;
+    width: 232px;
     font-size: 20px;
   }
 
   .catalog-item__parameters {
-    margin-top: 10px;
+    margin-top: 4px;
     font-size: 15px;
   }
 
   .catalog-item__buy {
     margin-top: auto;
     padding-top: 23px;
+    padding-bottom: 15px;
+    padding-left: 5px;
   }
 
   .catalog-item__price {
     font-size: 17px;
+  }
+
+  .catalog-item__btn-basket {
+    margin-top: -6px;
+    margin-right: 0;
   }
 }
 
