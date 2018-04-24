@@ -1,10 +1,25 @@
 .logo {
-  padding-top: 22px;
-  padding-bottom: 18px;
+  padding-top: 21px;
+  padding-bottom: 22px;
+
+  picture {
+    width: 86px;
+    height: 35px;
+  }
+
 }
 
 .logo__link {
   line-height: 0;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 /*

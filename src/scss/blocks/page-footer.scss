@@ -53,6 +53,15 @@
 
   .page-footer__logo {
     display: block;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .page-footer__social {
