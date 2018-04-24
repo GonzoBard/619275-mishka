@@ -99,6 +99,7 @@
 @include media-tablet {
   .catalog-item {
     width: $content-width-tablet;
+
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
@@ -151,6 +152,9 @@
 @include media-desktop {
   .catalog-item {
     width: 316px;
+
+    border: 1px solid $color-gallery;
+
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
@@ -159,15 +163,30 @@
   .catalog-item__pic {
     width: 316px;
     height: 462px;
+    margin-left: -1px;
   }
 
   .catalog-item__data-wrap {
     width: 100%;
-    height: auto;
-    padding: 26px 28px 27px 27px;
+    height: 100%;
+    padding: 25px 28px 27px 26px;
+
+    border: none;
   }
 
-  .catalog-item__info {
-    margin-bottom: 41px;
+  .catalog-item__parameters {
+    margin-top: 5px;
+    margin-bottom: -5px;
+  }
+
+  .catalog-item__buy {
+    padding-top: 22px;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  .catalog-item__btn-basket {
+    margin-top: -3px;
+    margin-right: 4px;
   }
 }

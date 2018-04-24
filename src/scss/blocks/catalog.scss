@@ -27,16 +27,22 @@
 }
 
 @include media-desktop {
+  .catalog {
+    margin-top: 133px;
+    margin-bottom: 0;
+  }
+
   .catalog__list {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
     flex-wrap: wrap;
   }
 
   .catalog__item {
     margin-right: 51px;
+    margin-bottom: 56px;
   }
 
   .catalog__item:nth-child(3n) {
