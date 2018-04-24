@@ -50,6 +50,7 @@
   .site-nav__item {
     padding-left: 0; // выкл., пришедший с mobile, сеточный отступ
     padding-right: 0; // выкл., пришедший с mobile, сеточный отступ
+    padding-bottom: 0;
   }
 
   .site-nav__link {
@@ -62,7 +63,8 @@
     vertical-align: middle;
     width: 18px;
     height: 18px;
-    margin-left: 30px;
+    margin-left: 32px;
+    padding-top: 40px;
 
     background-position: center center;
 
@@ -70,17 +72,20 @@
   }
 
   .site-nav__link--basket {
+    padding-top: 5px;
     padding-left: 82px; // отступ для иконки
-    background-position: 30px 4px;
+    background-position: 30px 9px;
   }
 
   .site-nav__link--catalog {
     @include fonts(15px, 24px, 700, normal, $color-black);
+    padding-top: 5px;
     padding-left: $indent-tablet;
   }
 
   .site-nav__link--order {
     @include fonts(15px, 24px, 700, normal, $color-black);
+    padding-top: 5px;
   }
 }
 

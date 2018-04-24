@@ -105,13 +105,21 @@
   }
 
   .main-nav__logo {
-    width: 318px; // т.к. элементы в шапке статичные
     flex-grow: 1;
+    width: 3px; // т.к. элементы в шапке статичные
+    margin-left: -2px;
+
+    border-top: none;
+  }
+
+  .main-nav__search,
+  .main-nav__basket {
+    height: 88px;
   }
 
   .main-nav__search {
     order: 1;
-    width: 82px; // т.к. элементы в шапке статичные
+    width: 83px; // т.к. элементы в шапке статичные
     border-left: 1px solid $color-gallery;
   }
 
@@ -122,12 +130,12 @@
   }
 
   .main-nav__catalog {
-    @include take-menu-item-out-of-flow(10000, 75px, 0);
+    @include take-menu-item-out-of-flow(10000, 75px, -1px);
     order: 3;
   }
 
   .main-nav__order {
-    @include take-menu-item-out-of-flow(10000, 75px, 215px);
+    @include take-menu-item-out-of-flow(10000, 75px, 217px);
     order: 4;
   }
 }
