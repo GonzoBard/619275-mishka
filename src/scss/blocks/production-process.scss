@@ -127,6 +127,7 @@
   $pic-width: 682px;
 
   .production-process__container {
+    margin-bottom: 105px;
     padding-left: $pic-width;
 
     position: relative;
@@ -143,9 +144,10 @@
     margin-top: 0;
     padding-top: 95px;
     padding-left: $padding-left;
+    padding-right: 50px;
 
     border: none;
-    background-position: $padding-left 50px;
+    background-position: 79px 45px;
   }
 
   .production-process__data-wrap {
@@ -155,7 +157,8 @@
 
   .production-process__btn {
     width: 230px;
-    margin-top: 82px;
-    margin-bottom: 55px;
+    margin-top: 47px;
+    margin-bottom: 59px;
+    padding-left: 17px;
   }
 }
