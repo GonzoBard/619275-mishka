@@ -82,6 +82,8 @@
 @include media-desktop {
   .form-order__intro {
     padding-left: $indent-desktop-left;
+    margin-top: 104px;
+    padding-right: 150px;
   }
 
   .form-order__footer {
