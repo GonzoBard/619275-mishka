@@ -36,7 +36,7 @@
   }
 
   @include media-desktop {
-    padding-left: $indent-desktop-left + 50px; // becouse box model
+    padding-left: $indent-desktop-left + $indent-tablet + 19px; // becouse box model
   }
 }
 
@@ -584,14 +584,134 @@
 }
 
 @include media-desktop {
-  .form-group-order__title {
-    top: 17px;
-    left: 105px;
+  .form-group-order--type {
+    padding-bottom: 28px;
+
+    .form-group-order__title {
+      top: 17px;
+      left: 114px;
+    }
+
+    .form-group-order__list {
+      padding-left: 244px;
+    }
+  }
+
+  .form-group-order--color {
+    padding-top: 51px;
+    padding-bottom: 28px;
+
+    .form-group-order__title {
+      top: 17px;
+      left: 109px;
+    }
+
+    .form-group-order__list {
+      padding-left: 244px;
+    }
+
+    .form-group-order__item:not(:last-child) {
+      margin-bottom: 27px;
+    }
+
+    .form-group-order__item:last-child {
+      margin-bottom: 27px;
+    }
+
+    .form-group-order__item:nth-child(2n) { // 2, 4, 6, ...
+      margin-right: 43px;
+    }
+
+    .form-group-order__item:nth-child(3n+1) { // каждый третий, начиная с первого: 1, 4, 7, ...
+      margin-right: 41px;
+    }
+
+    .form-group-order__item:nth-child(3n) { // 3, 6, 9, ...
+      margin-right: 0;
+    }
+
+    .form-group-order__item:nth-child(5n) { // 5, 10, 15, ...
+      margin-right: 43px;
+    }
+  }
+
+  .form-group-order--fio {
+    margin-bottom: 22px;
+
+    .form-group-order__list {
+      padding-left: 245px;
+      padding-right: 225px;
+    }
+
+    .form-group-order__title {
+      top: 4px;
+      left: 111px;
+    }
+
+    input {
+      padding-top: 3px;
+      padding-bottom: 16px;
+      padding-left: 18px;
+    }
+  }
+
+  .form-group-order--phone {
+    .form-group-order__title {
+      top: 18px;
+      left: 110px;
+    }
+
+    .form-group-order__list {
+      padding-left: 225px;
+      padding-right: 225px;
+    }
+
+    input {
+      background-position: calc(100% - 8px) 11px;
+    }
+  }
+
+  .form-group-order--email {
+    .form-group-order__title {
+      top: 19px;
+      left: 109px;
+    }
+
+    .form-group-order__list {
+      padding-left: 225px;
+      padding-right: 225px;
+    }
+
+    input {
+      letter-spacing: 1.1px;
+      background-position: calc(100% - 4px) 16px;
+    }
   }
 
   .form-group-order--extra {
-    textarea {
-      width: 870px;
+    .form-group-order__title {
+      top: 17px;
+      left: 112px;
     }
+
+    .form-group-order__list {
+      padding-left: 225px;
+    }
+
+    textarea {
+      min-width: 700px;
+      width: 700px;
+      max-width: 700px;
+    }
+  }
+
+  .form-order__footer {
+    margin-top: 37px;
+    justify-content: flex-start;
+  }
+
+  .form-order__info-required {
+    margin-left: 170px;
+    padding-top: 3px;
   }
 }
