@@ -77,18 +77,17 @@
   }
 
   .reviews__container {
-    margin-left: -3px;
     padding-left: $indent-tablet;
     padding-right: $indent-tablet;
   }
 
   .reviews__header {
-    margin-left: -2px;
+    margin-left: -5px;
   }
 
   .reviews__list {
     margin-top: 25px;
-    margin-left: 0;
+    margin-left: -3px;
   }
 
   .reviews__text {
@@ -101,14 +100,14 @@
 
   .reviews__navigation {
     position: absolute;
-    right: $indent-tablet - 1px;
+    right: $indent-tablet + 2px;
     bottom: 2px;
   }
 
   .reviews__btn {
     position: absolute;
     top: 2px;
-    right: $indent-tablet - 3px;
+    right: $indent-tablet;
 
     width: 175px;
     margin-top: 0;
@@ -130,7 +129,6 @@
   }
 
   .reviews__container {
-    margin-left: 0;
     padding-top: 70px;
     padding-bottom: 185px;
     padding-left: $indent-desktop-left + $indent-tablet; // becouse box model
