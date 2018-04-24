@@ -49,7 +49,7 @@
       content: "";
       position: absolute;
       z-index: 2000;
-      top: calc(100% - 14px);
+      top: calc(100% - 8px);
       left: 0;
       display: block;
       width: 100%;
@@ -62,7 +62,7 @@
   }
 
   .page-title--index {
-    padding-top: 100px;
+    padding-top: 117px;
     padding-bottom: 453px;
 
     .page-title__header {
@@ -72,6 +72,7 @@
 
   .page-title__bg-wrap {
     background-image: url("../img/page-title__bg-tablet@1x.jpg");
+    background-position: 50% 0;
   }
 }
 

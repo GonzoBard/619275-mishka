@@ -45,11 +45,11 @@
   }
 
   &--accessory-for-interior {
-    @include catalog-section(30px, 23px, 36px, $color-viking, 40px, 62px, "../img/icon-catalog-sections__item-bedside-night-light.svg");
+    @include catalog-section(25px, 30px, 23px, 36px, $color-viking, 40px, 62px, "../img/icon-catalog-sections__item-bedside-night-light.svg");
   }
 
   &--toy-for-children {
-    @include catalog-section(30px, 21px, 27px, $color-puerto-rico, 60px, 60px, "../img/icon-catalog-sections__item-lego.svg");
+    @include catalog-section(25px, 30px, 21px, 27px, $color-puerto-rico, 60px, 60px, "../img/icon-catalog-sections__item-lego.svg");
   }
 }
 
@@ -73,13 +73,14 @@
 
   .catalog-sections__a {
     @include fonts(20px, 30px, 700, normal, $color-white);
+    padding-left: 35px;
 
     &--accessory-for-interior {
-      @include catalog-section(40px, 23px, 36px, $color-viking, 40px, 62px, "../img/icon-catalog-sections__item-bedside-night-light.svg");
+      @include catalog-section(28px, 43px, 30px, 36px, $color-viking, 40px, 62px, "../img/icon-catalog-sections__item-bedside-night-light.svg");
     }
 
     &--toy-for-children {
-      @include catalog-section(40px, 21px, 27px, $color-puerto-rico, 60px, 60px, "../img/icon-catalog-sections__item-lego.svg");
+      @include catalog-section(28px, 43px, 31px, 33px, $color-puerto-rico, 60px, 60px, "../img/icon-catalog-sections__item-lego.svg");
     }
   }
 }
@@ -91,11 +92,11 @@
 
   .catalog-sections__a {
     &--accessory-for-interior {
-      @include catalog-section(50px, 23px, 36px, $color-viking, 40px, 62px, "../img/icon-catalog-sections__item-bedside-night-light.svg");
+      @include catalog-section(25px, 50px, 23px, 36px, $color-viking, 40px, 62px, "../img/icon-catalog-sections__item-bedside-night-light.svg");
     }
 
     &--toy-for-children {
-      @include catalog-section(50px, 21px, 27px, $color-puerto-rico, 60px, 60px, "../img/icon-catalog-sections__item-lego.svg");
+      @include catalog-section(25px, 50px, 21px, 27px, $color-puerto-rico, 60px, 60px, "../img/icon-catalog-sections__item-lego.svg");
     }
   }
 }

@@ -47,8 +47,7 @@
   border: none;
 }
 
-@mixin catalog-section($padding-bottom, $icon-top, $icon-right, $bg-color, $icon-w, $icon-h, $icon-url) {
-  $padding-top: 25px;
+@mixin catalog-section($padding-top, $padding-bottom, $icon-top, $icon-right, $bg-color, $icon-w, $icon-h, $icon-url) {
   $grow-size: 5px;
 
   padding-top: $padding-top;
