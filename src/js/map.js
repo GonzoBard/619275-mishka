@@ -11,7 +11,7 @@ function Map() {
     map = new ymaps.Map(mapContainerID, {
       center: [59.938631, 30.323055],
       zoom: 16,
-      controls: ['smallMapDefaultSet']
+      controls: ["smallMapDefaultSet"]
     }),
 
       // Создаём макет содержимого.

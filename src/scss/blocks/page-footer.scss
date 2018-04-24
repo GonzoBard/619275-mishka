@@ -23,7 +23,6 @@
 }
 
 .page-footer__copyright {
-  $left: 37px;
   margin-top: 37px;
   margin-left: 0;
 
@@ -33,7 +32,7 @@
     content: "";
     position: absolute;
     top: -21px;
-    left: -$left;
+    left: -37px;
 
     width: 260px;
     height: 1px;
