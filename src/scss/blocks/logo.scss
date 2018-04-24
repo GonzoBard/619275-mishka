@@ -6,7 +6,6 @@
     width: 86px;
     height: 35px;
   }
-
 }
 
 .logo__link {
@@ -34,6 +33,18 @@
     picture {
       width: 113px;
       height: 46px;
+    }
+  }
+}
+
+@include media-desktop {
+  .logo {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    picture {
+      width: 149px;
+      height: 72px;
     }
   }
 }

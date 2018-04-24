@@ -24,6 +24,7 @@
 
 .reviews__list {
   @include reset-list();
+  margin-left: -2px;
   padding-left: 2px;
 
   display: flex;
@@ -40,6 +41,11 @@
 
 .reviews__author {
   margin-top: 27px;
+  letter-spacing: 0.12px;
+}
+
+.review-author__contact {
+  letter-spacing: -0.1px;
 }
 
 .reviews__navigation {
@@ -82,6 +88,7 @@
 
   .reviews__list {
     margin-top: 25px;
+    margin-left: 0;
   }
 
   .reviews__text {
@@ -89,7 +96,7 @@
   }
 
   .reviews__author {
-    margin-top: 57px;
+    margin-top: 58px;
   }
 
   .reviews__navigation {
@@ -112,6 +119,7 @@
 
 @include media-desktop {
   .reviews {
+    margin-top: -5px;
     padding-top: 0; // выкл. отступа с tablet
     padding-bottom: 0; // выкл. отступа с tablet
 
@@ -122,25 +130,35 @@
   }
 
   .reviews__container {
-    padding-top: 75px;
-    padding-bottom: 180px;
+    margin-left: 0;
+    padding-top: 70px;
+    padding-bottom: 185px;
     padding-left: $indent-desktop-left + $indent-tablet; // becouse box model
 
     @include wave-after-desktop();
     @include put-review-bg($indent-tablet);
   }
 
+  .reviews__header {
+    margin-left: -4px;
+  }
+
+  .reviews__list {
+    width: 790px;
+    margin-left: -2px;
+  }
+
   .reviews__author {
-    margin-top: 25px;
+    margin-top: 40px;
   }
 
   .reviews__navigation {
-    bottom: 180px;
-    right: $indent-tablet;
+    bottom: 189px;
+    right: $indent-tablet + 2px;
   }
 
   .reviews__btn {
-    top: 75px;
+    top: 79px;
     right: $indent-tablet;
   }
 }

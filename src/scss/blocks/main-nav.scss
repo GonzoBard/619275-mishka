@@ -147,11 +147,13 @@
   }
 
   .main-nav__logo {
-    width: 149px;
-    height: 72px;
-
-    @include take-menu-item-out-of-flow(15000, 0, 490px);
+    @include take-menu-item-out-of-flow(15000, 9px, 500px);
     @include reset-margin-padding();
+  }
+
+  .main-nav__catalog,
+  .main-nav__order {
+    height: 88px;
   }
 
   .main-nav__catalog {
@@ -163,7 +165,7 @@
   .main-nav__order {
     order: 2;
     position: static;
-    width: 515px;
+    width: 516px;
     border-left: 1px solid $color-gallery;
   }
 
@@ -176,12 +178,12 @@
   }
 
   .main-nav__new {
-    @include take-menu-item-out-of-flow(10000, 75px, 0);
+    @include take-menu-item-out-of-flow(10000, 80px, 0);
     display: block;
   }
 
   .main-nav__sale {
-    @include take-menu-item-out-of-flow(10000, 75px, 215px);
+    @include take-menu-item-out-of-flow(10000, 80px, 244px);
     display: block;
   }
 }

@@ -67,6 +67,7 @@
 
     .page-title__header {
       width: 517px;
+      letter-spacing: 0.15px;
     }
   }
 
@@ -79,17 +80,20 @@
 @include media-desktop {
   .page-title {
     &::after {
+      top: calc(100% - 13px);
+      left: 0;
       height: 34px;
       background-image: url("../img/wave-page-title-desktop.svg");
     }
   }
 
   .page-title--index {
-    padding-top: 91px;
-    padding-bottom: 433px;
+    padding-top: 109px;
+    padding-bottom: 430px;
 
     .page-title__header {
       width: 620px;
     }
   }
 }
+

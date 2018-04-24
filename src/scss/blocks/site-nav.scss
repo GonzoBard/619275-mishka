@@ -81,11 +81,13 @@
     @include fonts(15px, 24px, 700, normal, $color-black);
     padding-top: 5px;
     padding-left: $indent-tablet;
+    letter-spacing: 0.1px;
   }
 
   .site-nav__link--order {
     @include fonts(15px, 24px, 700, normal, $color-black);
     padding-top: 5px;
+    letter-spacing: 0.1px;
   }
 }
 
@@ -93,20 +95,27 @@
   .site-nav__link--catalog {
     @include fonts(17px, 24px, 700, normal, $color-black);
     padding-left: 0; // выкл., пришедший с tablet
+    margin-left: -1px;
   }
 
   .site-nav__link--order {
     @include fonts(17px, 24px, 700, normal, $color-black);
-    padding-left: 20px;
+    padding-left: 34px;
   }
 
   .site-nav__link--new {
     @include fonts(15px, 24px, 700, normal, $color-black);
     padding-left: $indent-tablet;
+    letter-spacing: 0.17px;
   }
 
   .site-nav__link--sale {
     @include fonts(15px, 24px, 700, normal, $color-black);
     padding-left: 25px;
+    letter-spacing: 0.1px;
+  }
+
+  .site-nav__link--basket {
+    letter-spacing: 0.1px;
   }
 }
