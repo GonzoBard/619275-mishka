@@ -119,6 +119,52 @@
   }
 }
 
+@mixin wave-svg-after($z-index, $height, $url) {
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: $z-index;
+    bottom: 0;
+    left: 0;
+
+    width: 100%; // волна занимает всю ширину контейнера
+
+    // чтобы скрыть повторение фона по вертикали вниз
+    // на tablet, на ширине близкой к переключению на mobile
+    height: $height;
+
+    background-color: transparent;
+    background-image: url($url);
+    background-position: center; // центрирую волну
+    background-size: contain; // масштабирую волну
+
+    // для корректного масштабирования SVG
+    // крайне важно НЕ задать ширину или высоту, отличные от значений заданных во viewBox,
+    // например:
+    //    Правильно
+    //      <svg width="1150" height="34" viewBox="0 0 1150 34"
+    //    Ошибка
+    //      <svg width="1150" height="24" viewBox="0 0 1150 34" ==> ваше масштабирование перестанет работать как вы ожидаете
+  }
+}
+
+@mixin wave-svg-mobile() {
+  @include wave-svg-after(1000, 6px, "../img/wave-bg.svg");
+}
+
+@mixin wave-svg-tablet() {
+  @include wave-svg-after(1000, 15px, "../img/wave-bg.svg");
+}
+
+@mixin wave-svg-desktop() {
+  @include wave-svg-after(1000, 21px, "../img/wave-bg.svg");
+
+  &::after { // немного откорректирую положение волны
+    left: $indent-tablet;
+    width: $content-width-desktop;
+  }
+}
+
 @mixin wave-bg($bg-url) {
   background-color: transparent;
   background-image: url($bg-url);

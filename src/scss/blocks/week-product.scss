@@ -3,7 +3,8 @@
   margin-top: 27px;
   padding-bottom: 40px;
 
-  @include wave-bg-mobile();
+  @include wave-svg-mobile();
+  position: relative;
 }
 
 .week-product__container {
@@ -77,10 +78,11 @@
 
 @include media-tablet {
   .week-product {
-    @include wave-bg-tablet();
     margin-top: 44px;
     margin-left: -5px;
     padding-bottom: 67px;
+
+    @include wave-svg-tablet();
   }
 
   .week-product__container {
@@ -149,14 +151,16 @@
     margin-top: 123px;
     padding-bottom: 0;
 
-    background: none; // выкл. волну на фоне
+    &::after { // выкл. волну на блоке, который тянется на всю ширину
+      display: none;
+    }
   }
 
   .week-product__container {
     padding-left: $indent-desktop-left + $indent-tablet; // becouse box model
     padding-bottom: 96px;
 
-    @include wave-after-desktop(); // ставлю волну на псевдо-элементе
+    @include wave-svg-desktop();
   }
 
   .week-product__wrap {

@@ -47,32 +47,9 @@
 
 @include media-tablet {
   .page-title {
-    &::after {
-      content: "";
-      position: absolute;
-      z-index: 2000;
-      bottom: -8px;
-      left: 0;
-
-      width: 100%; // волна занимает всю ширину контейнера
-
-      // чтобы скрыть повторение фона по вертикали вниз
-      // на tablet, на ширине близкой к переключению на mobile
-      height: 20px;
-
-      background-color: transparent;
-      background-image: url("../img/page-title-wave.svg");
-      background-position: center; // центрирую волну
-      background-size: contain; // масштабирую волну
-
-      // для корректного масштабирования SVG
-      // крайне важно НЕ задать ширину или высоту, отличные от значений заданных во viewBox,
-      // например:
-      //    Правильно
-      //      <svg width="1150" height="34" viewBox="0 0 1150 34"
-      //    Ошибка
-      //      <svg width="1150" height="24" viewBox="0 0 1150 34" ==> ваше масштабирование перестанет работать как вы ожидаете
-    }
+    // высота волны = 20px, чтобы скрыть повторение фона вниз по вертикали
+    // на tablet, на ширине близкой к переключению на mobile
+    @include wave-svg-after(2000, 20px, "../img/page-title-wave.svg");
   }
 
   .page-title--index {
@@ -83,11 +60,16 @@
       width: 517px;
       letter-spacing: 0.15px;
     }
+
+    &::after { // волна
+      bottom: -8px;
+      left: 0;
+    }
   }
 
   .page-title--catalog,
   .page-title--order-form {
-    &::after {
+    &::after { // волна
       bottom: -10px;
       left: 0;
     }
@@ -110,20 +92,18 @@
 }
 
 @include media-desktop {
-  .page-title {
-    &::after {
-      bottom: -16px;
-      left: 0;
-      height: 34px;
-    }
-  }
-
   .page-title--index {
     padding-top: 109px;
     padding-bottom: 435px;
 
     .page-title__header {
       width: 620px;
+    }
+
+    &::after { // волна
+      bottom: -16px;
+      left: 0;
+      height: 34px;
     }
   }
 
@@ -132,7 +112,7 @@
     padding-top: 49px;
     padding-bottom: 55px;
 
-    &::after {
+    &::after { // волна
       bottom: -19px;
       left: 0;
     }
