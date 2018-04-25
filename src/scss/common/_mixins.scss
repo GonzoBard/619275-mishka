@@ -103,23 +103,7 @@
   box-shadow: 0 3px 5px 0 rgba($color-black, 0.1);
 }
 
-@mixin wave-after($height, $bg-url) {
-  &::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: $height;
-    background-color: $color-white;
-    background-image: url($bg-url);
-    background-repeat: repeat-x;
-    background-position: 0 0;
-  }
-}
-
-@mixin wave-svg-after($z-index, $height, $url) {
+@mixin wave-sin-after($z-index, $height, $url) {
   &::after {
     content: "";
     position: absolute;
@@ -129,17 +113,16 @@
 
     width: 100%; // волна занимает всю ширину контейнера
 
-    // чтобы скрыть повторение фона по вертикали вниз
-    // на tablet, на ширине близкой к переключению на mobile
+    // чтобы скрыть повторение фона по вертикали в некоторых случаях надо немного уменьшать требуемую высоту
     height: $height;
 
     background-color: transparent;
     background-image: url($url);
     background-position: center; // центрирую волну
-    background-size: contain; // масштабирую волну
+    background-size: contain; // масштабирую волну. Вообще говоря, это масштабирование работает как повторение...
 
     // для корректного масштабирования SVG
-    // крайне важно НЕ задать ширину или высоту, отличные от значений заданных во viewBox,
+    // крайне важно НЕ задать ширину или высоту, отличную от соответствующих значений viewBox,
     // например:
     //    Правильно
     //      <svg width="1150" height="34" viewBox="0 0 1150 34"
@@ -148,16 +131,22 @@
   }
 }
 
-@mixin wave-svg-mobile() {
-  @include wave-svg-after(1000, 6px, "../img/wave-bg.svg");
+@mixin wave-off() {
+  &::after {
+    display: none;
+  }
 }
 
-@mixin wave-svg-tablet() {
-  @include wave-svg-after(1000, 15px, "../img/wave-bg.svg");
+@mixin wave-sin-mobile() {
+  @include wave-sin-after(1000, 6px, "../img/wave-sin.svg");
 }
 
-@mixin wave-svg-desktop() {
-  @include wave-svg-after(1000, 21px, "../img/wave-bg.svg");
+@mixin wave-sin-tablet() {
+  @include wave-sin-after(1000, 15px, "../img/wave-sin.svg");
+}
+
+@mixin wave-sin-desktop() {
+  @include wave-sin-after(1000, 21px, "../img/wave-sin.svg");
 
   &::after { // немного откорректирую положение волны
     left: $indent-tablet;
@@ -165,40 +154,10 @@
   }
 }
 
-@mixin wave-bg($bg-url) {
-  background-color: transparent;
-  background-image: url($bg-url);
-  background-repeat: repeat-x;
-  background-position: 0 100%;
-}
-
-@mixin wave-bg-mobile() {
-  @include wave-bg("../img/wave-mobile.svg");
-}
-
-@mixin wave-bg-tablet() {
-  @include wave-bg("../img/wave-tablet.svg");
-}
-
-@mixin wave-bg-desktop() {
-  @include wave-bg("../img/wave-desktop.svg");
-}
-
-@mixin wave-after-desktop() {
-  &::after {
-    content: "";
-    position: absolute;
-    top: calc(100% - #{23px});
-    left: $indent-tablet;
-    display: block;
-    width: $content-width-desktop;
-    height: 23px;
-
-    background-color: transparent;
-    background-image: url("../img/wave-desktop.svg");
-    background-repeat: repeat-x;
-    background-position: 0 0;
-  }
+@mixin wave-half-sin-mobile() {
+  // высота волны = 20px, чтобы скрыть повторение по вертикали
+  // на tablet, на ширине близкой к переключению на mobile
+  @include wave-sin-after(2000, 20px, "../img/wave-half-sin.svg");
 }
 
 @mixin put-review-bg($left: 0) {

@@ -47,9 +47,7 @@
 
 @include media-tablet {
   .page-title {
-    // высота волны = 20px, чтобы скрыть повторение фона вниз по вертикали
-    // на tablet, на ширине близкой к переключению на mobile
-    @include wave-svg-after(2000, 20px, "../img/page-title-wave.svg");
+    @include wave-half-sin-mobile();
   }
 
   .page-title--index {
@@ -92,6 +90,12 @@
 }
 
 @include media-desktop {
+  .page-title {
+    &::after { // волна
+      height: 34px;
+    }
+  }
+
   .page-title--index {
     padding-top: 109px;
     padding-bottom: 435px;
@@ -103,7 +107,6 @@
     &::after { // волна
       bottom: -16px;
       left: 0;
-      height: 34px;
     }
   }
 

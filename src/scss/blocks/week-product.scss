@@ -3,7 +3,7 @@
   margin-top: 27px;
   padding-bottom: 40px;
 
-  @include wave-svg-mobile();
+  @include wave-sin-mobile();
   position: relative;
 }
 
@@ -82,7 +82,9 @@
     margin-left: -5px;
     padding-bottom: 67px;
 
-    @include wave-svg-tablet();
+    &::after { // волна
+      height: 15px;
+    }
   }
 
   .week-product__container {
@@ -151,16 +153,14 @@
     margin-top: 123px;
     padding-bottom: 0;
 
-    &::after { // выкл. волну на блоке, который тянется на всю ширину
-      display: none;
-    }
+    @include wave-off();
   }
 
   .week-product__container {
     padding-left: $indent-desktop-left + $indent-tablet; // becouse box model
     padding-bottom: 96px;
 
-    @include wave-svg-desktop();
+    @include wave-sin-desktop();
   }
 
   .week-product__wrap {
