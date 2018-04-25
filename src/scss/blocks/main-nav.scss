@@ -106,7 +106,7 @@
 
   .main-nav__logo {
     flex-grow: 1;
-    width: 3px; // т.к. элементы в шапке статичные
+    width: 1px; // У блока логотипа нет содержимого, поэтому задаю минимальную и flex-grow: 1
     margin-left: -2px;
 
     border-top: none;
