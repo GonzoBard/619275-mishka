@@ -3,7 +3,8 @@
   margin-top: 55px;
   padding-bottom: 50px;
 
-  @include wave-bg-mobile();
+  @include wave-sin-mobile();
+  position: relative;
 
   blockquote {
     @include reset-margin-padding();
@@ -71,9 +72,11 @@
     padding-top: 77px;
     padding-bottom: 132px;
 
-    @include wave-bg-tablet();
+    &::after { // волна
+      height: 15px;
+    }
+
     @include put-review-bg();
-    position: relative;
   }
 
   .reviews__container {
@@ -123,9 +126,10 @@
     padding-bottom: 0; // выкл. отступа с tablet
 
     &::before {
-      display: none; // выкл. волны с tablet
+      display: none; // выкл. фона с tablet
     }
-    background: none; // выкл. фона с tablet
+
+    @include wave-off(); // выкл. волну с tablet
   }
 
   .reviews__container {
@@ -133,7 +137,7 @@
     padding-bottom: 185px;
     padding-left: $indent-desktop-left + $indent-tablet; // becouse box model
 
-    @include wave-after-desktop();
+    @include wave-sin-desktop();
     @include put-review-bg($indent-tablet);
   }
 

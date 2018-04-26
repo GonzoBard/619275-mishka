@@ -22,14 +22,14 @@
         </picture>
       </a>
       <div class="main-nav__toggle-wrap" id="main-nav__toggle-wrap">
-        <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--close" id="main-nav__btn-toggle--close" onclick="mainNavigationMenu.changeState(false, true)">Закрыть меню</button>
-        <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--open" id="main-nav__btn-toggle--open" onclick="mainNavigationMenu.changeState(true, true)">Открыть меню</button>
+        <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--close" id="main-nav__btn-toggle--close" onclick="mainNavigationMenu.changeState(false)">Закрыть меню</button>
+        <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--open" id="main-nav__btn-toggle--open" onclick="mainNavigationMenu.changeState(true)">Открыть меню</button>
       </div>
     </div>
     <ul class="site-nav  main-nav__site" id="main-nav__site" aria-label="Навигация по сайту">
       <li class="site-nav__item  main-nav__item  main-nav__catalog"><a class="a  site-nav__link  site-nav__link--catalog" href="catalog.html">Каталог товаров</a></li>
-      <li class="site-nav__item  main-nav__item  main-nav__order"><a class="a  site-nav__link  site-nav__link--order" href="order-form.html">Вязание на заказ</a></li>
-      <li class="site-nav__item  main-nav__item  main-nav__search  site-nav__item--search"><a class="a  site-nav__link  site-nav__link--search" href="#">Поиск по сайту</a></li>
+      <li class="site-nav__item  main-nav__item  main-nav__order"><a class="a  site-nav__link  site-nav__link--order">Вязание на заказ</a></li>
+      <li class="site-nav__item  main-nav__item  main-nav__search"><a class="a  site-nav__link  site-nav__link--search" href="#">Поиск по сайту</a></li>
       <li class="site-nav__item  main-nav__item  main-nav__basket"><a class="a  site-nav__link  site-nav__link--basket" href="#">Корзина: пока пуста</a></li>
       <li class="site-nav__item  main-nav__item  main-nav__new"><a class="a  site-nav__link  site-nav__link--new" href="#">Новые поступления</a></li>
       <li class="site-nav__item  main-nav__item  main-nav__sale"><a class="a  site-nav__link  site-nav__link--sale" href="#">Распродажа</a></li>
@@ -193,5 +193,6 @@
 </footer>
 
 <script src="js/app.min.js"></script>
+<script src="js/picturefill.min.js" async></script>
 </body>
 </html>

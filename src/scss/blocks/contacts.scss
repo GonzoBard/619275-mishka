@@ -140,7 +140,7 @@
     background-color: transparent;
     background-image: url("../img/contacts__flag-tablet.svg");
     background-repeat: no-repeat;
-    background-position: calc(100% - 53px) 5px;
+    background-position: $content-width-tablet 5px;
   }
 
   .contacts__header {

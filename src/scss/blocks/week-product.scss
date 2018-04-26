@@ -3,7 +3,8 @@
   margin-top: 27px;
   padding-bottom: 40px;
 
-  @include wave-bg-mobile();
+  @include wave-sin-mobile();
+  position: relative;
 }
 
 .week-product__container {
@@ -77,10 +78,13 @@
 
 @include media-tablet {
   .week-product {
-    @include wave-bg-tablet();
-    margin-top: 33px;
+    margin-top: 44px;
     margin-left: -5px;
     padding-bottom: 67px;
+
+    &::after { // волна
+      height: 15px;
+    }
   }
 
   .week-product__container {
@@ -89,7 +93,7 @@
   }
 
   .week-product__wrap {
-    padding-right: calc(50% + 44px);
+    padding-right: 378px;
 
     position: relative;
   }
@@ -137,6 +141,8 @@
 
   .week-product__btn-order {
     margin-top: 34px;
+    padding-left: 22px;
+    letter-spacing: 0.5px;
   }
 
   .week-product__price {
@@ -146,21 +152,21 @@
 
 @include media-desktop {
   .week-product {
-    margin-top: 108px;
+    margin-top: 123px;
     padding-bottom: 0;
 
-    background: none; // выкл. волну на фоне
+    @include wave-off();
   }
 
   .week-product__container {
     padding-left: $indent-desktop-left + $indent-tablet; // becouse box model
     padding-bottom: 96px;
 
-    @include wave-after-desktop(); // ставлю волну на псевдо-элементе
+    @include wave-sin-desktop();
   }
 
   .week-product__wrap {
-    padding-right: calc(50% + 139px);
+    padding-right: 576.5px;
   }
 
   .week-product__header {

@@ -15,9 +15,7 @@
     user-select: none;
     cursor: pointer;
 
-    &:hover,
-    &:focus {
-      outline-width: 0;
+    &:hover {
       border-color: rgba($color-tundora, 0.3);
     }
 
