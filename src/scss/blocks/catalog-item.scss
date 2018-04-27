@@ -147,7 +147,7 @@
 
 @include media-desktop {
   .catalog-item {
-    width: 316px;
+    width: 30%; // = 316px / 1050px
 
     border: 1px solid $color-gallery;
 
