@@ -15,9 +15,7 @@
     user-select: none;
     cursor: pointer;
 
-    &:hover,
-    &:focus {
-      outline-width: 0;
+    &:hover {
       border-color: rgba($color-tundora, 0.3);
     }
 
@@ -28,5 +26,18 @@
 
   input:checked ~ label {
     border-color: $color-downy;
+  }
+}
+
+/*
+  ADAPTIVE
+*/
+
+@include media-tablet {
+  .form-group-add-product {
+    label {
+      width: 111px;
+      height: 52px;
+    }
   }
 }

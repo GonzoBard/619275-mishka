@@ -8,15 +8,11 @@
 
   &:hover,
   &:focus {
-    .catalog-item__data-wrap {
-      @include catalog-item-shadow-hover();
-    }
+    @include catalog-item-shadow-hover();
   }
 
   &:active {
-    .catalog-item__data-wrap {
-      @include catalog-item-shadow-active();
-    }
+    @include catalog-item-shadow-active();
   }
 }
 
@@ -99,6 +95,7 @@
 @include media-tablet {
   .catalog-item {
     width: $content-width-tablet;
+
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
@@ -111,7 +108,7 @@
   }
 
   .catalog-item__data-wrap {
-    padding: 26px 31px 30px;
+    padding: 26px 31px 10px 26px;
 
     display: flex;
     flex-direction: column;
@@ -120,44 +117,81 @@
   }
 
   .catalog-item__link {
+    display: inline-block;
+    vertical-align: top;
+    width: 232px;
     font-size: 20px;
   }
 
   .catalog-item__parameters {
-    margin-top: 10px;
+    margin-top: 4px;
     font-size: 15px;
   }
 
   .catalog-item__buy {
     margin-top: auto;
     padding-top: 23px;
+    padding-bottom: 15px;
+    padding-left: 5px;
   }
 
   .catalog-item__price {
     font-size: 17px;
   }
+
+  .catalog-item__btn-basket {
+    margin-top: -6px;
+    margin-right: 0;
+  }
 }
 
 @include media-desktop {
   .catalog-item {
-    width: 316px;
+    width: 30%; // = 316px / 1050px
+
+    border: 1px solid $color-gallery;
+
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
   }
 
   .catalog-item__pic {
-    width: 316px;
-    height: 462px;
+    flex-grow: 0;
+
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   .catalog-item__data-wrap {
+    flex-grow: 1;
+
     width: 100%;
     height: auto;
-    padding: 26px 28px 27px 27px;
+    padding: 29px 28px 27px 26px;
+
+    border: none;
   }
 
-  .catalog-item__info {
-    margin-bottom: 41px;
+  .catalog-item__parameters {
+    margin-top: 5px;
+    margin-bottom: -5px;
+  }
+
+  .catalog-item__buy {
+    padding-top: 22px;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  .catalog-item__btn-basket {
+    margin-top: -3px;
+    margin-right: 4px;
   }
 }

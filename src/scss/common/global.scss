@@ -60,6 +60,24 @@ body {
   padding-left: 0;
 }
 
+.grid-modal {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $indent-mobile;
+  padding-left: $indent-mobile;
+
+  @include media-mobile {
+    max-width: $grid-breakpoint-mobile;
+  }
+
+  @include media-tablet {
+    max-width: 566px;
+    padding-right: 108px;
+    padding-left: 108px;
+  }
+}
+
 /*
   UTILS
 */
@@ -89,4 +107,8 @@ body {
   margin-left: 0;
   padding-right: 0;
   padding-left: 0;
+}
+
+.modal-open {
+  overflow: hidden;
 }

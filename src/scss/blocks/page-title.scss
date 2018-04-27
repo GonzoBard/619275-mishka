@@ -2,7 +2,7 @@
   padding-top: 48px;
   padding-bottom: 53px;
 
-  background-color: $color-alabaster;
+  background-color: $color-seashell;
 
   position: relative;
 
@@ -16,8 +16,10 @@
   padding-top: 48px;
   padding-bottom: 305px;
 
+  background-color: $color-alabaster;
+
   .page-title__header {
-    width: 217px;
+    width: 255px;
   }
 }
 
@@ -45,50 +47,78 @@
 
 @include media-tablet {
   .page-title {
-    &::after {
-      content: "";
-      position: absolute;
-      z-index: 2000;
-      top: calc(100% - 14px);
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 24px;
-      background-color: transparent;
-      background-image: url("../img/wave-page-title-tablet.svg");
-      background-repeat: repeat-x;
-      background-position: 0 0;
-    }
+    @include wave-half-sin-mobile();
   }
 
   .page-title--index {
-    padding-top: 100px;
-    padding-bottom: 453px;
+    padding-top: 117px;
+    padding-bottom: 458px;
 
     .page-title__header {
       width: 517px;
+      letter-spacing: 0.15px;
     }
+
+    &::after { // волна
+      bottom: -8px;
+      left: 0;
+    }
+  }
+
+  .page-title--catalog,
+  .page-title--order-form {
+    &::after { // волна
+      bottom: -10px;
+      left: 0;
+    }
+  }
+
+  .page-title--catalog {
+    padding-top: 59px;
+    padding-bottom: 44px;
+  }
+
+  .page-title--order-form {
+    padding-top: 57px;
+    padding-bottom: 46px;
   }
 
   .page-title__bg-wrap {
     background-image: url("../img/page-title__bg-tablet@1x.jpg");
+    background-position: 50% 0;
   }
 }
 
 @include media-desktop {
   .page-title {
-    &::after {
+    &::after { // волна
       height: 34px;
-      background-image: url("../img/wave-page-title-desktop.svg");
     }
   }
 
   .page-title--index {
-    padding-top: 91px;
-    padding-bottom: 433px;
+    padding-top: 109px;
+    padding-bottom: 435px;
 
     .page-title__header {
       width: 620px;
     }
+
+    &::after { // волна
+      bottom: -16px;
+      left: 0;
+    }
+  }
+
+  .page-title--catalog,
+  .page-title--order-form {
+    padding-top: 49px;
+    padding-bottom: 55px;
+
+    &::after { // волна
+      bottom: -19px;
+      left: 0;
+    }
   }
 }
+

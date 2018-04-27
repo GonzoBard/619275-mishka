@@ -22,12 +22,12 @@
         </picture>
       </a>
       <div class="main-nav__toggle-wrap" id="main-nav__toggle-wrap">
-        <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--close" id="main-nav__btn-toggle--close" onclick="mainNavigationMenu.changeState(false, true)">Закрыть меню</button>
-        <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--open" id="main-nav__btn-toggle--open" onclick="mainNavigationMenu.changeState(true, true)">Открыть меню</button>
+        <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--close" id="main-nav__btn-toggle--close" onclick="mainNavigationMenu.changeState(false)">Закрыть меню</button>
+        <button class="cut-from-content  main-nav__btn-toggle  main-nav__btn-toggle--open" id="main-nav__btn-toggle--open" onclick="mainNavigationMenu.changeState(true)">Открыть меню</button>
       </div>
     </div>
     <ul class="site-nav  main-nav__site" id="main-nav__site" aria-label="Навигация по сайту">
-      <li class="site-nav__item  main-nav__item  main-nav__catalog"><a class="a  site-nav__link  site-nav__link--catalog" href="catalog.html">Каталог товаров</a></li>
+      <li class="site-nav__item  main-nav__item  main-nav__catalog"><a class="a  site-nav__link  site-nav__link--catalog">Каталог товаров</a></li>
       <li class="site-nav__item  main-nav__item  main-nav__order"><a class="a  site-nav__link  site-nav__link--order" href="order-form.html">Вязание на заказ</a></li>
       <li class="site-nav__item  main-nav__item  main-nav__search"><a class="a  site-nav__link  site-nav__link--search" href="#">Поиск по сайту</a></li>
       <li class="site-nav__item  main-nav__item  main-nav__basket"><a class="a  site-nav__link  site-nav__link--basket" href="#">Корзина: пока пуста</a></li>
@@ -40,7 +40,7 @@
 
 <main class="page-main">
 
-  <section class="page-title  page-title--catalog  page-main__title  grid-unlim">
+  <section class="page-title  page-title--catalog  page-title--catalog  page-main__title  grid-unlim">
     <h2 class="page-title__header">Каталог товаров</h2>
   </section>
 
@@ -51,7 +51,7 @@
     <ul class="catalog__list">
 
       <li class="catalog-item  catalog__item">
-        <a class="catalog-item__pic" href="#" aria-label="Подробное описание товара «Зайчик-попрыгайчик»">
+        <a class="catalog-item__pic" href="stub-detailed-product-description.html" aria-label="Подробное описание товара «Зайчик-попрыгайчик»">
           <picture>
             <source srcset="img/catalog-item__pic-bunny-jump-desktop@1x.jpg" media="(min-width: 1150px)">
             <source srcset="img/catalog-item__pic-bunny-jump-tablet@1x.jpg" media="(min-width: 768px)">
@@ -60,18 +60,20 @@
         </a>
         <div class="catalog-item__data-wrap">
           <div class="catalog-item__info">
-            <a class="a  catalog-item__link" href="#">Зайчик-попрыгайчик</a>
+            <a class="a  catalog-item__link" href="stub-detailed-product-description.html">Зайчик-попрыгайчик</a>
             <p class="catalog-item__parameters">Рост 30 см, вес 200 г</p>
           </div>
           <div class="catalog-item__buy">
             <p class="catalog-item__price">1 200 руб.</p>
-            <button class="catalog-item__btn-basket">Добавить в корзину</button>
+            <a class="catalog-item__btn-basket" onclick="addToBasketModal.open(event);" href="stub-add-to-basket.html">
+              Добавить в корзину
+            </a>
           </div>
         </div>
       </li>
 
       <li class="catalog-item  catalog__item">
-        <a class="catalog-item__pic" href="#" aria-label="Подробное описание товара «Корзинка для белья»">
+        <a class="catalog-item__pic" href="stub-detailed-product-description.html" aria-label="Подробное описание товара «Корзинка для белья»">
           <picture>
             <source srcset="img/catalog-item__pic-laundry-basket-desktop@1x.jpg" media="(min-width: 1150px)">
             <source srcset="img/catalog-item__pic-laundry-basket-tablet@1x.jpg" media="(min-width: 768px)">
@@ -80,18 +82,20 @@
         </a>
         <div class="catalog-item__data-wrap">
           <div class="catalog-item__info">
-            <a class="a  catalog-item__link" href="#">Корзинка для белья</a>
+            <a class="a  catalog-item__link" href="stub-detailed-product-description.html">Корзинка для белья</a>
             <p class="catalog-item__parameters">Диаметр 15 см, высота 10 см</p>
           </div>
           <div class="catalog-item__buy">
             <p class="catalog-item__price">690 руб.</p>
-            <button class="catalog-item__btn-basket">Добавить в корзину</button>
+            <a class="catalog-item__btn-basket" onclick="addToBasketModal.open(event);" href="stub-add-to-basket.html">
+              Добавить в корзину
+            </a>
           </div>
         </div>
       </li>
 
       <li class="catalog-item  catalog__item">
-        <a class="catalog-item__pic" href="#" aria-label="Подробное описание товара «Большая корзинка для игрушек»">
+        <a class="catalog-item__pic" href="stub-detailed-product-description.html" aria-label="Подробное описание товара «Большая корзинка для игрушек»">
           <picture>
             <source srcset="img/catalog-item__pic-large-toy-basket-desktop@1x.jpg" media="(min-width: 1150px)">
             <source srcset="img/catalog-item__pic-large-toy-basket-tablet@1x.jpg" media="(min-width: 768px)">
@@ -100,12 +104,14 @@
         </a>
         <div class="catalog-item__data-wrap">
           <div class="catalog-item__info">
-            <a class="a  catalog-item__link" href="#">Большая корзинка для игрушек</a>
+            <a class="a  catalog-item__link" href="stub-detailed-product-description.html">Большая корзинка для игрушек</a>
             <p class="catalog-item__parameters">Диаметр 30 см, высота 30 см</p>
           </div>
           <div class="catalog-item__buy">
             <p class="catalog-item__price">1 500 руб.</p>
-            <button class="catalog-item__btn-basket">Добавить в корзину</button>
+            <a class="catalog-item__btn-basket" onclick="addToBasketModal.open(event);" href="stub-add-to-basket.html">
+              Добавить в корзину
+            </a>
           </div>
         </div>
       </li>
@@ -130,6 +136,36 @@
         <p class="production-process__intro">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="btn  production-process__btn" href="order-form.html">Сделать заказ</a>
       </div>
+    </div>
+  </section>
+
+  <section class="add-to-basket-modal  grid-unlim  visually-hidden" id="add-to-basket-modal" onclick="addToBasketModal.close();">
+    <div class="add-to-basket-modal__container  grid-modal" onclick="event.stopPropagation();">
+      <h3 class="visually-hidden">Форма добавления товара в корзину</h3>
+      <h3 class="add-to-basket-modal__header">Добавить в корзину</h3>
+      <p class="add-to-basket-modal__text">Выберите размер:</p>
+      <form class="form-add-product" action="https://echo.htmlacademy.ru" method="post">
+
+        <ul class="form-add-product__list" aria-label="Список размеров">
+
+          <li class="form-group-add-product" aria-label="Размер «s»">
+            <input class="visually-hidden" type="radio" name="size" value="s" id="form-group-add-product__size-s" tabindex="-1" checked>
+            <label for="form-group-add-product__size-s" tabindex="0">s</label>
+          </li>
+
+          <li class="form-group-add-product" aria-label="Размер «m»">
+            <input class="visually-hidden" type="radio" name="size" value="m" id="form-group-add-product__size-m" tabindex="-1">
+            <label for="form-group-add-product__size-m" tabindex="0">m</label>
+          </li>
+
+          <li class="form-group-add-product" aria-label="Размер «l»">
+            <input class="visually-hidden" type="radio" name="size" value="l" id="form-group-add-product__size-l" tabindex="-1">
+            <label for="form-group-add-product__size-l" tabindex="0">l</label>
+          </li>
+
+        </ul>
+        <button class="btn form-add-product__btn" onclick="addToBasketModal.close();">Добавить</button>
+      </form>
     </div>
   </section>
 
@@ -163,6 +199,8 @@
 
 </footer>
 
-<script src="js/app.js"></script>
+<script src="js/app.min.js"></script>
+<script src="js/picturefill.min.js" async></script>
+<script src="js/addToBasket.min.js"></script>
 </body>
 </html>
