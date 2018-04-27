@@ -159,9 +159,13 @@
   .catalog-item__pic {
     flex-grow: 0;
 
-    width: 316px;
-    height: 462px;
-    margin-left: -1px;
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .catalog-item__data-wrap {
@@ -169,7 +173,7 @@
 
     width: 100%;
     height: auto;
-    padding: 25px 28px 27px 26px;
+    padding: 29px 28px 27px 26px;
 
     border: none;
   }
