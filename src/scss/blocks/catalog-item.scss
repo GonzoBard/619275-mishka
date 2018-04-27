@@ -8,15 +8,11 @@
 
   &:hover,
   &:focus {
-    .catalog-item__data-wrap {
-      @include catalog-item-shadow-hover();
-    }
+    @include catalog-item-shadow-hover();
   }
 
   &:active {
-    .catalog-item__data-wrap {
-      @include catalog-item-shadow-active();
-    }
+    @include catalog-item-shadow-active();
   }
 }
 
