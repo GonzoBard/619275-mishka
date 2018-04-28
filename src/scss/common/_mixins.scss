@@ -180,6 +180,11 @@
     background-image: url("../img/reviews__bg-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
+
+    @include retina {
+      background-image: url("../img/reviews__bg-tablet@2x.jpg");
+      background-size: 350px auto;
+    }
   }
 }
 
