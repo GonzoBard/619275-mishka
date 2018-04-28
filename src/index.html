@@ -15,8 +15,8 @@
     <h2 class="visually-hidden">Основная навигация</h2>
     <div class="logo  main-nav__logo  main-nav__item">
       <picture>
-        <source srcset="img/page-header__logo-mishka-desktop.svg" type="image/svg+xml" media="(min-width: 1150px)">
-        <source srcset="img/page-header__logo-mishka-tablet.svg" type="image/svg+xml" media="(min-width: 768px)">
+        <source media="(min-width: 1150px)" type="image/svg+xml" srcset="img/page-header__logo-mishka-desktop.svg">
+        <source media="(min-width: 768px)" type="image/svg+xml" srcset="img/page-header__logo-mishka-tablet.svg">
         <img src="img/page-header__logo-mishka-mobile.svg" alt="Логотип магазина «Мишка»">
       </picture>
       <div class="main-nav__toggle-wrap" id="main-nav__toggle-wrap">
@@ -79,9 +79,9 @@
           </table>
         </div>
         <picture class="week-product__pic">
-          <source srcset="img/week-product__pic-knitted-baskets-desktop@1x.jpg" media="(min-width: 1150px)">
-          <source srcset="img/week-product__pic-knitted-baskets-tablet@1x.jpg" media="(min-width: 768px)">
-          <img src="img/week-product__pic-knitted-baskets-mobile@1x.jpg" alt="Вязаные корзинки">
+          <source media="(min-width: 1150px)" srcset="img/week-product__pic-knitted-baskets-desktop@1x.jpg 1x, img/week-product__pic-knitted-baskets-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/week-product__pic-knitted-baskets-tablet@1x.jpg 1x, img/week-product__pic-knitted-baskets-tablet@2x.jpg 2x">
+          <img src="img/week-product__pic-knitted-baskets-mobile@1x.jpg" srcset="img/week-product__pic-knitted-baskets-mobile@2x.jpg 2x" alt="Вязаные корзинки">
         </picture>
         <div class="week-product__buy">
           <p class="week-product__price">Цена: 990 руб.</p>
@@ -165,7 +165,7 @@
     </div>
     <div class="contacts__map-wrap">
       <div class="contacts__map" id="contacts__map">
-        <img src="img/contacts__map@1x.jpg" width="1149" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+        <img src="img/contacts__map-fallback.jpg" width="1149" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
       </div>
     </div>
     <div class="contacts__container  contacts__container--after-map  grid">
