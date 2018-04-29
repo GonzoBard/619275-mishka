@@ -88,5 +88,9 @@ gulp.task("syncserver", () => {
 });
 
 gulp.task("build", () => {
+  runsequence("clean", ["fonts", "html", "img", "js", "css"]);
+});
+
+gulp.task("start", () => {
   runsequence("clean", ["fonts", "html", "img", "js", "css", "syncserver"]);
 });

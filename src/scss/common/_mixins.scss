@@ -16,6 +16,12 @@
   }
 }
 
+@mixin retina() {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @content;
+  }
+}
+
 @mixin fonts($size, $height, $weight, $style, $color) {
   font-size: $size;
   line-height: $height;
@@ -174,6 +180,11 @@
     background-image: url("../img/reviews__bg-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
+
+    @include retina {
+      background-image: url("../img/reviews__bg-tablet@2x.jpg");
+      background-size: 350px auto;
+    }
   }
 }
 
