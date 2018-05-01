@@ -11,10 +11,9 @@
   margin-bottom: 30px;
 }
 
-/*
-  ADAPTIVE
-*/
-
+//
+// ADAPTIVE
+//
 @include media-tablet {
   .catalog {
     margin-top: 80px;

@@ -4,10 +4,9 @@
   @include fonts(15px, 24px, 400, normal, $color-tundora);
 }
 
-/*
-  ADAPTIVE
-*/
-
+//
+// ADAPTIVE
+//
 @include media-tablet {
   .page-header {
     position: relative;

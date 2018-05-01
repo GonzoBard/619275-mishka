@@ -21,10 +21,9 @@
   line-height: 0;
 }
 
-/*
-  ADAPTIVE
-*/
-
+//
+// ADAPTIVE
+//
 @include media-tablet {
   .logo {
     padding-top: 22px;

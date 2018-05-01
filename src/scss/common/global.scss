@@ -6,10 +6,9 @@ body {
   @include fonts(15px, normal, 400, normal, $color-tundora);
 }
 
-/*
-  ADAPTIVE
-*/
-
+//
+// ADAPTIVE
+//
 .grid { // с отступами + фиксированная max-width
   width: 100%;
   margin-right: auto;
@@ -78,11 +77,10 @@ body {
   }
 }
 
-/*
-  UTILS
-*/
-
-.visually-hidden { /* https://allyjs.io/tutorials/hiding-elements.html#2017-edition-of-visuallyhidden */
+//
+// UTILS
+//
+.visually-hidden { // https://allyjs.io/tutorials/hiding-elements.html#2017-edition-of-visuallyhidden
   position: absolute;
 
   width: 1px;

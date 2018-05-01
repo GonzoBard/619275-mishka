@@ -46,10 +46,9 @@
   }
 }
 
-/*
-  ADAPTIVE
-*/
-
+//
+// ADAPTIVE
+//
 @include media-tablet {
   .page-title {
     @include wave-half-sin-mobile();

@@ -42,10 +42,9 @@
   }
 }
 
-/*
-  ADAPTIVE
-*/
-
+//
+// ADAPTIVE
+//
 @include media-tablet {
   .site-nav__item {
     padding-left: 0; // выкл., пришедший с mobile, сеточный отступ
