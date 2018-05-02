@@ -62,10 +62,9 @@
   }
 }
 
-/*
-  ADAPTIVE
-*/
-
+//
+// ADAPTIVE
+//
 @include media-tablet {
   .main-nav {
     max-width: $grid-breakpoint-tablet; // начиная с tablet и выше, это контентный блок всей шапки
