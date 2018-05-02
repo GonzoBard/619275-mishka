@@ -57,10 +57,9 @@
   letter-spacing: 0.2px;
 }
 
-/*
-  ADAPTIVE
-*/
-
+//
+// ADAPTIVE
+//
 @include media-tablet {
   .production-process__container {
     margin-bottom: 63px;

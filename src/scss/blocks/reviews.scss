@@ -62,10 +62,9 @@
   text-align: center;
 }
 
-/*
-  ADAPTIVE
-*/
-
+//
+// ADAPTIVE
+//
 @include media-tablet {
   .reviews {
     margin-top: -12px;

@@ -16,6 +16,27 @@
 
 .page-footer__logo {
   display: none;
+
+  width: 102px;
+  height: 34px;
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $color-puerto-rico;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $color-puerto-rico;
+    }
+    opacity: 0.3;
+  }
+}
+
+.page-footer__logo-link {
+  text-decoration: none;
 }
 
 .page-footer__social {
@@ -40,10 +61,9 @@
   }
 }
 
-/*
-  ADAPTIVE
-*/
-
+//
+// ADAPTIVE
+//
 @include media-tablet {
   .page-footer__container {
     margin-top: 25px;
@@ -56,17 +76,6 @@
 
   .page-footer__logo {
     display: block;
-    width: 102px;
-    height: 34px;
-
-    &:hover,
-    &:focus {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
   }
 
   .page-footer__social {

@@ -115,10 +115,9 @@
   text-align: center;
 }
 
-/*
-  ADAPTIVE
-*/
-
+//
+// ADAPTIVE
+//
 @include media-tablet {
   .contacts {
     margin-top: 41px;

@@ -20,6 +20,7 @@
     }
 
     &:active {
+      outline-width: 0;
       border-color: $color-downy;
     }
   }
@@ -29,10 +30,9 @@
   }
 }
 
-/*
-  ADAPTIVE
-*/
-
+//
+// ADAPTIVE
+//
 @include media-tablet {
   .form-group-add-product {
     label {

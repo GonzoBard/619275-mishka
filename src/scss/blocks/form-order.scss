@@ -44,10 +44,9 @@
   @include fonts(17px, 16px, 700, normal, $color-tundora);
 }
 
-/*
-  ADAPTIVE
-*/
-
+//
+// ADAPTIVE
+//
 @include media-tablet {
   .form-order {
     padding-bottom: 50px;
