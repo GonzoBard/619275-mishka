@@ -52,6 +52,11 @@
 @include media-tablet {
   .page-title {
     @include wave-half-sin-mobile();
+
+    &::after { // волна
+      bottom: -10px;
+      left: 0;
+    }
   }
 
   .page-title--index {
@@ -65,14 +70,6 @@
 
     &::after { // волна
       bottom: -8px;
-      left: 0;
-    }
-  }
-
-  .page-title--catalog,
-  .page-title--order-form {
-    &::after { // волна
-      bottom: -10px;
       left: 0;
     }
   }
@@ -100,8 +97,13 @@
 
 @include media-desktop {
   .page-title {
+    padding-top: 49px;
+    padding-bottom: 55px;
+
     &::after { // волна
       height: 34px;
+      bottom: -19px;
+      left: 0;
     }
   }
 
@@ -115,17 +117,6 @@
 
     &::after { // волна
       bottom: -16px;
-      left: 0;
-    }
-  }
-
-  .page-title--catalog,
-  .page-title--order-form {
-    padding-top: 49px;
-    padding-bottom: 55px;
-
-    &::after { // волна
-      bottom: -19px;
       left: 0;
     }
   }

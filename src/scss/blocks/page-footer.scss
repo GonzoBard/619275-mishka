@@ -19,6 +19,10 @@
 
   width: 102px;
   height: 34px;
+}
+
+.page-footer__logo-link {
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -33,10 +37,6 @@
     }
     opacity: 0.3;
   }
-}
-
-.page-footer__logo-link {
-  text-decoration: none;
 }
 
 .page-footer__social {
